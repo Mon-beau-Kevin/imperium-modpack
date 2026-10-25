@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.6
+- Correction de l'erreur « index file hash is invalid » juste après une mise à jour : on télécharge le pack figé au dernier commit.
+
 ## 3.5.5
 - Le bandeau vert « à jour » s'efface après 10 secondes.
 - La version en bas à gauche reste affichée : verte si à jour, rouge sinon (le bandeau de mise à jour, lui, reste).
