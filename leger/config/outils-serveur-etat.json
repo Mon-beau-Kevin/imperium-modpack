@@ -1,0 +1,20 @@
+{
+  "_aide": "Tresor public et pouvoirs du president. taxe_tresor \u003d part du prix des achats de chunks qui va au tresor (1.0 \u003d tout). seuil_vote_crowns \u003d a partir de ce montant, une depense doit etre votee. prix_chunk_serveur_crowns \u003d prix d\u0027un chunk de la zone serveur paye par le tresor. soldes_* \u003d decret de reduction des chunks. mandat_jours \u003d duree d\u0027un mandat, mandats_max_affilee \u003d mandats de suite au maximum. treve_heures \u003d duree de la treve (une par mandat). Durees en temps reel.",
+  "taxe_tresor": 1.0,
+  "seuil_vote_crowns": 100,
+  "prix_chunk_serveur_crowns": 5,
+  "soldes_pourcent": 25,
+  "soldes_duree_minutes": 120,
+  "soldes_delai_jours": 5,
+  "annonce_delai_minutes": 10,
+  "proposition_duree_minutes": 5,
+  "mandat_jours": 7,
+  "mandats_max_affilee": 2,
+  "treve_heures": 24,
+  "mediation_minutes": 10,
+  "votes_oui_min": 2,
+  "le_demandeur_compte_dans_les_oui": false,
+  "boutique_creative_vers_tresor": true,
+  "batisseur_jours_max": 30,
+  "_aide_2": "Depense publique (versement a un joueur ou chunks de la zone serveur) : des que le total du jour atteint seuil_vote_crowns, vote obligatoire. Il faut alors au moins votes_oui_min OUI (sans compter celui qui demande, sauf si le_demandeur_compte_dans_les_oui \u003d true) et plus de oui que de non. boutique_creative_vers_tresor \u003d l\u0027argent paye aux Vendors creatifs (mode Vente) va dans le tresor au lieu de disparaitre. Le tresor compte au spur pres (toutes les pieces comptent, meme les petites). batisseur_jours_max \u003d duree maximum d\u0027un contrat de batisseur (le seul qui peut construire et casser dans la zone serveur)."
+}

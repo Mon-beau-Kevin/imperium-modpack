@@ -1,0 +1,15 @@
+version:3955
+autoJump:false
+renderDistance:8
+simulationDistance:6
+graphicsMode:0
+maxFps:90
+enableVsync:false
+mipmapLevels:2
+biomeBlendRadius:0
+entityShadows:false
+particles:1
+entityDistanceScaling:0.75
+renderClouds:"false"
+resourcePacks:["tacz_resources","vanilla","mod_resources","moonlight:merged_pack"]
+incompatibleResourcePacks:[]

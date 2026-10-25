@@ -1,0 +1,8 @@
+name = "WN Siege"
+filename = "wn-siege-1.13.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8800/454/wn-siege-1.13.0.jar"
+hash-format = "sha1"
+hash = "11142a9fcd44413b1f9c4374d9ae9f01909b9d14"

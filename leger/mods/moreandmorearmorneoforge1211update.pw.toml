@@ -1,0 +1,8 @@
+name = "More and More Armor"
+filename = "MoreAndMoreArmorNEOFORGE1211UPDATE.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6337/498/MoreAndMoreArmorNEOFORGE1211UPDATE.jar"
+hash-format = "sha1"
+hash = "bf3baa9befbc88b0f796854279a9b4313d76a3a4"

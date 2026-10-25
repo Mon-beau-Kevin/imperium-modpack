@@ -1,0 +1,8 @@
+name = "TACZ Aeronautics compat"
+filename = "tacz_aero_compat-1.8.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8195/668/tacz_aero_compat-1.8.0.jar"
+hash-format = "sha1"
+hash = "119204f6baf382da70903db2c16d7ddde4adbe69"

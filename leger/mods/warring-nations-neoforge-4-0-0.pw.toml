@@ -1,0 +1,8 @@
+name = "Warring Nations"
+filename = "warring-nations-neoforge-4.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8800/476/warring-nations-neoforge-4.0.0.jar"
+hash-format = "sha1"
+hash = "460f5f703538ede4fa26db21f8717626922442d9"

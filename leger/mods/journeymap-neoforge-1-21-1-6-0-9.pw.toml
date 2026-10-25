@@ -1,0 +1,8 @@
+name = "JourneyMap"
+filename = "journeymap-neoforge-1.21.1-6.0.9.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8923/668/journeymap-neoforge-1.21.1-6.0.9.jar"
+hash-format = "sha1"
+hash = "3a5c86e620a7d5aa53b6e42ca4a1577bbba1d332"

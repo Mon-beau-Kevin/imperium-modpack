@@ -1,0 +1,8 @@
+name = "Berezka API TaCZ addon [The Lost City/Abandoned Structures/Bunkers]"
+filename = "berezka_api_tacz_addon-1.0.0-beta.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7425/861/berezka_api_tacz_addon-1.0.0-beta.jar"
+hash-format = "sha1"
+hash = "d36eba59965b5be99a9b6c6bf2bc4739f104e00d"

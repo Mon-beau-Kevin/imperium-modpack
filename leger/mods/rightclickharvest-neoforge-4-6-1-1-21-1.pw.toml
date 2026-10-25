@@ -1,0 +1,8 @@
+name = "RightClickHarvest"
+filename = "rightclickharvest-neoforge-4.6.1+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7508/749/rightclickharvest-neoforge-4.6.1%2B1.21.1.jar"
+hash-format = "sha1"
+hash = "473b960c0cae751b7752a43df4756010e30988fa"

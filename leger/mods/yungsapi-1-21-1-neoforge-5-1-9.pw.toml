@@ -1,0 +1,8 @@
+name = "YUNG's API (NeoForge) [1.20.4-1.21.1 ONLY]"
+filename = "YungsApi-1.21.1-NeoForge-5.1.9.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8894/736/YungsApi-1.21.1-NeoForge-5.1.9.jar"
+hash-format = "sha1"
+hash = "2c4b740c8ad27bbcb2a21b85b64f011b809aed91"

@@ -1,0 +1,8 @@
+name = "TACZ Bandits"
+filename = "tacz_bandits-1.3.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8936/466/tacz_bandits-1.3.jar"
+hash-format = "sha1"
+hash = "fafc1b725b6af12de65a198a15b550cc5288a2e5"

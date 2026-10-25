@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.7 — version Léger
+- Nouvelle version **Léger** pour les petits PC (sans Distant Horizons, Sound Physics, EMF/ETF, Light Overlay, BetterF3, spark, WorldEdit ; graphismes allégés). Elle se met à jour toute seule, comme la version normale.
+- Packs à importer dans CurseForge, avec l'outil de mise à jour déjà dedans.
+
 ## 3.5.6
 - Correction de l'erreur « index file hash is invalid » juste après une mise à jour : on télécharge le pack figé au dernier commit.
 

@@ -1,0 +1,8 @@
+name = "Rotten Creatures"
+filename = "rottencreatures-neoforge-1.21.1-1.1.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6677/62/rottencreatures-neoforge-1.21.1-1.1.2.jar"
+hash-format = "sha1"
+hash = "c44de2c17018ffb8141ee68caaa4a71d979b96b2"

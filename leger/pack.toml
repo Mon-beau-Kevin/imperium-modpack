@@ -1,0 +1,13 @@
+name = "Imperium - Leger"
+author = "Kaszimir01"
+version = "3.5.7"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "5eb73abdffbd089a8c899baf046a459ad0d8a3e47b6ac609d3a674d6a6886184"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.264"

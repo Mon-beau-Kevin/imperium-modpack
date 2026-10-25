@@ -1,0 +1,8 @@
+name = "Immersive Paintings"
+filename = "immersive_paintings-neoforge-1.21.1-0.7.9.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8871/485/immersive_paintings-neoforge-1.21.1-0.7.9.jar"
+hash-format = "sha1"
+hash = "0386ff2db20edfcafc890760adb96073cd38c1a2"

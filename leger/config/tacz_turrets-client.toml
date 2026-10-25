@@ -1,0 +1,11 @@
+#Change which model turrets use. Purely cosmetic.
+#Allowed Values: RETRO, MODERN, INDUSTRIAL, SCIFI, SCRAP, TACTICAL
+modelType = "MODERN"
+#Turret health bar style. GREEN_TO_RED fades green to orange to red as health drops, COLOR uses healthBarColor.
+#Allowed Values: COLOR, GREEN_TO_RED
+healthBarStyle = "GREEN_TO_RED"
+#Turret health bar colour as hex.
+healthBarColor = "#FF3030"
+#Turret recoil type. BOUNCE kicks the barrel up, PUSH slides the gun backwards.
+#Allowed Values: BOUNCE, PUSH
+recoilType = "PUSH"

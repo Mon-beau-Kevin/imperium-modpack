@@ -5,7 +5,11 @@ set "PACK=https://raw.githubusercontent.com/Mon-beau-Kevin/imperium-modpack/main
 rem --- Dernier commit sur GitHub : on telecharge le pack fige a ce commit (evite les copies en cache a moitie a jour) ---
 set "SHA="
 for /f "usebackq delims=" %%S in (`powershell -NoProfile -ExecutionPolicy Bypass -Command "try { (Invoke-RestMethod -Uri 'https://api.github.com/repos/Mon-beau-Kevin/imperium-modpack/commits/main' -Headers @{Accept='application/vnd.github.sha'} -TimeoutSec 10).Trim() } catch { '' }"`) do set "SHA=%%S"
-if defined SHA set "PACK=https://raw.githubusercontent.com/Mon-beau-Kevin/imperium-modpack/%SHA%/pack.toml"
+rem --- Version Leger (petits PC) : son propre pack ---
+set "SUB="
+if exist "imperium-edition.txt" findstr /i "leger" "imperium-edition.txt" >nul && set "SUB=leger/"
+if defined SUB set "PACK=https://raw.githubusercontent.com/Mon-beau-Kevin/imperium-modpack/main/leger/pack.toml"
+if defined SHA set "PACK=https://raw.githubusercontent.com/Mon-beau-Kevin/imperium-modpack/%SHA%/%SUB%pack.toml"
 
 if not exist "packwiz-installer-bootstrap.jar" (
   echo Le fichier packwiz-installer-bootstrap.jar est introuvable.

@@ -1397,7 +1397,7 @@ preserve = true
 
 [[files]]
 file = "imperium-version.txt"
-hash = "1e95443457b8ea47a23241b12e7e6a593869a619b770e6b4fbff836851f2a3cf"
+hash = "19e240e64b5ee96839b52c754c0564f1d894fe2fc7e80e792fc7ec315bf452a3"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -1545,7 +1545,7 @@ metafile = true
 
 [[files]]
 file = "mods/casino-numismatics-1.0.0.jar"
-hash = "3d99bbf2e3c16c765b10fc9f55613b486aa51eb7bfb1e94cee9442f902f410b3"
+hash = "f834df5dcf9837fcdef0062886be6eae21b4530106ed87102ae640fa7931fd78"
 
 [[files]]
 file = "mods/cerbonsapi-neoforge-1-21-1-3-0.pw.toml"

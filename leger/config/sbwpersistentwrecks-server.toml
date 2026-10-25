@@ -1,0 +1,97 @@
+[general]
+	enabled = true
+	#Extra burning time after the original white bar reaches zero.
+	# Default: 2400
+	# Range: 0 ~ 86400
+	extendedBurnDurationSeconds = 2400
+	#Light smoke period after the additional fire ends.
+	# Default: 120
+	# Range: 0 ~ 86400
+	coolingDurationSeconds = 120
+	keepCooledWrecks = true
+	#Zero means permanent.
+	# Default: 0
+	# Range: 0 ~ 5256000
+	cooledWreckLifetimeMinutes = 120
+	keepCollision = true
+	preventWreckMounting = true
+	#Burning wrecks lightly hurt entities standing on or inside them.
+	enableWreckDangerZones = true
+	#Base damage in health points per danger tick. Tanks multiply this slightly.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	wreckDangerDamage = 1.0
+	#Ticks between danger-zone damage pulses. 20 ticks is one second.
+	# Default: 40
+	# Range: 1 ~ 1200
+	wreckDangerIntervalTicks = 40
+	#Fastest wreck removal channel with the Superb Warfare defuser.
+	# Default: 3
+	# Range: 1 ~ 60
+	defuserMinDurationSeconds = 3
+	#Slowest wreck removal channel with the Superb Warfare defuser. Heavy wrecks use more of this range.
+	# Default: 8
+	# Range: 1 ~ 120
+	defuserMaxDurationSeconds = 8
+
+[effects]
+	enableExtendedFire = true
+	enableExtendedSmoke = true
+	#Show a subtle long-range black smoke marker above large burning wrecks.
+	enableDistantSmokeBeacon = true
+	#Max distance in blocks for distant smoke beacon particles.
+	# Default: 512
+	# Range: 0 ~ 768
+	smokeBeaconDistance = 256
+	enableCoolingSmoke = true
+	enableSparks = true
+	enableBurningSounds = true
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	particleDensity = 1.0
+	# Default: 512
+	# Range: 0 ~ 512
+	particleRenderDistance = 192
+	# Default: 64
+	# Range: 0 ~ 512
+	soundDistance = 64
+	igniteNearbyBlocks = false
+	#Show sound and particles while salvaging with the defuser. The actionbar progress remains visible.
+	enableDefuserEffects = true
+	#Burning wrecks can occasionally detonate remaining ammunition once.
+	enableSecondaryExplosions = true
+	#Warn nearby players when a burning wreck has armed ammunition.
+	enableSecondaryExplosionWarnings = true
+	#Distance in blocks for unstable ammunition actionbar warnings and crackle sounds.
+	# Default: 28
+	# Range: 0 ~ 128
+	secondaryExplosionWarningDistance = 28
+	#Base chance per wreck. Heavy ammo vehicles multiply this internally.
+	# Default: 0.12
+	# Range: 0.0 ~ 1.0
+	secondaryExplosionChance = 0.12
+	#Minimum delay after the extended burning phase starts.
+	# Default: 20
+	# Range: 0 ~ 86400
+	secondaryExplosionMinDelaySeconds = 20
+	#Maximum delay after the extended burning phase starts.
+	# Default: 240
+	# Range: 0 ~ 86400
+	secondaryExplosionMaxDelaySeconds = 240
+	#Base explosion power. TNT is 4.0; this defaults lower.
+	# Default: 2.0
+	# Range: 0.0 ~ 10.0
+	secondaryExplosionPower = 2.0
+
+[performance]
+	# Default: 250
+	# Range: 1 ~ 10000
+	maximumPersistentWrecksPerDimension = 100
+	# Default: 32
+	# Range: 1 ~ 1024
+	maximumBurningWrecksPerChunk = 8
+	reduceDistantEffects = true
+	# Default: 200
+	# Range: 1 ~ 72000
+	cooledWreckCheckIntervalTicks = 200
+	removeOldestWhenDimensionLimitIsReached = true

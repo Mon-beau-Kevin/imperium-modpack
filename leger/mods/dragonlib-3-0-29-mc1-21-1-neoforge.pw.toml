@@ -1,0 +1,8 @@
+name = "DragonLib"
+filename = "dragonlib-3.0.29+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9119/903/dragonlib-3.0.29%2Bmc1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "ca7227b30334cb50117efe5cf76a01772e053eed"

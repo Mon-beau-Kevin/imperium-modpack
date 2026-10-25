@@ -1,0 +1,158 @@
+{
+  "ammo_type_patterns": [
+    {
+      "contains": "_incendiary",
+      "type": "INCENDIARY"
+    },
+    {
+      "contains": "_fire",
+      "type": "INCENDIARY"
+    },
+    {
+      "contains": "_dragon",
+      "type": "DRAGONS_BREATH"
+    },
+    {
+      "contains": "_hp",
+      "type": "HP"
+    },
+    {
+      "contains": "_hollow",
+      "type": "HP"
+    },
+    {
+      "contains": "_ap",
+      "type": "AP"
+    },
+    {
+      "contains": "_armor",
+      "type": "AP"
+    },
+    {
+      "contains": "_sp",
+      "type": "SP"
+    },
+    {
+      "contains": "_soft",
+      "type": "SP"
+    },
+    {
+      "contains": "_fmj",
+      "type": "FMJ"
+    },
+    {
+      "contains": "_full_metal",
+      "type": "FMJ"
+    },
+    {
+      "contains": "_buckshot_0",
+      "type": "BUCKSHOT_0"
+    },
+    {
+      "contains": "_00buck",
+      "type": "BUCKSHOT_0"
+    },
+    {
+      "contains": "_buckshot_4",
+      "type": "BUCKSHOT_4"
+    },
+    {
+      "contains": "_4buck",
+      "type": "BUCKSHOT_4"
+    },
+    {
+      "contains": "_birdshot",
+      "type": "BIRDSHOT"
+    }
+  ],
+  "default_type": "FMJ",
+  "ap_penetrates_dox_armor": false,
+  "caliber_base_damage": {
+    "9mm": 27.3,
+    "45acp": 30.0,
+    "50ae": 35.6,
+    "357mag": 32.7,
+    "46x30": 24.6,
+    "57x28": 24.6,
+    "545x39": 31.4,
+    "556x45": 32.7,
+    "762x39": 35.6,
+    "308": 41.0,
+    "30_06": 43.7,
+    "762x54": 47.8,
+    "338": 51.9,
+    "792x57": 43.7,
+    "50bmg": 68.3,
+    "9x18": 25.2,
+    "30mauser": 26.7,
+    "22wmr": 23.3,
+    "500mag": 36.8,
+    "9x39": 33.0,
+    "300blk": 33.8,
+    "58x42": 33.0,
+    "602x41": 34.5,
+    "68x51fury": 44.3,
+    "50beowulf": 42.8,
+    "45_70": 42.0,
+    "127x55": 42.8,
+    "300winmag": 46.1,
+    "408cheytac": 59.7,
+    "12g": 11.0
+  },
+  "type_modifiers": {
+    "HP": {
+      "damage_multiplier": 1.25,
+      "armor_penetration": 0.0,
+      "fire_ticks": 0,
+      "headshot_multiplier": 3.0
+    },
+    "SP": {
+      "damage_multiplier": 1.1,
+      "armor_penetration": 0.15,
+      "fire_ticks": 0,
+      "headshot_multiplier": 2.75
+    },
+    "FMJ": {
+      "damage_multiplier": 1.0,
+      "armor_penetration": 0.3,
+      "fire_ticks": 0,
+      "headshot_multiplier": 2.5
+    },
+    "INCENDIARY": {
+      "damage_multiplier": 0.9,
+      "armor_penetration": 0.1,
+      "fire_ticks": 60,
+      "headshot_multiplier": 2.5
+    },
+    "AP": {
+      "damage_multiplier": 0.75,
+      "armor_penetration": 0.7,
+      "fire_ticks": 0,
+      "headshot_multiplier": 2.0
+    },
+    "BUCKSHOT_0": {
+      "damage_multiplier": 1.0,
+      "armor_penetration": 0.3,
+      "fire_ticks": 0,
+      "headshot_multiplier": 2.0
+    },
+    "BUCKSHOT_4": {
+      "damage_multiplier": 0.625,
+      "armor_penetration": 0.1,
+      "fire_ticks": 0,
+      "headshot_multiplier": 2.0
+    },
+    "BIRDSHOT": {
+      "damage_multiplier": 0.375,
+      "armor_penetration": 0.0,
+      "fire_ticks": 0,
+      "headshot_multiplier": 1.5
+    },
+    "DRAGONS_BREATH": {
+      "damage_multiplier": 0.625,
+      "armor_penetration": 0.0,
+      "fire_ticks": 60,
+      "headshot_multiplier": 2.0
+    }
+  }
+}

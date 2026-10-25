@@ -1,0 +1,8 @@
+name = "Supplementaries Squared"
+filename = "suppsquared-neoforge-1.21-1.2.18.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8268/988/suppsquared-neoforge-1.21-1.2.18.jar"
+hash-format = "sha1"
+hash = "0b6845d2afd22f91275a69ad270a0f0ecbfaebe3"

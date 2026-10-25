@@ -1,0 +1,8 @@
+name = "Salvage Workbench "
+filename = "seamless-deconstructing-workbench-2.1.1+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9072/204/seamless-deconstructing-workbench-2.1.1%2Bmc1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "837a84750a7e12df2dcb72e42e5906fd9c5bcf06"

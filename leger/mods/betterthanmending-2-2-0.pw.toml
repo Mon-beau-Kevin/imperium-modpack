@@ -1,0 +1,8 @@
+name = "Better Than Mending"
+filename = "BetterThanMending-2.2.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/5666/358/BetterThanMending-2.2.0.jar"
+hash-format = "sha1"
+hash = "868135dde3fc2f33150870de4a0f1831b74b755a"

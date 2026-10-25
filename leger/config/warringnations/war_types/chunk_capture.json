@@ -1,0 +1,22 @@
+{
+  "id": "chunk_capture",
+  "scoringSource": "chunk-presence",
+  "winCondition": "score-limit",
+  "territoryEffect": "live-transfer",
+  "target": "any-claimed-chunk",
+  "rewardStructure": "none",
+  "durationPacing": "open-ended",
+  "formulas": {
+    "captureTicksBase": "400",
+    "captureMaxRatePerTick": "6",
+    "captureNeutralDecayPerTick": "1",
+    "captureTierScale": "0.10",
+    "captureSupplyFalloff": "0.05",
+    "captureMinSupply": "0.30",
+    "captureRawProtectionTicks": "600",
+    "scoreLimit": "100000"
+  },
+  "scripts": {
+    "capture_complete": "broadcast_message(\"Un chunk de la ligne de front est tombe !\");"
+  }
+}

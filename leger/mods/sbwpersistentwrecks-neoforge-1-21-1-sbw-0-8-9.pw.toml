@@ -1,0 +1,8 @@
+name = "[SBW] Persistent Wrecks"
+filename = "sbwpersistentwrecks-neoforge-1.21.1-sbw-0.8.9.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8541/420/sbwpersistentwrecks-neoforge-1.21.1-sbw-0.8.9.jar"
+hash-format = "sha1"
+hash = "c081e53fa5619b81b3edd33fc59ffeb3fbab798a"

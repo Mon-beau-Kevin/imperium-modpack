@@ -1,0 +1,8 @@
+name = "Create: Northstar - Redux"
+filename = "Northstar-0.6.6+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8954/734/Northstar-0.6.6%2B1.21.1.jar"
+hash-format = "sha1"
+hash = "21290951e26b8ca0c73955a13de4aa014f473a11"

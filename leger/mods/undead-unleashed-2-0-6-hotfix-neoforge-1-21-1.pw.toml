@@ -1,0 +1,8 @@
+name = "Undead Unleashed - Continued"
+filename = "undead_unleashed-2.0.6-hotfix-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8965/790/undead_unleashed-2.0.6-hotfix-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "7bc796a3e63fe07a7a7a9de254db0595561cebc0"

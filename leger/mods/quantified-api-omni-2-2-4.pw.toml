@@ -1,0 +1,8 @@
+name = "[QAPI] | Quantified API"
+filename = "quantified api-omni-2.2.4.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9037/916/quantified%20api-omni-2.2.4.jar"
+hash-format = "sha1"
+hash = "b0da726a7b5d6729102d26c219b2187945df0d4c"

@@ -1,0 +1,8 @@
+name = "Explosion Overhaul: A new level of destruction"
+filename = "explosionoverhaul-0.2.3.0-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8478/789/explosionoverhaul-0.2.3.0-neoforge.jar"
+hash-format = "sha1"
+hash = "26c0313b1cb937e6a730144f3d74df941c6cea0f"

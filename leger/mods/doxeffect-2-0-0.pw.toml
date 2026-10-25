@@ -1,0 +1,8 @@
+name = "DoxEffect (TaCZ Recommendation)"
+filename = "doxeffect-2.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8690/89/doxeffect-2.0.0.jar"
+hash-format = "sha1"
+hash = "57b6dac77051aca1a3cdf8fc8e2eefcf8d1b66c9"

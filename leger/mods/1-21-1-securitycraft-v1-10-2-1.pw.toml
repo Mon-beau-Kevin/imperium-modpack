@@ -1,0 +1,8 @@
+name = "Security Craft"
+filename = "[1.21.1] SecurityCraft v1.10.2.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8336/498/%5B1.21.1%5D%20SecurityCraft%20v1.10.2.1.jar"
+hash-format = "sha1"
+hash = "8760079e80039f982f1a92d3ee9d60a2bcab3251"

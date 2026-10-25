@@ -1,0 +1,8 @@
+name = "Exposure: Expanded"
+filename = "exposure_expanded-neoforge-1.0.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6959/722/exposure_expanded-neoforge-1.0.1.jar"
+hash-format = "sha1"
+hash = "a64e3b59d385f472c583cc4ed3e9353538a9290d"

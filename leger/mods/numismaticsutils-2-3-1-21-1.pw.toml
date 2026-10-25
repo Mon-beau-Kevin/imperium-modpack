@@ -1,0 +1,8 @@
+name = "Create: Numismatics Utils"
+filename = "numismaticsutils-2.3-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8757/462/numismaticsutils-2.3-1.21.1.jar"
+hash-format = "sha1"
+hash = "1d7b9b4d9abd84355be7a0f18f7a0152e4c3df74"

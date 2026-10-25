@@ -1,0 +1,8 @@
+name = "Steam 'n' Rails Neoforge"
+filename = "railways-0.2.1+neoforge-mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8243/336/railways-0.2.1%2Bneoforge-mc1.21.1.jar"
+hash-format = "sha1"
+hash = "f2d71927ef504b597a6c992d02118c1e6ee6e369"

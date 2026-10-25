@@ -6,6 +6,8 @@ Sources :
   - mods/*.jar           : nos mods et les versions modifiées, hébergés ici ;
   - config/, options.txt, servers.dat, journeymap/ : fichiers de départ, installés UNE SEULE FOIS
     (« preserve ») : les réglages, touches et serveurs des joueurs ne sont jamais écrasés.
+Construit aussi la version « Léger » (dossier leger/) pour les petits PC : mêmes fichiers, moins de mods
+(tools/leger.json) et des réglages graphiques plus légers (tools/leger/).
 Usage : python3 tools/build_pack.py <version>
 """
 import hashlib, json, os, re, sys, urllib.parse
@@ -38,14 +40,54 @@ def slug(name):
     return s[:80]
 
 
+LEGER = "leger"
+
+
+def make_leger():
+    """Recopie le pack principal dans leger/, sans les mods lourds, avec les réglages légers."""
+    import shutil
+    spec = json.load(open(os.path.join(ROOT, "tools", "leger.json"), encoding="utf-8"))
+    dst = os.path.join(ROOT, LEGER)
+    if os.path.isdir(dst):
+        shutil.rmtree(dst)
+    os.makedirs(os.path.join(dst, "mods"))
+    for d in ("config", "journeymap"):
+        shutil.copytree(os.path.join(ROOT, d), os.path.join(dst, d))
+    for f in ("options.txt", "servers.dat", "imperium-version.txt"):
+        shutil.copy2(os.path.join(ROOT, f), os.path.join(dst, f))
+    for f in os.listdir(os.path.join(ROOT, "mods")):
+        if f.endswith(".jar") and f not in spec["sans_mods"]:
+            shutil.copy2(os.path.join(ROOT, "mods", f), os.path.join(dst, "mods", f))
+    for f in spec.get("sans_fichiers", []):
+        p = os.path.join(dst, f)
+        if os.path.exists(p):
+            os.remove(p)
+    over = os.path.join(ROOT, "tools", "leger")
+    for dirpath, _, fns in os.walk(over):
+        for fn in fns:
+            src = os.path.join(dirpath, fn)
+            out = os.path.join(dst, os.path.relpath(src, over))
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            shutil.copy2(src, out)
+    with open(os.path.join(dst, "imperium-edition.txt"), "w", encoding="utf-8", newline="\n") as f:
+        f.write("leger\n")
+    return set(spec["sans_mods"])
+
+
 def main():
-    os.chdir(ROOT)
+    build(ROOT, "Imperium", set())
+    sans = make_leger()
+    build(os.path.join(ROOT, LEGER), "Imperium - Leger", sans)
+
+
+def build(base, packname, sans):
+    os.chdir(base)
     meta_dir = "mods"
     # ancien .pw.toml générés : on repart de zéro
     for f in os.listdir(meta_dir):
         if f.endswith(".pw.toml"):
             os.remove(os.path.join(meta_dir, f))
-    cf = json.load(open("tools/curseforge.json", encoding="utf-8"))
+    cf = [m for m in json.load(open(os.path.join(ROOT, "tools", "curseforge.json"), encoding="utf-8")) if m["filename"] not in sans]
     hosted = {f for f in os.listdir(meta_dir) if f.endswith(".jar")}
     files = []
     used = set()
@@ -65,7 +107,7 @@ def main():
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             f.write(body)
         files.append({"file": path, "hash": sha256(path), "metafile": True})
-    skip_top = {".git", "tools", "installeur", "README.md", "CHANGELOG.md", "pack.toml", "index.toml", ".gitattributes", "docs"}
+    skip_top = {".git", "tools", "installeur", "README.md", "CHANGELOG.md", "pack.toml", "index.toml", ".gitattributes", "docs", LEGER, "dist", ".gitignore"}
     for dirpath, dirnames, filenames in os.walk("."):
         dirnames[:] = [d for d in dirnames if not (dirpath == "." and d in skip_top)]
         for fn in filenames:
@@ -89,14 +131,14 @@ def main():
         out.append("")
     with open("index.toml", "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(out))
-    pack = (f'name = "Imperium"\nauthor = "Kaszimir01"\nversion = {q(VERSION)}\npack-format = "packwiz:1.1.0"\n\n'
+    pack = (f'name = {q(packname)}\nauthor = "Kaszimir01"\nversion = {q(VERSION)}\npack-format = "packwiz:1.1.0"\n\n'
             f'[index]\nfile = "index.toml"\nhash-format = "sha256"\nhash = {q(sha256("index.toml"))}\n\n'
             f'[versions]\nminecraft = {q(MC)}\nneoforge = {q(NEOFORGE)}\n')
     with open("pack.toml", "w", encoding="utf-8", newline="\n") as f:
         f.write(pack)
     n_meta = sum(1 for e in files if e.get("metafile"))
     n_jar = sum(1 for e in files if e["file"].endswith(".jar") and e["file"].startswith("mods/"))
-    print(f"Imperium {VERSION} : {n_meta} mods CurseForge, {n_jar} mods hébergés, {len(files) - n_meta - n_jar} autres fichiers")
+    print(f"{packname} {VERSION} : {n_meta} mods CurseForge, {n_jar} mods hébergés, {len(files) - n_meta - n_jar} autres fichiers")
 
 
 if __name__ == "__main__":

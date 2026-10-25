@@ -1,0 +1,83 @@
+["Lean System"]
+	#Mode for leaning: HOLD (keep pressing key) or TOGGLE (press once to lean, press again to stop)
+	#Allowed Values: HOLD, TOGGLE
+	leanMode = "HOLD"
+	#Require aiming (holding Right Click / ADS) along with lean keys to lean: Aim + Lean Left, Aim + Lean Right
+	leanRequiresAim = false
+	#Automatically lean around walls/corners when standing close to cover
+	autoLeanNearWalls = false
+	#Only trigger auto-lean when aiming down sights (or holding aim key)
+	autoLeanOnlyWhenAiming = false
+	#Raycast detection distance in meters for auto-leaning near walls (0.5 to 3.0)
+	# Default: 1.2
+	# Range: 0.5 ~ 3.0
+	autoLeanDistance = 1.2
+	#Enable or disable sound effects for leaning
+	leanSoundsEnabled = true
+	#Speed of leaning interpolation (0.05 to 0.5)
+	# Default: 0.15
+	# Range: 0.05 ~ 0.5
+	leanSpeed = 0.15
+	#Maximum lean angle in degrees (5 to 45)
+	# Default: 15.0
+	# Range: 5.0 ~ 45.0
+	maxLeanAngle = 15.0
+
+["Crouch System"]
+	#Crouch mode: HOLD or TOGGLE
+	#Allowed Values: HOLD, TOGGLE
+	crouchMode = "HOLD"
+
+["Prone System"]
+	#Prone mode: HOLD or TOGGLE
+	#Allowed Values: HOLD, TOGGLE
+	proneMode = "TOGGLE"
+	#Enable or disable sound effects for prone position
+	proneSoundsEnabled = true
+
+["Slide System"]
+	#Enable or disable sliding mechanic
+	slideEnabled = true
+	#Enable or disable sound effects for sliding
+	slideSoundsEnabled = true
+	#Action when releasing the slide key early: CONTINUE (finish slide momentum and then go prone), PRONE (interrupt slide immediately and go prone), STAND (interrupt slide and stand up)
+	#Allowed Values: CONTINUE, PRONE, STAND
+	slideReleaseMode = "STAND"
+	#Minimum speed threshold to trigger sliding (requires sprinting)
+	# Default: 0.15
+	# Range: 0.05 ~ 1.0
+	slideMinSpeed = 0.15
+	#Duration of sliding in ticks (determines slide distance)
+	# Default: 15
+	# Range: 10 ~ 50
+	slideDurationTicks = 15
+	#Initial speed impulse boost multiplier for sliding
+	# Default: 1.25
+	# Range: 1.0 ~ 2.5
+	slideSpeedBoost = 1.25
+
+["Movement Animations"]
+	#Enable custom realistic walk, sprint, idle and crouch animations replacing vanilla movement
+	enableCustomWalkAnimations = true
+	#Enable automatic animation compatibility when ParCool mod is installed
+	parcoolCompatEnabled = true
+
+["Peak Stamina Compatibility"]
+	#Enable or disable stamina requirements when Peak Stamina mod is installed
+	peakStaminaEnabled = true
+	#Stamina cost consumed upon starting a slide
+	# Default: 10.0
+	# Range: 0.0 ~ 50.0
+	peakStaminaSlideStartCost = 10.0
+	#Stamina cost consumed upon ending a slide
+	# Default: 10.0
+	# Range: 0.0 ~ 50.0
+	peakStaminaSlideEndCost = 10.0
+	#Stamina cost consumed upon lying down (going prone)
+	# Default: 10.0
+	# Range: 0.0 ~ 50.0
+	peakStaminaProneDownCost = 10.0
+	#Stamina cost consumed upon standing up from prone
+	# Default: 10.0
+	# Range: 0.0 ~ 50.0
+	peakStaminaProneUpCost = 10.0

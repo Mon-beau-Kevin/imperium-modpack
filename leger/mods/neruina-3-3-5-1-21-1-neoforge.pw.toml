@@ -1,0 +1,8 @@
+name = "Neruina - Ticking Entity Fixer"
+filename = "neruina-3.3.5+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9220/575/neruina-3.3.5%2B1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "f8556c45619b21b95741f340b0eaea48f26b4a6b"

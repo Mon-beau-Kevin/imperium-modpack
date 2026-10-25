@@ -1,0 +1,8 @@
+name = "Berezka's library"
+filename = "berezka_api-1.2.9.5-fix-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8624/655/berezka_api-1.2.9.5-fix-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "2b483e873bf86ae4b856efb47ea11a2954f20dda"

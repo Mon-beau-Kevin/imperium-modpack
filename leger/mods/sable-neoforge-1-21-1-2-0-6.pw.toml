@@ -1,0 +1,8 @@
+name = "Sable"
+filename = "sable-neoforge-1.21.1-2.0.6.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9043/865/sable-neoforge-1.21.1-2.0.6.jar"
+hash-format = "sha1"
+hash = "cf46f7e8c1511f170abcdbee739944f0540549bf"

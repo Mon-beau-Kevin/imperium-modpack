@@ -1,0 +1,427 @@
+[claims]
+	#Base claims per member
+	# Default: 8
+	# Range: 1 ~ 512
+	claimsPerMemberBase = 8
+	#Hard cap on total claims per nation
+	# Default: 64
+	# Range: 1 ~ 4096
+	claimsPerMemberMax = 64
+	#Claim cap for a player who hasn't joined or founded a nation
+	# Default: 1
+	# Range: 0 ~ 4096
+	soloClaimCap = 0
+	#Require voluntary claims to border your nation's existing territory in the same dimension (anti-grief)
+	requireContiguousClaims = false
+	#How many of a nation's own claimed chunks may be force-loaded (kept ticking with nobody nearby, /forceload) at once. A real ongoing server-performance cost, so kept small.
+	# Default: 3
+	# Range: 0 ~ 4096
+	maxForceLoadedChunksPerNation = 3
+	#Dimension IDs (e.g. "vaultmc:the_vault") where no chunk can ever be claimed by any nation, and so is never contested by any war either. Empty by default.
+	excludedDimensions = []
+
+[war]
+	#Ticks between war declaration and war start (2400 = 2 min)
+	# Default: 2400
+	# Range: > 0
+	declarationCooldownTicks = 6000
+	#Ticks until a war times out (144000 = 2 hours)
+	# Default: 144000
+	# Range: > 1
+	endCooldownTicks = 1728000
+	#Minimum members a nation must have to declare war
+	# Default: 1
+	# Range: 1 ~ 100
+	minMembersToDeclarWar = 1
+	#War model: CHUNK_CAPTURE, ATTRITION, SIEGE, OBJECTIVES, NEGOTIATED
+	warModel = "CHUNK_CAPTURE"
+	#Score threshold to win a war (CHUNK_CAPTURE, ATTRITION, OBJECTIVES)
+	# Default: 100
+	# Range: 1 ~ 10000
+	warScoreToWin = 100
+	#Ticks required to capture one chunk. Currently has no effect on any active war model -- every composable war type (including chunk_capture) reads its own captureTicksBase from its war-type formula file instead. Kept for old configs and possible legacy-model revival; edit the war-type json to actually change capture speed.
+	# Default: 200
+	# Range: 1 ~ 72000
+	captureTicksBase = 200
+	#Ticks attacker must hold defender home to win a SIEGE war. Currently has no effect -- the SIEGE war model runs through the composable 'breach' war type, which uses its own keepHoldTicks formula instead. Kept for old configs; edit war_types/breach.json to actually change hold-time.
+	# Default: 12000
+	# Range: > 1
+	siegeHoldTicks = 12000
+	#War-score points per enemy-owned chunk a side has presence in, per scoring interval (ATTRITION, NEGOTIATED). Currently has no effect -- both war models run through composable engines with their own formula-driven scoring instead. Kept for old configs; edit the relevant war-type json to actually change scoring.
+	# Default: 1
+	# Range: 0 ~ 10000
+	attritionPointsPerTick = 1
+	#How often, in ticks, the legacy (pre-composable) ATTRITION/NEGOTIATED war engine re-scores presence and hands out attritionPointsPerTick. Currently has no effect -- that legacy engine no longer runs; every war goes through the composable war-type-file system, which exposes the same idea per-type as that file's own attritionScoreInterval/negotiatedScoreInterval formula instead. Kept for old configs.
+	# Default: 20
+	# Range: > 1
+	attritionScoreIntervalTicks = 20
+	#Maximum simultaneous active wars per nation
+	# Default: 3
+	# Range: 1 ~ 100
+	maxConcurrentWarsPerNation = 3
+	#Minimum claimed chunks a nation must own to declare war
+	# Default: 0
+	# Range: 0 ~ 4096
+	minClaimsToDeclareWar = 4
+	#Master switch: false blocks /wn war declare and declare-as outright, before any other gate. Nations, claims, and diplomacy keep working; only starting a war is disabled.
+	warDeclarationsEnabled = true
+	#Blocks a declaration when the declarer's member count is more than this many times the target's. 0 disables the check.
+	# Default: 0.0
+	# Range: 0.0 ~ 1000.0
+	warSizeParityMinRatio = 0.0
+	#Require staff to approve war declarations (/wn admin war approve) before the countdown starts
+	requireWarApproval = true
+	#Require staff to approve nation creation (/wn admin nation approve <player>) before the nation is founded
+	requireNationApproval = false
+	#Require the founder to already have a linked Discord account (see wn-discord's /account link) before founding a nation. Only has an effect while wn-discord is installed and connected -- a server without it sees no behavior change regardless of this value, since nothing exists to check the link against. Default true (assumes wn-discord is the common case).
+	requireLinkedAccountForNationCreation = false
+	#Require staff to approve a nation's custom-painted banner (/wn admin banner approve <nation>) before it replaces the current one
+	requireBannerApproval = false
+	#Strip FTB Teams' and FTB Chunks' own top-level commands (/ftbteams, /ftbteams_add_fake_player, /ftbchunks, /create_gui, /chunks) once they finish registering, since those mods' own commands let a player found a team or claim/unclaim land straight through them, bypassing every WN gate (requireNationApproval, requireLinkedAccountForNationCreation, claim protection). Safe to enable: WN's own FTB integration talks to FTB Teams'/FTB Chunks' Java API directly, never through their commands. Does not touch either mod's other commands (e.g. FTB Chunks' waypoint/loaded-chunk commands) or GUI screens. Default false (opt in deliberately).
+	suppressFtbCommands = false
+	#Grace window, in ticks, during which a nation with no member online anywhere is immune to every composable war engine's capture progress. Measured from the last member's most recent login/logout. 0 disables offline raid protection.
+	# Default: 0
+	# Range: > 0
+	offlineRaidProtectionTicks = 2000000000
+	#Percent of a nation's members who must vote before a war-declaration vote can resolve, for nations with warVoteRequired on
+	# Default: 50.0
+	# Range: 0.0 ~ 100.0
+	warVoteQuorumPercent = 50.0
+	#Percent of CAST votes that must be yes for a war-declaration vote to pass once quorum is met
+	# Default: 50.0
+	# Range: 0.0 ~ 100.0
+	warVoteApprovalPercent = 50.0
+	#Ticks a live war-declaration vote stays open before it's tallied on whatever turnout it has (6000 = 5 min)
+	# Default: 6000
+	# Range: > 20
+	warVoteTimeoutTicks = 12000
+
+[season]
+	#Ticks between automatic seasonal wipes (releases every nation's claims, zeroes treasury, resets progression, archives a leaderboard first). 0 disables automatic seasons; /wn admin season wipe always works regardless.
+	# Default: 0
+	# Range: 0 ~ 9223372036854775807
+	seasonLengthTicks = 0
+	#How many top nations (by claim count) are captured in each archived season's leaderboard
+	# Default: 10
+	# Range: 0 ~ 1000
+	seasonLeaderboardSize = 10
+
+[outcome]
+	#Percent of loser claims annexed by winner on a decisive win. Currently has no effect -- annexation is now decided per composable war type (see each war_types/*.json's own annex terms) instead of this one global percent. Kept for old configs.
+	# Default: 50
+	# Range: 0 ~ 100
+	annexPercent = 50
+	#Ticks of re-declaration immunity granted to the loser after a war. Currently has no effect -- nothing in the composable war engine reads it. Kept for old configs; offlineRaidProtectionTicks (war section) is the setting that actually shields a recently-warred nation today.
+	# Default: 6000
+	# Range: > 0
+	postWarProtectionTicks = 6000
+
+[combat]
+	#Whether allied nation members can damage each other
+	allowFriendlyFire = false
+	#Shield claimed land from explosions, cross-border pistons, mob block-breaking and trampling
+	claimEnvironmentProtection = false
+	#CONQUEST base score; attacker win threshold = this * defender tier weight, points per capture = attacker tier weight. Currently has no effect -- CONQUEST runs through the composable war-type-file system, which reads its own scoreLimit/tier formulas from war_types/conquest.json instead. Kept for old configs.
+	# Default: 20
+	# Range: 1 ~ 100000
+	conquestScoreBase = 20
+
+[territory]
+	#Strength decay rate per tick for unclaimed/inactive chunks. Currently has no effect -- reserved for a chunk-strength mechanic that hasn't been built yet.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	chunkStrengthDecayRate = 0.01
+	#Ticks a nation-home 'Go Home' teleport channels for before completing; cancelled by damage or movement (100 = 5s). 0 disables the channel (instant teleport).
+	# Default: 100
+	# Range: 0 ~ 72000
+	homeTeleportChannelTicks = 100
+	#Excludes a nation's home claim entirely from chunk_capture/conquest/objectives capture (NOT siege, whose keep IS the point of that war type). False by default.
+	protectHomeClaimFromCapture = false
+
+[koth]
+	#Currency paid to the winning nation's treasury when a recurring KOTH round (/wn admin koth) ends. 0 = no payout, round still runs.
+	# Default: 0
+	# Range: 0 ~ 9223372036854775807
+	kothRewardAmount = 0
+	#Master switch for King of the Hill: recurring, admin-defined contested sites (/wn admin koth create|delete|list) that award kothRewardAmount to whichever nation holds the most cumulative member-presence when a round ends. When false every /wn admin koth subcommand refuses with a 'disabled on this server' message and no round ever starts; any site already defined stays on disk untouched. Default true -- KOTH ran unconditionally before this toggle existed, so an untouched server sees no behavior change.
+	kothEnabled = true
+
+[display]
+	#Show the player's rank, from an external rank-provider mod (LuckPerms), as its own bracketed segment next to the nation tag in chat/tab list. No effect if no supported rank-provider mod is installed.
+	showRankTag = true
+	#Render the nation tag after the player's name instead of before it
+	nationTagAsSuffix = false
+	#Render every nation member's banner design as their in-world cape. Server-controlled: it overrides each member's own client-side cape toggle and replaces any real cape they own. Players with no nation, or whose nation has no banner design, are unaffected. Default false.
+	nationCapesEnabled = false
+	#Narrows nationCapesEnabled to wartime: members wear the nation cape only while their nation is in an ongoing war, and revert to their own cape when it ends. Inert unless nationCapesEnabled is true. Default false (capes are always on once enabled).
+	nationCapesWarOnly = false
+
+[economy]
+	#Master switch for treasury/economy features: nation treasury deposit/withdraw, war declaration cost, claim upkeep, and negotiated-peace reparations/tribute/vassalage/DMZ. Cession and white peace stay available either way. Default true; set false for a server that doesn't want an economy layer at all.
+	economyEnabled = true
+	#Which installed economy/banking mod backs nation treasuries when more than one is present, e.g. "ubs". "auto" (default) uses whichever one the loader detects first. Setting a specific id that isn't actually installed leaves treasury features inert rather than silently using a different provider. Has no effect on the separate personal-wallet bridge (Impactor/Lightman's Currency/SG-Economy) treasury deposit/withdraw also uses.
+	economyProviderId = "auto"
+	#Nation XP awarded per net-new claimed chunk (drives leveling, see the claims section's per-level bonus)
+	# Default: 10
+	# Range: 0 ~ 100000
+	claimXpPerChunk = 0
+	#Nation XP awarded to the winner of a decisively-won war. Nothing is awarded for a white peace, a negotiated settlement with no victor, or an admin-ended war. 0 disables it.
+	# Default: 100
+	# Range: 0 ~ 100000
+	warWinXp = 100
+	#Currency a member must deposit into the nation treasury per 1 nation XP. Counted against the treasury's all-time high, so deposit/withdraw cycling earns nothing; admin balance grants never count. 0 disables it.
+	# Default: 500
+	# Range: 0 ~ 9223372036854775807
+	treasuryDepositCurrencyPerXp = 500
+	#One-time nation XP for each diplomacy milestone: the nation's first alliance, and its first non-aggression pact. Each pays out at most once per nation. 0 disables it.
+	# Default: 50
+	# Range: 0 ~ 100000
+	diplomacyMilestoneXp = 0
+	#Treasury cost to declare a war; the declaration is refused if the nation can't afford it. 0 disables the cost (declaring is free).
+	# Default: 0
+	# Range: 0 ~ 9223372036854775807
+	warDeclarationCost = 0
+	#Treasury upkeep charged per claimed chunk, once per in-game day, to every nation holding claims. Never puts a nation in debt. 0 disables upkeep.
+	# Default: 0
+	# Range: 0 ~ 9223372036854775807
+	claimUpkeepPerChunkPerDay = 0
+	#How many chunks a nation may flag as protected critical infrastructure at once
+	# Default: 5
+	# Range: 0 ~ 4096
+	maxProtectedAssetsPerNation = 5
+	#Percent of the loser's treasury seized by the winner when any composable war ends decisively (not via negotiated peace, which has its own reparations term). 0 disables it.
+	# Default: 0
+	# Range: 0 ~ 100
+	treasurySeizurePercent = 0
+
+[negotiated]
+	#Score-margin denominator for negotiated-peace dominance; a margin below this reads as a skirmish, not domination
+	# Default: 40
+	# Range: > 1
+	leverageNormalizer = 40
+	#Negotiating budget a side has at full (1.0) war-score dominance
+	# Default: 100
+	# Range: 0 ~ 1000000
+	maxLeverageBudget = 100
+	#Multiplier on entitlement before a peace offer is rejected as unaffordable, allowing a small over-ask
+	# Default: 1.15
+	# Range: 1.0 ~ 10.0
+	leverageSlack = 1.15
+	#Budget cost per percentage point of claims ceded in a peace offer
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	cessionWeight = 3.0
+	#Budget cost per percentage point of treasury demanded as reparations in a peace offer
+	# Default: 0.6
+	# Range: 0.0 ~ 1000.0
+	reparationWeight = 0.6
+	#Flat budget cost to attach recurring tribute to a peace offer
+	# Default: 25.0
+	# Range: 0.0 ~ 1000.0
+	tributeWeight = 25.0
+	#Flat budget cost to force vassalage in a peace offer
+	# Default: 60.0
+	# Range: 0.0 ~ 1000.0
+	vassalageWeight = 60.0
+	#Budget cost per percentage point of claims placed under a DMZ in a peace offer
+	# Default: 1.5
+	# Range: 0.0 ~ 1000.0
+	dmzWeight = 1.5
+	#Minimum dominance (0.0-1.0) required to force vassalage at all, on top of its budget cost
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	vassalageDominanceFloor = 0.75
+	#How often an active tribute obligation is charged
+	# Default: 24000
+	# Range: 1 ~ 9223372036854775807
+	tributeIntervalTicks = 24000
+	#How long a tribute obligation lasts once imposed
+	# Default: 168000
+	# Range: 1 ~ 9223372036854775807
+	tributeDurationTicks = 168000
+	#How long an imposed vassalage lasts, blocking the vassal from declaring war on its overlord
+	# Default: 168000
+	# Range: 1 ~ 9223372036854775807
+	vassalageDurationTicks = 168000
+	#How long an established DMZ blocks capture/annexation of its chunks
+	# Default: 72000
+	# Range: 1 ~ 9223372036854775807
+	dmzDurationTicks = 72000
+	#Minimum self-dominance (0.0-1.0) required to issue an ultimatum
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	ultimatumThreshold = 0.6
+	#How long the responder has to accept a live ultimatum before it auto-resolves
+	# Default: 2400
+	# Range: > 1
+	ultimatumGraceTicks = 2400
+	#How long a live peace offer with no ultimatum stands before the war auto-resolves it
+	# Default: 6000
+	# Range: > 1
+	peaceNegotiationTicks = 6000
+	#Minimum |dominance| for auto-resolution's dominance-based default terms, below this it's white peace instead
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	autoResolveDominanceThreshold = 0.5
+	#Slack multiplier a mediator's proposal may exceed either side's own entitlement by
+	# Default: 1.3
+	# Range: 1.0 ~ 10.0
+	mediationOverreach = 1.3
+
+[history]
+	#Hard cap on retained concluded-war records server-wide (WarHistoryStore), oldest evicted first. Pure history, no gameplay effect; only bounds memory/save-file growth and the /war history lookback window.
+	# Default: 100
+	# Range: 1 ~ 1000000
+	warHistoryMaxEntries = 100
+	#Hard cap on retained diplomatic-relation-change records server-wide (DiplomacyHistoryStore), oldest evicted first. Pure history, no gameplay effect.
+	# Default: 100
+	# Range: 1 ~ 1000000
+	diplomacyHistoryMaxEntries = 100
+	#Hard cap on retained governance/membership log entries PER NATION (NationLogStore), oldest evicted first. Pure history, no gameplay effect.
+	# Default: 50
+	# Range: 1 ~ 1000000
+	nationLogMaxEntries = 50
+	#Hard cap on retained nation-size snapshots PER NATION (NationHistoryStore), recorded roughly once an hour, oldest evicted first. Feeds the wn-discord growth-over-time graph command; pure history, no gameplay effect, only bounds memory growth and how far back the graph can look. Default 2880 (~120 days at the recorder's 1-hour cadence).
+	# Default: 2880
+	# Range: 1 ~ 1000000
+	nationHistoryMaxEntriesPerNation = 2880
+	#Hard cap on retained resolved-bet records PER PLAYER (WarBetHistoryStore), oldest evicted first. Feeds the wn-discord bet-history command; pure history, no gameplay effect.
+	# Default: 50
+	# Range: 1 ~ 1000000
+	warBetHistoryMaxEntriesPerPlayer = 50
+	#How many pending chunk-unclaims ClaimReleaseService drains per server tick (e.g. when a large nation disbands or a season wipe releases every claim at once). Higher finishes a mass release faster at the cost of more work per tick.
+	# Default: 5
+	# Range: 1 ~ 100000
+	claimReleaseChunksPerTick = 5
+
+[commands]
+	#Nest every WN command under a shared /wn root (e.g. /wn nation, /wn war end) instead of registering bare top-level commands (/nation, /war end). Off by default. Enable this if another installed mod's command already claims one of WN's bare names (e.g. the Homeostatic Seasons mod claims /season). Requires a server restart (or a vanilla /reload) to take effect.
+	commandNamespacePrefixEnabled = false
+
+[immersion]
+	#Right-clicking a signed written book titled 'Join: <Nation>' submits a /nation apply <Nation> application, as a physical/in-world alternative to typing the command. Purely an alternate UI trigger for the same application flow (application-policy nations still require officer approval, invite-only nations still reject it); off by default.
+	bookApplicationsEnabled = false
+	#Shift-right-clicking a placed banner claims the player's current chunk for their nation (same rules as /nation claim); right-clicking a placed banner with flint and steel unclaims it (same as /nation unclaim). Off by default.
+	bannerClaimingEnabled = false
+	#A nation's painted banner design is rendered on real banner blocks in the world: any banner with no loom patterns of its own, standing in a chunk claimed by a nation that has painted a custom banner, flies that nation's design instead of plain dyed cloth. Purely visual and entirely client-side (nothing extra is stored or sent); patterned banners, banners outside claimed land, and nations still on the default banner template are untouched. Off by default.
+	nationBannerWorldPresenceEnabled = false
+	#Right-clicking a placed banner with a goat horn declares war on the nation owning the nearest claimed chunk within goatHornWarDeclarationRadiusChunks of the banner (same rules as /war declare). Off by default.
+	goatHornWarDeclarationEnabled = false
+	#Search radius, in chunks, goatHornWarDeclarationEnabled scans around the banner for the nearest foreign claim.
+	# Default: 3
+	# Range: 1 ~ 64
+	goatHornWarDeclarationRadiusChunks = 3
+
+[luckperms]
+	#Auto-manage a LuckPerms group per nation (wn_nation_<id>): created on nation creation, its prefix kept in sync with the nation's name, membership kept in sync with the nation's roster, and cleared (not deleted) when the nation disbands. No effect if LuckPerms isn't installed. Off by default -- strictly opt-in, so a server whose admin manages LuckPerms groups by hand sees no behavior change unless this is turned on.
+	syncLuckPermsGroups = false
+	#Play a handful of vanilla sound effects for key war/nation moments (war declared, a chunk capture crossing a 25/50/75% milestone, a nation disbanding). Purely cosmetic audio, no gameplay effect; on by default, turn off if players/servers find it annoying.
+	warSoundEffectsEnabled = true
+	#Broadcast a chat line (scoped to the two belligerent nations) whenever a kill happens during an active war, plus a personal running-total line to killer and victim. Purely additive observability, no gameplay effect; on by default, turn off on a server with heavy war PvP that finds the per-kill chat noisy. Lifetime kill/death/war-win counters (/war stats) keep tracking either way.
+	warKillAnnouncementsEnabled = true
+
+[capitals]
+	#Master switch for nation capitals: a named, leader-designated seat pinned to one of the nation's own claimed chunks (/nation capital set <name>). When false every /nation capital subcommand refuses with a 'disabled on this server' message, the capital chunk gets no unclaim guard, and capitalIncomePerDay is inert regardless of its value. Off by default -- strictly opt-in, so an untouched server sees no behavior change at all.
+	capitalsEnabled = false
+	#How long, in wall-clock minutes, a nation must wait between MOVING its capital from one chunk to another. A nation's first designation and any in-place rename are never subject to it, and clearing the capital does not reset it (otherwise clear-then-redesignate would be a free bypass). Default 720 (12 hours); 0 disables the cooldown.
+	# Default: 720
+	# Range: 0 ~ 525600
+	capitalMoveCooldownMinutes = 720
+	#Currency deposited into the treasury of every nation that has a designated capital, once per in-game day (every 24000 ticks, the same boundary claimUpkeepPerChunkPerDay is charged on). Inert unless capitalsEnabled AND economyEnabled are both on; 0 disables income while leaving the capital itself (name, seat, unclaim guard) fully working.
+	# Default: 100
+	# Range: 0 ~ 9223372036854775807
+	capitalIncomePerDay = 100
+	#When true, a nation that loses its capital chunk to an enemy during a war immediately capitulates in THAT war: it ends at once as a decisive defeat, exactly as if the nation had run /war surrender, so the usual consequences follow (war record, SIEGE home-chunk annexation, treasurySeizurePercent). The nation itself survives -- it is not disbanded, keeps its members, remaining claims and treasury, and its other wars are untouched. Inert unless capitalsEnabled is also on. Off by default -- an optional intensifier on top of an already opt-in feature.
+	capitalCaptureEndsWar = false
+
+[bounty]
+	#Master switch for bounties: a nation escrows currency on a player via /bounty post, paid out of the killer's wallet on that player's next confirmed PvP death regardless of either side's nation or war status. When false every /bounty subcommand refuses with a 'disabled on this server' message and no bounty can be posted, cancelled or listed. Posting already separately refuses when economyEnabled is off (a bounty is treasury-backed escrow); this toggle is for turning the feature itself off. Default true -- bounties ran unconditionally before this toggle existed, so an untouched server sees no behavior change.
+	bountiesEnabled = true
+
+[villages]
+	#Master switch for villages: an independent territorial unit below the nation, with its own name, leader, roster and claimed chunks, either affiliated with a nation or fully standalone (/village create <name>). When false every /village subcommand refuses with a 'disabled on this server' message, no village can be founded, the /claim guard against village land is inert, and no siege ever runs. Off by default -- strictly opt-in, so an untouched server sees no behavior change at all.
+	villagesEnabled = false
+	#Maximum chunks one village may hold. Village claims are DISJOINT from nation claims: a village can only be founded and expand on land no nation and no other village holds, and its chunks count toward no nation's claim cap or upkeep. Every claim after the first must border the village's existing land. Default 16; 0 means unlimited.
+	# Default: 16
+	# Range: 0 ~ 4096
+	villageMaxClaims = 16
+	#Seconds of sustained, outnumbering enemy presence inside a village's chunks needed to capture it. Progress accrues at most 3/second however lopsided the headcount and decays 1/second while uncontested, so this is a best-case floor divided by three, not a fixed timer. A standalone village may be besieged by any nation; a nation-affiliated one only by a nation at war with its owner. Default 300.
+	# Default: 300
+	# Range: 5 ~ 86400
+	villageSiegeSeconds = 300
+	#How long, in wall-clock minutes, a village that just changed hands in a siege cannot be besieged again, so a contested village can't be relayed back and forth on a loop. Default 60; 0 disables it.
+	# Default: 60
+	# Range: 0 ~ 525600
+	villageSiegeImmunityMinutes = 60
+	#Progress a single one-second siege step may add to a besieged village, however lopsided the attacker/defender headcount is. A cap: puts a floor of villageSiegeSeconds / this value on how fast a village can fall, so defenders always get at least that long a window to respond. Raise for faster-flipping villages; lower (down to 1) to make numbers matter less and time-under-siege matter more. Default 3.
+	# Default: 3
+	# Range: 1 ~ 1000
+	villageSiegeMaxProgressPerSecond = 3
+	#Progress lost per second a besieged village's siege sits uncontested (nobody currently outnumbers the defenders). Slower than it accrues by default, so a brief lapse doesn't cost everything, but an abandoned siege still unwinds on its own. 0 disables decay entirely. Default 1.
+	# Default: 1
+	# Range: 0 ~ 1000
+	villageSiegeDecayPerSecond = 1
+
+[access]
+	#Master switch for player-initiated nation creation via /nation create. False blocks all self-service creation outright, before any other gate (name validation, approval queue, etc.); /wn admin nation create <name> <player> (admin-forced creation) is NOT affected -- that's the intended bypass for a server that wants nations created only by staff. Default true (an untouched server sees no behavior change).
+	playerCreationEnabled = true
+	#Master switch for new join requests: /nation join (instant join on an OPEN nation) and /nation apply (application submission on an APPLICATION nation) both refuse outright when false, on top of whatever per-nation join policy already applies. Existing memberships and already-sent invites are unaffected. Default true (an untouched server sees no behavior change).
+	joinRequestsEnabled = true
+	#How many co-leaders a nation may appoint alongside its primary leader (/nation coleader add). Co-leadership grants every permission implicitly, exactly like the primary leader -- it's shared command of the whole nation, not a role tier. Nations wanting many privileged-but-not-total-control members should use a custom role instead. Default 4.
+	# Default: 4
+	# Range: 1 ~ 100
+	maxCoLeaders = 4
+	#Maximum screening questions a nation may set for its join-application flow (/nation applyquestions). A small bounded list by design, meant to weed out obviously-wrong applicants rather than be a general form builder. Existing questions beyond a lowered cap are silently trimmed the next time they're saved. Default 5.
+	# Default: 5
+	# Range: 0 ~ 50
+	maxApplicationQuestions = 5
+
+[rebellions]
+	#Master switch for internal rebellions: disgruntled nation members secretly organize (/rebellion create|join|abandon|info|start) to break away and found a new nation that immediately goes to war with the one they left. When false every /rebellion subcommand refuses with a 'disabled on this server' message and no rebellion can ever be founded. Off by default -- strictly opt-in, so an untouched server sees no behavior change at all.
+	rebellionsEnabled = false
+	#Flat minimum participant count a rebellion needs before it's eligible to split off, regardless of the origin nation's size. Guards a small nation against a single defector instantly forming a 'rebellion' of one. Default 2.
+	# Default: 2
+	# Range: 1 ~ 4096
+	rebellionMinParticipants = 2
+	#Minimum fraction (0.0-1.0) of the origin nation's CURRENT member count a rebellion needs among its participants before it's eligible, on top of rebellionMinParticipants (the larger of the two applies). Default 0.34 (roughly a third).
+	# Default: 0.34
+	# Range: 0.0 ~ 1.0
+	rebellionMinParticipantFraction = 0.34
+	#Minimum wall-clock minutes a rebellion must exist before it's eligible to split, even once it has enough participants -- stops instant found-and-finalize, and gives the origin nation's leadership a short window to notice something is wrong. Default 10.
+	# Default: 10
+	# Range: 0 ~ 525600
+	rebellionMinMinutes = 10
+
+[witherBlocking]
+	#Cancel newly-spawned Withers outright, before they ever join the world. Withers already present in the save are unaffected -- only fresh spawns are intercepted. Off by default (Withers spawn normally).
+	blockWitherSpawns = false
+
+[raidCurfew]
+	#Master switch: block /war declare, /war declare-as, and /war reinforce during a fixed daily time window, regardless of who is online. Distinct from war.offlineRaidProtectionTicks, which is presence-based rather than schedule-based. Off by default.
+	raidCurfewEnabled = true
+	#Curfew window start, HH:mm 24-hour local time in raidCurfewTimeZone. Inert unless raidCurfewEnabled is true.
+	raidCurfewStart = "01:00"
+	#Curfew window end, HH:mm 24-hour local time in raidCurfewTimeZone; may wrap midnight (e.g. start 22:00, end 06:00). Inert unless raidCurfewEnabled is true.
+	raidCurfewEnd = "10:00"
+	#IANA timezone id (e.g. "America/New_York", "UTC") the curfew window is evaluated in.
+	raidCurfewTimeZone = "Europe/Paris"
+
+[chunkCapture]
+	#Seconds of no movement before a player stops contributing to composable chunk-capture headcount scoring. Only affects capture-progress headcount; war declarations, PvP, and everything else reading online-player state are unaffected. 0 disables the filter (every online player always counts). Default 60.
+	# Default: 60
+	# Range: 0 ~ 86400
+	chunkCaptureAfkThresholdSeconds = 60
+	#Lower Y-level (inclusive) a player must be at or above to contribute to chunk-capture headcount scoring. Default Integer.MIN_VALUE: no floor, zero behavior change on an untouched server. Narrow this (with chunkCaptureMaxY) to require capture contribution at a specific altitude band.
+	# Default: -2147483648
+	# Range: > -2147483648
+	chunkCaptureMinY = -2147483648
+	#Upper Y-level (inclusive) a player must be at or below to contribute to chunk-capture headcount scoring. Default Integer.MAX_VALUE: no ceiling, zero behavior change on an untouched server. See chunkCaptureMinY.
+	# Default: 2147483647
+	# Range: > -2147483648
+	chunkCaptureMaxY = 2147483647
+	#Apply the vanilla Glowing status effect to any player currently counting toward a chunk's capture progress, so it's visually obvious who's in the capture zone. Default true (on by default, unlike most recent additions).
+	chunkCaptureGlowEnabled = true
+
+[metrics]
+	#Send anonymous server/player-count usage statistics to bStats (bstats.org), the standard analytics service most Minecraft mods use. Only aggregate counts are sent (player count, server count, a few WN feature-usage stats such as nations-created and active-war counts) -- never player names, UUIDs, IPs, or server addresses. This is an additional, mod-specific off switch; bStats also writes its own global opt-out file (plugins/bStats/config.yml) that applies to every mod on the server, independent of this setting. Default true (on by default, matching bStats' own convention), but you may want to turn this off if your server has a strict no-telemetry policy.
+	metricsEnabled = true

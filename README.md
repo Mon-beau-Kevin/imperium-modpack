@@ -32,3 +32,9 @@ Voir [CHANGELOG.md](CHANGELOG.md).
 - `tools/curseforge.json` : mods téléchargés depuis CurseForge ; `mods/*.jar` : nos mods et les versions modifiées.
 - `config/`, `options.txt`, `servers.dat`, `journeymap/` : installés une seule fois, jamais écrasés ensuite.
 - Après une modification : `python3 tools/build_pack.py <version>`, mettre la même version dans `imperium-version.txt`, puis commit et push.
+
+
+## Version Léger (petits PC)
+Le dossier `leger/` est un second pack, construit automatiquement par `tools/build_pack.py` : mêmes fichiers, sans les mods listés dans `tools/leger.json`, avec les réglages de `tools/leger/`. Il se met à jour tout seul comme le pack normal (fichier `imperium-edition.txt`).
+
+Packs à importer dans CurseForge : `python3 tools/make_cf_zips.py` (dans `dist/`).

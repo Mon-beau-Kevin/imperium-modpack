@@ -1,0 +1,8 @@
+name = "Nebulus' New Paintings"
+filename = "nebulus_new_paintings-1.0.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6216/857/nebulus_new_paintings-1.0.0-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "8191c339b31bdca2e9492367c96a3c13ff260612"

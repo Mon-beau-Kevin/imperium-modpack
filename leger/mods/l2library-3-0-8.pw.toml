@@ -1,0 +1,8 @@
+name = "L2 Library"
+filename = "l2library-3.0.8.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7584/599/l2library-3.0.8.jar"
+hash-format = "sha1"
+hash = "b41ecb7b33335259265b1b4dfae806cab801aeb4"
