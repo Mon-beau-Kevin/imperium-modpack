@@ -12,8 +12,13 @@ if not exist "packwiz-installer-bootstrap.jar" (
 
 rem --- On cherche Java : d'abord celui installe par CurseForge, sinon celui de l'ordinateur ---
 set "JAVA="
-for /d %%D in ("%~dp0..\..\Install\runtime\*") do if not defined JAVA if exist "%%~D\bin\java.exe" set "JAVA=%%~D\bin\java.exe"
-for /d %%D in ("%USERPROFILE%\curseforge\minecraft\Install\runtime\*") do if not defined JAVA if exist "%%~D\bin\java.exe" set "JAVA=%%~D\bin\java.exe"
+for %%C in ("%~dp0..\..\Install" "%USERPROFILE%\curseforge\minecraft\Install") do (
+  for /d %%D in ("%%~C\java\*") do if not defined JAVA if exist "%%~D\bin\java.exe" set "JAVA=%%~D\bin\java.exe"
+  for /d %%D in ("%%~C\runtime\*") do (
+    if not defined JAVA if exist "%%~D\bin\java.exe" set "JAVA=%%~D\bin\java.exe"
+    for /d %%E in ("%%~D\windows-x64\*") do if not defined JAVA if exist "%%~E\bin\java.exe" set "JAVA=%%~E\bin\java.exe"
+  )
+)
 if not defined JAVA (
   where java >nul 2>nul && set "JAVA=java"
 )
