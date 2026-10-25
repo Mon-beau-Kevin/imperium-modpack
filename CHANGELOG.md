@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.3
+- Écran titre : bandeau vert « Ton modpack Imperium est à jour » quand tu as la bonne version.
+- La version du modpack est affichée en bas à gauche de l'écran titre.
+
 ## 3.5.2
 - Après la mise à jour, CurseForge se rouvre tout seul : il ne reste qu'à cliquer sur Jouer.
 
