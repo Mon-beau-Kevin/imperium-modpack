@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.2
+- Après la mise à jour, CurseForge se rouvre tout seul : il ne reste qu'à cliquer sur Jouer.
+
 ## 3.5.1 — mise à jour depuis le jeu
 - CurseForge : plus besoin du double-clic. Au lancement, si une mise à jour existe, un écran propose de l'installer : le jeu se ferme, une fenêtre télécharge les nouveautés, puis on relance le jeu.
 - « Plus tard » : la mise à jour s'installe toute seule à la fermeture du jeu.
