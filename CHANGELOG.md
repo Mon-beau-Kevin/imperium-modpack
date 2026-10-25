@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.5
+- Le bandeau vert « à jour » s'efface après 10 secondes.
+- La version en bas à gauche reste affichée : verte si à jour, rouge sinon (le bandeau de mise à jour, lui, reste).
+
 ## 3.5.4
 - Après la mise à jour, CurseForge (version Overwolf ou classique) se rouvre vraiment tout seul.
 

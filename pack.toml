@@ -1,12 +1,12 @@
 name = "Imperium"
 author = "Kaszimir01"
-version = "3.5.4"
+version = "3.5.5"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "c343df23902bdd822173de6e8ae4a6ffaf243930a961de95f513d4ea868f0096"
+hash = "fab71b4abd5cb594ebcd0bba8c725171137b278c733247e27062c6c4f0baccf2"
 
 [versions]
 minecraft = "1.21.1"
