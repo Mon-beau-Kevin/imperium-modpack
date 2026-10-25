@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.8
+- Réouverture de CurseForge après la mise à jour : cherche aussi les raccourcis (menu Démarrer, Bureau).
+
 ## 3.5.7 — version Léger
 - Nouvelle version **Léger** pour les petits PC (sans Distant Horizons, Sound Physics, EMF/ETF, Light Overlay, BetterF3, spark, WorldEdit ; graphismes allégés). Elle se met à jour toute seule, comme la version normale.
 - Packs à importer dans CurseForge, avec l'outil de mise à jour déjà dedans.

@@ -54,6 +54,7 @@ set "CFOW="
 for %%P in ("%LOCALAPPDATA%\Programs\CurseForge Windows\CurseForge.exe" "%ProgramFiles%\CurseForge Windows\CurseForge.exe") do if not defined CF if exist "%%~P" set "CF=%%~P"
 set "OW=%ProgramFiles(x86)%\Overwolf\OverwolfLauncher.exe"
 if not defined CF if exist "%OW%" set "CFOW=1"
+if not defined CF if not defined CFOW for %%L in ("%APPDATA%\Microsoft\Windows\Start Menu\Programs\Overwolf\CurseForge.lnk" "%APPDATA%\Microsoft\Windows\Start Menu\Programs\CurseForge.lnk" "%ProgramData%\Microsoft\Windows\Start Menu\Programs\CurseForge.lnk" "%USERPROFILE%\Desktop\CurseForge.lnk" "%PUBLIC%\Desktop\CurseForge.lnk" "%USERPROFILE%\OneDrive\Desktop\CurseForge.lnk" "%USERPROFILE%\OneDrive\Bureau\CurseForge.lnk") do if not defined CF if exist "%%~L" set "CF=%%~L"
 if defined CF start "" "%CF%"
 if defined CFOW start "" "%OW%" -launchapp cchhcaiapeikjbdbpfplgmpobbcdkdaphclbmkbj -from-desktop
 if defined CF echo CurseForge s'ouvre : clique sur Jouer.
