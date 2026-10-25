@@ -1,0 +1,8 @@
+name = "National anthems"
+filename = "national_anthems-neoforge-1.21.1-1.5.6.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8412/153/national_anthems-neoforge-1.21.1-1.5.6.jar"
+hash-format = "sha1"
+hash = "b5c1808374e7d72bb64c3d95eec728a8af68012c"

@@ -1,0 +1,8 @@
+name = "Distant Horizons: A Level of Detail mod"
+filename = "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9004/764/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar"
+hash-format = "sha1"
+hash = "4357b4d19fab818780c94f0e43dad1cc931634b2"

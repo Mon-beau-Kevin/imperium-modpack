@@ -1,0 +1,8 @@
+name = "Guard Villagers"
+filename = "guardvillagers-2.4.12-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8767/509/guardvillagers-2.4.12-1.21.1.jar"
+hash-format = "sha1"
+hash = "a817f2263e93aad5bdbe65eeafd2f27489b47ccf"

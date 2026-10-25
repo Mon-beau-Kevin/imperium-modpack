@@ -1,0 +1,96 @@
+{
+  "guns": {
+    "tacz:p320": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:glock_18c": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "daffas_arsenal:hk45": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:mk23": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:vector45": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:p90": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:hk_mp5sd": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:mp7": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:aug_a3": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:scar_h": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:ak12": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:mk47": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:hk416d": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:sr15": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:m4a1": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:mk18": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:ai_awp": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:m82a2": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:msr": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:saiga12": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "tacz:m249": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "lradd:mg42": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    },
+    "maxstuff:dp28": {
+      "tactical_insert_ms": -1,
+      "empty_insert_ms": -1
+    }
+  }
+}

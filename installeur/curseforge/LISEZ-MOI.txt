@@ -1,0 +1,16 @@
+IMPERIUM - MISE A JOUR AUTOMATIQUE (CurseForge)
+================================================
+
+1. Dans CurseForge, fais clic droit sur ton instance Imperium > "Ouvrir le dossier".
+2. Copie dans ce dossier les deux fichiers :
+     - Mettre a jour Imperium.bat
+     - packwiz-installer-bootstrap.jar
+3. Double-clique sur "Mettre a jour Imperium.bat".
+   La premiere fois, il verifie tout ton modpack (ca peut prendre un peu de temps).
+   Ensuite, il ne telecharge que ce qui a change.
+4. Lance le jeu depuis CurseForge, comme d'habitude.
+
+A FAIRE AVANT CHAQUE PARTIE : double-clic sur "Mettre a jour Imperium.bat".
+Si une mise a jour existe, le jeu te le rappelle aussi sur l'ecran titre.
+
+Tes touches, tes reglages, tes serveurs et tes mondes ne sont JAMAIS modifies.

@@ -1,0 +1,235 @@
+[features]
+	#Draw each nation's claimed territory as merged colored regions.
+	claims = true
+	#Draw a separate overlay for contested frontline chunks between nations at war.
+	warOverlay = true
+	#Draw alliance lines between allied nations' largest regions.
+	diplomacyLines = true
+	#Start the diplomacy marker set hidden in the web-app.
+	diplomacyLinesDefaultHidden = true
+	#Also draw rivalry lines (the ENEMY half of a nation's diplomacy) alongside alliance lines in the diplomacy marker set. Both halves of a nation's standing diplomacy come from the same source; drawing only alliances showed half the picture. Turn off to keep the layer to alliances only. Requires diplomacyLines.
+	rivalryLines = true
+	#Draw each village's claimed territory (a separate claim space from nation claims, see VillageInfo) as its own colored region, visually distinct from nation territory.
+	villages = true
+
+[style]
+	#Territory fill opacity (0=transparent, 1=opaque), used only on a map whose own BlueMap config has both perspective and free-flight views turned off (flat top-down only). Such a map draws territory as one flat shape instead of the terrain-hugging border walls below, since there's no 3D view for a wall to be seen from. A normal 3D-capable map ignores this and uses tintOpacity/borderOpacity instead.
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	fillOpacity = 0.3
+	#Territory border-line opacity for that same flat-view-only fallback as fillOpacity above; a normal 3D-capable map uses borderOpacity instead.
+	# Default: 0.8
+	# Range: 0.0 ~ 1.0
+	lineOpacity = 0.8
+	#Territory border-line width in pixels for that same flat-view-only fallback as fillOpacity above.
+	# Default: 2
+	# Range: 0 ~ 20
+	lineWidth = 2
+	#Bottom Y of the war frontline overlay's extruded slab (see warOverlay above) -- the only thing this still positions now that ordinary territory hugs real terrain (borderWallHeight/tintHeightOffset below) instead of sitting at a fixed Y.
+	# Default: 62
+	# Range: -64 ~ 320
+	shapeMinY = 62
+	#Base world Y that most other layers place themselves at (usually one block above this): the war frontline slab's top, siege rings, objective markers, diplomacy lines, village territory, and the flat-view-only territory fallback above. Ordinary terrain-hugging territory (borderWallHeight/tintHeightOffset below) ignores this and follows real ground height instead.
+	# Default: 74
+	# Range: -64 ~ 320
+	shapeMaxY = 74
+	#If true the slab is hidden behind terrain; if false borders show through everything.
+	depthTest = false
+	#Height in blocks of each territory border wall panel (replaces the old fixed shapeMinY/shapeMaxY slab for territory rendering: the border now hugs real terrain instead of sitting at one fixed world Y, which used to float in the air or clip underground on any world whose ground isn't near vanilla sea level).
+	# Default: 4
+	# Range: 1 ~ 32
+	borderWallHeight = 4
+	#Sample terrain height every this many blocks along the border, so the wall steps up/down to follow slopes and cliffs instead of being perfectly flat per chunk edge. Consecutive samples at the same height are merged into one longer panel, so flat runs don't cost extra markers.
+	# Default: 4
+	# Range: 1 ~ 16
+	borderSampleSpacing = 4
+	#Wall panel thickness in blocks, centered on the true chunk boundary line.
+	# Default: 0.5
+	# Range: 0.1 ~ 4.0
+	borderThickness = 0.5
+	#Territory border wall opacity (0=transparent, 1=opaque).
+	# Default: 0.85
+	# Range: 0.0 ~ 1.0
+	borderOpacity = 0.85
+	#Fill each nation's whole claimed area with a flat, depth-tested tint (same colour as the border walls). BlueMap has no separate flat-map/perspective visibility flag, so this leans on depthTest instead: sitting right at ground level with depth-testing on, it reads clearly from the flat top-down map (nothing is in front of it looking straight down) but is occluded by real terrain from any angled 3D view the same way the ground itself would occlude a painted-on decal, unlike the border walls (which stick up and stay visible from an angle on purpose).
+	tintEnabled = true
+	#Territory tint fill opacity (0=transparent, 1=opaque). Kept low by default since, unlike the border walls, this covers the whole claimed area, not just its edge.
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	tintOpacity = 0.3
+	#Blocks above the sampled ground height the tint sits at. Needs real clearance, not a sub-block nudge, to reliably win BlueMap's depth test from directly above (confirmed live: 0.1 was invisible from the flat map, not merely flickering). Raise this if the tint still doesn't show on a hilly claim; lower it if it starts visibly floating above terrain from an angle.
+	# Default: 1.0
+	# Range: 0.0 ~ 8.0
+	tintHeightOffset = 1.0
+	#Ground-height sampling (border walls and territory tint) walks down from the surface looking for the first opaque/fluid block, and gives up after this many blocks, reporting the surface height itself rather than scanning the full world column. Bounds the rare pathological case (a tall glass tower, a deep uncapped shaft) to a fixed worst-case cost per sample instead of the full world height; the common case (a few decorations before real ground) resolves in 1-3 blocks regardless.
+	# Default: 48
+	# Range: 4 ~ 384
+	maxSurfaceScanDepth = 48
+	#Force a full, uncached recompute of every nation's territory every this many rebuild PASSES (not triggers -- see nationsPerTick), regardless of the tracked per-nation dirty set. A nation's color change (the one field the cached territory depends on with no WnEvents notification -- atWar and name both already have one) is now detected directly, per-nation, every pass at negligible cost, so this is no longer the thing catching that. It's pure paranoia insurance against any OTHER unknown cache-invalidation gap, which is why the default is now high: a full recompute of every nation's entire border is real cost on a large server, not something to pay routinely for a safety net that's rarely the thing actually needed.
+	# Default: 500
+	# Range: 1 ~ 5000
+	fullRebuildEvery = 500
+
+[war]
+	#War/frontline color as 0xRRGGBB.
+	# Default: 16724016
+	# Range: 0 ~ 16777215
+	colorRgb = 16724016
+	#War/frontline border-line width in pixels.
+	# Default: 3
+	# Range: 0 ~ 20
+	lineWidth = 3
+	#War/frontline fill opacity.
+	# Default: 0.45
+	# Range: 0.0 ~ 1.0
+	fillOpacity = 0.45
+	#War/frontline border-line opacity, kept separate from fillOpacity so the outline can stay bold and readable even while the fill itself is faint.
+	# Default: 0.9
+	# Range: 0.0 ~ 1.0
+	lineOpacity = 0.9
+	#How strongly the war color (colorRgb above) blends into a nation's own territory color (border walls and tint) while it is at war, so an at-war nation's claim visibly shifts toward 'danger' without losing its identity color entirely. 0 = territory keeps its normal color even at war; 1 = territory turns fully into the war color, hiding the nation's own color completely. Example: at the default 0.55, an at-war nation's territory reads as roughly half its own color, half war-red.
+	# Default: 0.55
+	# Range: 0.0 ~ 1.0
+	claimsTintMix = 0.55
+	#Alliance-line color as 0xRRGGBB.
+	# Default: 3211104
+	# Range: 0 ~ 16777215
+	allianceColorRgb = 3211104
+	#Rivalry-line color as 0xRRGGBB, for the ENEMY half of a nation's diplomacy. Deliberately not the same as the war/frontline colour: a rivalry is a standing diplomatic posture, not an active war, and the map must not let the two read as the same thing from a distance.
+	# Default: 16751152
+	# Range: 0 ~ 16777215
+	rivalryColorRgb = 16751152
+	#Alliance-line width in pixels.
+	# Default: 3
+	# Range: 0 ~ 20
+	allianceLineWidth = 3
+	#Rivalry-line width in pixels. Thinner than the alliance default on purpose -- a rivalry is a lower-certainty relation (may never come to blows) than an alliance.
+	# Default: 2
+	# Range: 0 ~ 20
+	rivalryLineWidth = 2
+	#Opacity shared by both alliance and rivalry lines.
+	# Default: 0.85
+	# Range: 0.0 ~ 1.0
+	diplomacyLineOpacity = 0.85
+
+[villages]
+	#Village territory fill opacity. Kept lower than the nation tint default (fillOpacity/tintOpacity) on purpose -- villages render as a flat top-down decal always (never terrain-hugging border walls, unlike nation territory -- see MarkerService's buildVillageTerritory doc), so a fainter fill keeps a village from reading as visually 'louder' than the nation territory it may be sitting inside or next to.
+	# Default: 0.22
+	# Range: 0.0 ~ 1.0
+	fillOpacity = 0.22
+	#Village territory border-line opacity.
+	# Default: 0.7
+	# Range: 0.0 ~ 1.0
+	lineOpacity = 0.7
+	#Village territory border-line width in pixels.
+	# Default: 1
+	# Range: 0 ~ 20
+	lineWidth = 1
+
+[siege]
+	#Color for a standing (not-yet-fallen) siege wall ring or the keep chunk, as 0xRRGGBB. Deliberately distinct from the generic war/frontline colour above: a siege ring is real per-chunk geometry (see ComposableSiegeEngine), not just 'contested territory', and reads better as its own colour instead of blending into the frontline.
+	# Default: 16752688
+	# Range: 0 ~ 16777215
+	ringColorRgb = 16752688
+	#Color for a FALLEN wall ring. Fallen rings stay drawn (see SiegeStatusView's own doc: 'so a viewer can see the siege's overall progress, not just what's left'), just visually demoted to this duller colour instead of disappearing.
+	# Default: 7368816
+	# Range: 0 ~ 16777215
+	ringFallenColorRgb = 7368816
+	#Color for the keep chunk itself (ring 0), as 0xRRGGBB. Distinct from a wall ring's own colour so the keep -- the attacker's actual win condition once every wall has fallen -- always stands out on the map regardless of ring state.
+	# Default: 16765024
+	# Range: 0 ~ 16777215
+	keepColorRgb = 16765024
+	#Fill opacity for a standing wall ring or the keep chunk.
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	ringFillOpacity = 0.35
+	#Fill opacity for a fallen wall ring -- lower than the standing default so a fallen ring visibly recedes without vanishing outright.
+	# Default: 0.18
+	# Range: 0.0 ~ 1.0
+	ringFallenFillOpacity = 0.18
+	#Border-line opacity shared by standing and fallen wall rings and the keep.
+	# Default: 0.85
+	# Range: 0.0 ~ 1.0
+	ringLineOpacity = 0.85
+	#Wall-ring/keep border-line width in pixels.
+	# Default: 2
+	# Range: 0 ~ 20
+	ringLineWidth = 2
+	#Color for an objective's site marker, as 0xRRGGBB.
+	# Default: 3195135
+	# Range: 0 ~ 16777215
+	objectiveColorRgb = 3195135
+	#Objective site marker fill opacity.
+	# Default: 0.4
+	# Range: 0.0 ~ 1.0
+	objectiveFillOpacity = 0.4
+	#Objective site marker border-line opacity.
+	# Default: 0.9
+	# Range: 0.0 ~ 1.0
+	objectiveLineOpacity = 0.9
+	#Objective site marker border-line width in pixels.
+	# Default: 2
+	# Range: 0 ~ 20
+	objectiveLineWidth = 2
+	#Half-width in blocks of the small square drawn at an objective's site chunk centre (kept well inside one 16-block chunk so it reads as a point marker, not a whole-chunk fill, distinguishing it at a glance from a siege ring's full-chunk shapes).
+	# Default: 5
+	# Range: 1 ~ 8
+	objectiveMarkerRadiusBlocks = 5
+
+[labels]
+	claims = "Nations"
+	war = "Active Wars"
+	diplomacy = "Diplomacy"
+	villages = "Villages"
+
+[popup]
+	#How many member names a nation's territory popup lists before collapsing the rest into a '+N more' line. Higher shows more names but makes the popup taller; this only limits what's DISPLAYED, the member count shown alongside it is always the real total.
+	# Default: 8
+	# Range: 1 ~ 100
+	rosterDisplayLimit = 8
+	#How many allies (and, separately, how many enemies) a nation's territory popup names before collapsing the rest into a '+N more' line.
+	# Default: 5
+	# Range: 1 ~ 100
+	relationDisplayLimit = 5
+
+[discord]
+	#Logical channel key this mod registers with the wndiscord bridge addon (if installed) to post war-start/war-end notifications to. Must match a channel the server owner has routed to an actual Discord channel in wndiscord's own config -- see that mod's docs. Has no effect at all if wndiscord isn't installed.
+	channelKey = "bluemap"
+	#Post a short message (with a map deep-link, see mapWebRootUrl below) to the Discord channel above whenever a war starts or ends. Requires wndiscord to be installed; does nothing otherwise.
+	warNotifications = true
+
+[behaviour]
+	#Coalesce bursts of changes: wait this many ms of quiet before rebuilding markers.
+	# Default: 1500
+	# Range: 0 ~ 60000
+	debounceMillis = 1500
+	#A rebuild's expensive part (per-block ground-height scanning for border walls and tint) is spread across server ticks instead of done all at once: at most this many nations get their claim-geometry (re)computed and their region list queued per tick -- the actual per-region wall building is paced separately by wallRegionsPerTick, so a single nation with many disjoint regions (war captures, scattered claims) can't itself blow one tick's budget either. Lower = gentler on tick time but a full rebuild takes more ticks (and the map lags further behind real state) to finish.
+	# Default: 3
+	# Range: 1 ~ 200
+	nationsPerTick = 3
+	#Border-wall building (per-block ground-height scanning along each region's boundary) is paced at this many REGIONS -- one connected claimed area -- per tick, independently of nationsPerTick. A region's cost tracks its PERIMETER, not its area, so this stays cheap for one large but compact claim; it matters for a nation whose territory is split into many disjoint regions (scattered claims, war-captured pockets), where nation-atomic pacing alone couldn't stop all of them being built synchronously in one tick just because they belong to the same nation.
+	# Default: 8
+	# Range: 1 ~ 500
+	wallRegionsPerTick = 8
+	#The territory TINT specifically (see 'tintEnabled') is paced separately from the rest of a rebuild, at this many claimed CHUNKS' worth of ground-height SAMPLING per tick, instead of counting against nationsPerTick. Tint samples ground height once per claimed chunk, so its cost tracks AREA directly -- a single nation claiming hundreds of chunks in one burst would otherwise do all of that scanning synchronously in the one tick nationsPerTick happened to schedule it on, no matter how low nationsPerTick itself is set. This bounds that regardless of how large a single claim burst is. See tintGroupsPerTick for the (separately paced) step after sampling that turns the samples into markers.
+	# Default: 150
+	# Range: 10 ~ 5000
+	tintCellsPerTick = 150
+	#Once tint sampling finishes for a nation, adjacent same-height chunks are merged into as few polygons as possible (see the territory layer's marker-count note) -- that merging/polygon-building step is paced at this many merged GROUPS per tick, independently of tintCellsPerTick. On very large, terrain-varied claims this can produce thousands of groups; without its own pacing, turning all of them into markers happened synchronously in one call the moment the last chunk finished sampling, which measured as a real multi-tick-equivalent stall on a large enough claim.
+	# Default: 200
+	# Range: 10 ~ 10000
+	tintGroupsPerTick = 200
+	#Village territory is paced at this many VILLAGES per tick, independently of nationsPerTick. Villages need no per-block ground-height scanning at all (they render as a single flat decal per region, like a flat-only-dimension nation -- see buildVillageTerritory's doc), so unlike nation territory's four-queue pacing, one queue at village granularity is enough: the only real cost is boundary-tracing (ChunkPolygonBuilder) over a village's own (typically modest) claim count.
+	# Default: 10
+	# Range: 1 ~ 500
+	villagesPerTick = 10
+	#Per-dimension enablement: ALL, INCLUDE (only listed), or EXCLUDE (all but listed).
+	dimensionMode = "ALL"
+	#Comma-separated dimension ids used by INCLUDE/EXCLUDE, e.g. 'minecraft:overworld,minecraft:the_nether'.
+	dimensionList = "minecraft:the_nether,minecraft:the_end"
+	#Public BlueMap web root (e.g. https://map.example.com), used to build deep links for the optional Discord integration. Blank disables deep links.
+	mapWebRootUrl = ""
+
+[metrics]
+	#Send anonymous server/player-count usage statistics to bStats (bstats.org), the standard analytics service most Minecraft mods use. Only aggregate counts are sent (player count, server count, a few WN-BlueMap feature-usage stats such as which overlays are enabled) -- never player names, UUIDs, IPs, or server addresses. This is an additional, mod-specific off switch; bStats also writes its own global opt-out file (config/bStats/config.yml) that applies to every mod on the server, independent of this setting. Default true (on by default, matching bStats' own convention), but you may want to turn this off if your server has a strict no-telemetry policy.
+	enabled = true

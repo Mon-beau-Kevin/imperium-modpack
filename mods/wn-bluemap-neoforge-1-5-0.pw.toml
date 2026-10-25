@@ -1,0 +1,8 @@
+name = "WN Bluemap"
+filename = "wn-bluemap-neoforge-1.5.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8800/457/wn-bluemap-neoforge-1.5.0.jar"
+hash-format = "sha1"
+hash = "5762762bd484672baa1bbeeae1ee6e1c7e5e81d5"

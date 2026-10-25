@@ -1,0 +1,8 @@
+name = "SeamlessLib"
+filename = "seamless-api-2.0.2+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9072/71/seamless-api-2.0.2%2Bmc1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "65481217f61f3fab960d42f81ca7832db372893d"

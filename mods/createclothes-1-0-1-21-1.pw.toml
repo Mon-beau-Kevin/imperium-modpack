@@ -1,0 +1,8 @@
+name = "Create: Clothes"
+filename = "createclothes-1.0-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8161/281/createclothes-1.0-1.21.1.jar"
+hash-format = "sha1"
+hash = "d1de181996f0a371f1845c52117f513957ecc751"

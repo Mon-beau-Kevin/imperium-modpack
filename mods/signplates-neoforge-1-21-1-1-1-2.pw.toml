@@ -1,0 +1,8 @@
+name = "Sign Plates: Letters & Symbols"
+filename = "SignPlates-NeoForge-1.21.1-1.1.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8175/647/SignPlates-NeoForge-1.21.1-1.1.2.jar"
+hash-format = "sha1"
+hash = "68323a2db6a86f6031cac2a3ba942cb390f6f1ef"

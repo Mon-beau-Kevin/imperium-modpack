@@ -1,0 +1,8 @@
+name = "Traveler's Backpack"
+filename = "travelersbackpack-neoforge-1.21.1-10.1.39.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8762/814/travelersbackpack-neoforge-1.21.1-10.1.39.jar"
+hash-format = "sha1"
+hash = "4fe7a8d15085f40d45f1555330b2826478ebc484"

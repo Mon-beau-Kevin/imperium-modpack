@@ -1,0 +1,8 @@
+name = "TeamPins - FTB Teams Map Integration"
+filename = "teampins-2.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8775/309/teampins-2.0.0.jar"
+hash-format = "sha1"
+hash = "bf8d35ebbbf85fac34f961911efca57730e32f1f"

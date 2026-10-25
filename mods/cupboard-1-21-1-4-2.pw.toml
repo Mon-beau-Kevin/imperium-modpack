@@ -1,0 +1,8 @@
+name = "Cupboard"
+filename = "cupboard-1.21.1-4.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8889/50/cupboard-1.21.1-4.2.jar"
+hash-format = "sha1"
+hash = "6c2d786a161f49470dad92b2edaefdac38a1e79b"

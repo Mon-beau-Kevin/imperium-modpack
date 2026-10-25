@@ -1,0 +1,8 @@
+name = "Jade 🔍"
+filename = "Jade-1.21.1-NeoForge-15.10.6.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8591/319/Jade-1.21.1-NeoForge-15.10.6.jar"
+hash-format = "sha1"
+hash = "88ee316e68900080b017f60c12162e2731924cf8"

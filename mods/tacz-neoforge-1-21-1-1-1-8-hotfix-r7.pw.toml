@@ -1,0 +1,8 @@
+name = "[UNOFFICIAL] TaCZ NeoForge Port"
+filename = "tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9027/337/tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar"
+hash-format = "sha1"
+hash = "c6ef4976de69a46c4e267bd7f91c730d2dc43a4e"

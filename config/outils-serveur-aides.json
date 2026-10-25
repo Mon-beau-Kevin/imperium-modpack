@@ -1,0 +1,7 @@
+{
+  "_aide": "Aides du pays. tresor_depart_crowns = tresor public d'un NOUVEAU monde. creation_nation_crowns = offert au joueur qui fonde sa nation (une fois par joueur). aide_jour_crowns = recue chaque jour reel (heure de Paris) au guichet du pays. payees_par_le_tresor = true : ces aides sortent du tresor public (rien si le tresor est vide) ; false : creees par le serveur. (Les 5 crowns de depart de chaque joueur sont dans config/numismatics-server.toml, starter_crowns.)",
+  "tresor_depart_crowns": 20,
+  "creation_nation_crowns": 5,
+  "aide_jour_crowns": 1,
+  "payees_par_le_tresor": true
+}

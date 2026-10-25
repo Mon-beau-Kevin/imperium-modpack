@@ -1,0 +1,8 @@
+name = "Big Sign Writer"
+filename = "bigsignwriter-2.2.1+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8786/823/bigsignwriter-2.2.1%2B1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "3450f4694d2b6962db5ca3e069e37fd1285bb77a"

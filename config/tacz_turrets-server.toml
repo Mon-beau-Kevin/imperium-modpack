@@ -1,0 +1,130 @@
+#Whether turrets need ammo.
+consumeAmmo = true
+#Turret detection and engagement range in blocks.
+# Default: 64
+# Range: 8 ~ 1000
+turretRange = 64
+#Turret range for sniper guns.
+# Default: 128
+# Range: 8 ~ 1000
+sniperTurretRange = 128
+#Gun types that use the sniper range.
+sniperGunTypes = ["sniper"]
+#Health of turret.
+# Default: 200
+# Range: 10 ~ 1000
+turretHealth = 200
+#Armor points of turrets.
+# Default: 6.0
+# Range: 0.0 ~ 1000.0
+turretArmor = 6.0
+#Rows of ammo slots in the turret screen.
+# Default: 2
+# Range: 1 ~ 6
+turretSlotRows = 2
+#Ammo slots per row in the turret screen.
+# Default: 5
+# Range: 1 ~ 9
+turretSlotLength = 5
+#If false, turrets will be immune to damage.
+turretsTakeDamage = true
+#Effects turrets are immune to. Accepts effect ids and #effect tags.
+effectBlacklist = ["minecraft:poison", "minecraft:wither", "minecraft:weakness", "minecraft:blindness", "minecraft:darkness", "minecraft:hunger", "minecraft:mining_fatigue", "minecraft:nausea", "minecraft:slowness"]
+#If true, turrets target all living entities (except players, turrets, and the owner). If false, turrets only target vanilla monsters and entities in the tacz_turrets:turret_targets entity type tag.
+targetAllMobs = false
+#Logs turret shoot results when enabled. Only use for debugging purposes.
+logTurretShootResults = false
+#Entities turrets never target. Accepts entity ids and #entity tags.
+targetBlacklist = []
+#Entities turrets always target. Accepts entity ids and #entity tags.
+targetWhitelist = []
+#Entities turret fire can damage, so bullets pass through bystanders. Leave empty to match what turrets target. Accepts entity ids and #entity tags.
+damageableEntities = []
+#How turret inaccuracy is calculated. DISTANCE gets less accurate the further away the target is, RANDOM is the same at any range.
+#Allowed Values: DISTANCE, RANDOM
+inaccuracyMode = "DISTANCE"
+#Distance inaccuracy at maximum range. 0 always hits.
+# Default: 1.0
+# Range: 0.0 ~ 45.0
+distanceInaccuracy = 1.0
+#Random inaccuracy. 0 always hits.
+# Default: 1.0
+# Range: 0.0 ~ 45.0
+randomInaccuracy = 1.0
+#Distance at which adaptive mode switches from conserving ammo to firing freely.
+# Default: 25
+# Range: 1 ~ 1000
+adaptiveRange = 25
+#Repair particles.
+repairParticles = true
+#Sounds played when a turret is repaired. One is picked at random.
+repairSounds = ["minecraft:entity.iron_golem.repair"]
+#Allies cannot be damaged by turret fire.
+alliesCannotBeDamaged = true
+#How turrets treat a player they are retaliating against. CONTINUE_TARGETING keeps shooting them, CLEAR_ON_DEATH forgets them once they die.
+#Allowed Values: CONTINUE_TARGETING, CLEAR_ON_DEATH
+retaliateTargeting = "CLEAR_ON_DEATH"
+#Grudge time in seconds when Retaliate Targeting type is Continue Targeting.
+# Default: 30
+# Range: 1 ~ 3600
+retaliationTimer = 30
+#Allies can interact with turrets even if they are not owner.
+alliesHavePerms = true
+#Operators can manage any turret.
+opBypass = true
+#Owners cannot be damaged by their own turrets.
+ownerTakesNoDamage = true
+#Enable sounds.
+enableSounds = true
+#Turret reload sound.
+reloadSound = true
+#Turret recoil.
+turretRecoil = true
+#Turrets use the first person gunshot sound. Needed for sound packs that only replace first person sounds.
+firstPersonShootSound = false
+#Better turret targeting. Turrets pick separate targets instead of focusing one.
+betterTargeting = true
+#Turrets with a gun look around when they have no target.
+idleLookAround = true
+#Enable player damage.
+damagePlayers = true
+#Turrets defend their owner.
+protectOwner = true
+#Turrets spare their owner's teammates on vanilla teams, FTB Teams and Open Parties and Claims parties. Allies of the owner's FTB team or party count as teammates.
+respectTeams = true
+#Turret kills count as owner kills.
+creditKillsToOwner = true
+#Passive healing.
+passiveHealing = false
+#Passive healing amount.
+# Default: 1.0
+# Range: 0.0 ~ 1000.0
+passiveHealAmount = 1.0
+#Passive healing frequency in ticks.
+# Default: 100
+# Range: 1 ~ 72000
+passiveHealInterval = 100
+#Items that can repair turrets. Accepts item ids and #item tags.
+repairItems = ["minecraft:iron_bars"]
+#Health restored per repair item.
+# Default: 25.0
+# Range: 0.0 ~ 1000.0
+repairAmount = 25.0
+#Turrets need FE to run.
+requireEnergy = false
+#Energy buffer size.
+# Default: 10000
+# Range: 1 ~ 1000000000
+energyCapacity = 10000
+#Energy accepted per tick.
+# Default: 200
+# Range: 1 ~ 1000000000
+energyTransferRate = 200
+#Energy used per shot.
+# Default: 10
+# Range: 0 ~ 1000000
+energyPerShot = 10
+#Energy used per tick.
+# Default: 1
+# Range: 0 ~ 1000000
+energyIdleDrain = 1

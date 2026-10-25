@@ -1,0 +1,8 @@
+name = "Structory"
+filename = "Structory_26.2_v1.3.7.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8396/883/Structory_26.2_v1.3.7.jar"
+hash-format = "sha1"
+hash = "8a9a1a1b3f74398310420b6fbe2c26ef142bed42"

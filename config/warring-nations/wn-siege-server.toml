@@ -1,0 +1,338 @@
+#Warring Nations Siege: master + per-module toggles.
+#Each module makes one target mod obey WN claim/war protection: block changes are
+#denied in foreign claims at peace, and allowed against enemy claims during a declared war.
+[general]
+	#Master switch. When false, no module does anything.
+	enabled = true
+	#What to do about world alterations that happen in the
+	#tiny window right at server startup before the Warring Nations API has finished
+	#loading. true (default): ALLOW them ("fail open") so nothing ever gets stuck or
+	#crashes while WN is still coming up -- the safe choice for almost every server.
+	#false: DENY them instead ("fail closed") until WN is ready. Only turn this off if
+	#you've had griefing happen in that startup window specifically; for everyone else
+	#the default is correct and this key can be ignored.
+	failOpenBeforeWnReady = true
+	#When a player's own shot, placed explosive, or direct action
+	#gets blocked by siege protection, should they be told why in chat? false (default):
+	#stay silent, same as always -- the block just doesn't break and nothing is said.
+	#true: send the player a short chat line ("That land is claimed and protected.")
+	#so they understand it wasn't a bug. Only fires when the game actually knows WHICH
+	#player caused the denial (most direct hits/placements do; a machine sitting in the
+	#wild, an unowned mine, or a wide-radius blast with no tracked source does not, and
+	#stays silent either way since there's no one specific to tell).
+	notifyDeniedPlayers = true
+	#Minimum time (in seconds) between denial
+	#chat messages to the SAME player, so a machine-gun spray or a wide blast that clips
+	#twenty claimed blocks in one tick doesn't spam their chat with twenty copies of the
+	#same line. Only matters when notifyDeniedPlayers above is true. 5 is a sensible
+	#default; raise it on a busy PvP server if even one message every few seconds feels
+	#like too much, or set to 0 to notify on every single denial with no cooldown at all.
+	# Default: 5
+	# Range: 0 ~ 300
+	notifyDeniedPlayersCooldownSeconds = 5
+	#If a target mod updates and its internals no longer
+	#match what wn-siege expects, that ONE mod's protection auto-disables itself for
+	#safety rather than crashing the server (see the console log for details either
+	#way). true (default): also tell every currently-online staff member holding the
+	#warringnations.siege.staffnotify permission node in chat the moment it happens, so
+	#it isn't missed until someone happens to grief that mod's now-unprotected claims.
+	#With no permission plugin installed, that node resolves to vanilla op level 2 (the
+	#same default every server had before this node existed). false: log to console
+	#only, no in-game message.
+	notifyStaffOnAutoDisable = true
+	#How many recent siege denials to remember in memory for staff to
+	#review (via the wndiscord /siege recent command, if that addon is installed).
+	#Not written to disk -- this list always starts empty on server restart. Higher
+	#values remember further back in time but use a little more memory; 25 (default) is
+	#plenty for spot-checking recent griefing attempts. Set to 0 to keep no history at
+	#all (protection itself still works exactly the same either way -- this only
+	#affects how much of it staff can look back on afterward).
+	# Default: 25
+	# Range: 0 ~ 500
+	denialLogSize = 25
+
+	[general.metrics]
+		#Send anonymous usage statistics (server count, player count, Minecraft/
+		#NeoForge version, and a couple of wn-siege-specific feature-usage counts -- never
+		#player names, UUIDs, or server addresses) to bStats (https://bstats.org) so the
+		#author can see how the mod is actually used. This is a second, independent switch on
+		#top of bStats' own global opt-out file (config/bStats/config.yml, shared by every
+		#bStats-based mod/plugin on this server) -- turning either one off is enough to stop
+		#all reporting for this mod. true (default): send stats. false: don't even start the
+		#reporting task.
+		enabled = true
+
+[createBigCannons]
+	#Enforce siege rules on Create Big Cannons shells, autocannon rounds,
+	#shrapnel, and shell explosions, plus its cannon-welder network packet, which
+	#took two client-supplied block positions with zero distance/permission check
+	#(confirmed by reading the mod's real source). Also covers the CC:CBC
+	#ComputerCraft compat (it only fires existing CBC cannons, no mixin needed).
+	enabled = true
+
+[cbcMoreShells]
+	#Enforce siege rules on CBC Military Supplement (mod id
+	#cbcmoreshells): dual-cannon shells, racked rockets/bombs, torpedoes, and the
+	#anti-air machine gun. These munitions reimplement block penetration themselves
+	#and never call CBC's own canDamageTerrain hook, so this module also plugs that
+	#pre-existing grief-protection gap, not just WN-awareness.
+	enabled = true
+
+[create]
+	#Enforce siege rules on Create automation that bypasses block events:
+	#drills, saws, mechanical rollers, harvesters, and moving contraption breakers.
+	enabled = true
+	#Also guard blocks a contraption drops into the world on
+	#disassembly (contraption block placement across borders). Best-effort attribution
+	#by the contraption's current chunk; disable if it interferes with legitimate parking.
+	guardContraptionPlacement = true
+	#Also guard blocks a moving Mechanical Roller paves into the world
+	#(track-laying / material-fill ahead of the roller). Separate from
+	#guardContraptionPlacement above, which is scoped to disassembly placement only;
+	#disable this one if it interferes with legitimate roller use across your own
+	#claim boundary.
+	guardRollerPaving = true
+
+[tacz]
+	#Enforce siege rules on TaCZ fire-starting ammo (raw fire block placement).
+	#TaCZ explosive ammo/grenades are handled by the shared explosion filter below.
+	enabled = true
+
+[railways]
+	#Enforce siege rules on Create: Steam 'n' Rails' own Roller
+	#extension (track-laying / track-material replacement), which diverts around
+	#Create's own Roller paving path this addon already gates.
+	enabled = true
+
+[explosions]
+	#Per-block filter for vanilla-routed explosions (Create Nuclear reactor
+	#meltdown, TaCZ explosive rounds/grenades, and any other mod that routes through
+	#Level.explode). Claimed blocks survive unless the blast's nation is at war with the
+	#owner. Does not touch Create Big Cannons' own explosions (handled by the CBC module).
+	enabled = true
+
+[warnautics]
+	#Enforce siege rules on Create: Warnautics (mod id cbc_more_content)
+	#aerial bombs and land mines. Its bomb blasts drive their own explosion lifecycle
+	#directly instead of calling CBC's shared canDamageTerrain choke point, so this
+	#module also plugs that pre-existing grief-protection gap, not just WN-awareness
+	#(same situation as cbcMoreShells above). Its small-shrapnel mine variant already
+	#routes through CBC's shared explosion handler and is covered by the CBC module.
+	enabled = true
+
+[superbWarfare]
+	#Enforce siege rules on Superb Warfare (mod id superbwarfare) rockets,
+	#cannon shells, mines, and C4: several of its projectile/mine classes call
+	#Level#destroyBlock directly for single- or multi-block impact destruction, AND
+	#(corrected 2026-08-18, was previously assumed native/covered generically -- it
+	#is not) its shared full-radius CustomExplosion.explode() destroys blocks via its
+	#own raw Level#destroyBlock call in a manual radius loop and never populates the
+	#vanilla toBlow list, so the generic explosion filter has nothing to filter --
+	#confirmed by reading the mod's real source, not assumed. Vehicle-fired shots
+	#already attribute correctly to the real gunner via vanilla's own
+	#Projectile#getOwner(), no module needed for that half.
+	enabled = true
+
+[warbornExplosives]
+	#Enforce siege rules on WarBorn Explosives (mod id warbornexplosives,
+	#a Superb Warfare add-on): its shrapnel entity destroys glass blocks/panes
+	#directly (the exact TaCZ glass-shatter pattern), and its Tm62M mine adds a
+	#second manual block-destroy pass on top of its already-covered explosion
+	#blast. Its regular grenade and other mine types need nothing (no block damage
+	#attempted, or already routed through the covered Superb Warfare explosion).
+	enabled = true
+
+[weaponsAndTools]
+	#Enforce siege rules on Weapons And Tools (mod id weapon_and_tools_):
+	#its Magic Wand's laser mode places raw fire/soul-fire with no event, letting
+	#vanilla fire spread do ungated damage. Melee weapons and the wand's ball mode
+	#need nothing (effect-only, or already an event-firing vanilla explosion).
+	enabled = true
+
+[pyrotechnics]
+	#Enforce siege rules on Pyrotechnics (mod id pyrotechnics): its thrown
+	#Sticky Grenade plants a live primed-grenade block on impact with no event,
+	#before its later (already-covered) delayed detonation. Every other explosive
+	#in this mod already routes through a real vanilla explosion and needs nothing.
+	enabled = true
+
+[immersiveWeapons]
+	#Enforce siege rules on Immersive Weapons (mod id immersiveweapons):
+	#its bullets destroy glass blocks/panes directly on impact (the TaCZ
+	#glass-shatter pattern). Its mortar, meteor staff, and landmine already route
+	#through real vanilla explosions and need nothing.
+	enabled = true
+
+[pointBlank]
+	#Enforce siege rules on Point Blank (mod id pointblank, 8.2M
+	#downloads, the single most-used mod in this addon's whole compat list): its
+	#own CustomExplosion class never fires a NeoForge explosion event at all (own
+	#private toBlow field, never delegates to vanilla's own blow-list machinery),
+	#and its hitscan guns destroy thin blocks (glass etc) directly, the TaCZ
+	#glass-shatter pattern.
+	enabled = true
+
+[cbcNeoWarfare]
+	#Enforce siege rules on CBC Neo Warfare (mod id cbcmodernwarfare), a
+	#Create Big Cannons addon. Its Big Cannon shells and autocannon rounds already
+	#extend CBC's own gated classes and need no module-specific code; its new Medium
+	#Cannon shell class extends AbstractCannonProjectile directly (a sibling of, not a
+	#descendant of, the classes the CBC module already covers) and reimplements block
+	#penetration with a raw setBlock call that never reaches CBC's own canDamageTerrain
+	#gate. Its unmanned munitions-carrying Create contraption has the same raw-setBlock
+	#gap, attributed via controller/train/chunk-owner resolution since it has no
+	#projectile owner of its own.
+	enabled = true
+
+[justEnoughGuns]
+	#Enforce siege rules on Just Enough Guns (mod id jeg): its shared
+	#SpecialExplosion utility (payload drones, C4 vests, placed explosives, faction
+	#bomber fire) threads a real owner through the whole call chain but discards it
+	#right before the block-destroying blast itself, passing null instead -- a real
+	#self-attribution loophole that this module repairs. Explosive-ammo bullets and
+	#penetrating rounds, flaming arrows, and molotov/grenade fire spread are also
+	#covered, each gated by the real shooter/thrower's owner. Dynamic-light muzzle
+	#flash effects and the water bomb's fire-suppression effect need nothing (cosmetic
+	#or purely defensive, no claimed-block destruction).
+	enabled = true
+
+[insaneTnt]
+	#Enforce siege rules on Insane TNT (mod id insanetnt): seven of
+	#its ~36 TNT/nuke block variants (Ice, Glitch, Magic Slime, Slime, Sponge,
+	#Subzero, Transformation) dispatch raw permission-level-4 /fill commands across
+	#areas up to 63 blocks wide, bypassing block events entirely -- no vanilla
+	#explosion is ever fired, so the addon's generic explosion handler never sees
+	#them. This module gates each one at its command-dispatch call site, checked per
+	#chunk across the whole affected area. The other ~29 variants already route
+	#through a real vanilla explosion and are presumed covered by the existing
+	#generic handler the same way Create Nuclear's reactor meltdown already is --
+	#verify this with a live-boot test before fully trusting it, this hasn't been
+	#confirmed in-game yet.
+	enabled = true
+
+[bmnw]
+	#Enforce siege rules on BMNW (mod id bmnw, Bunkers Machines & Nuclear
+	#Weapons): all 5 nuke types (Caseoh, Dropped Soulfire Bomb, Little Boy, Nuclear
+	#Charge, Tsar Bomba) funnel through the exact same shared crater-carving handler,
+	#which carves a chunk-radius blast with zero events and zero attribution --
+	#the highest-severity gap found in this addon's whole compat sweep. Attributed via
+	#chunk-owner-of-impact, the same null-source fallback the generic explosion
+	#handler uses, since the falling bomb tracks no owner at all and can drift before
+	#detonating.
+	enabled = true
+
+[ballistix]
+	#Enforce siege rules on Ballistix (mod id ballistix, 1.3M
+	#downloads): its shared canBreakBlockState choke point (used by 10 of its ~25
+	#blast types) already fires a real BlockEvent.BreakEvent but only checks
+	#GriefDefender, no Warring Nations awareness at all -- gated directly at that
+	#choke point rather than a new blanket global block-break listener. Also covers
+	#BlastRejuvination (regenerates an entire target chunk from fresh world-gen
+	#data with zero permission check at all -- the single most severe finding in
+	#this addon's whole compat sweep) and BlastAntigravity (raw block-launching,
+	#bypasses the shared choke point its own siblings use). Ballistix's missile
+	#system tracks no owner anywhere in its data model from launch to impact --
+	#a real gap, left undesigned for now rather than rushing an invasive fix that
+	#would need new persistent state in the mod's own save schema; see the wn-siege
+	#README for details.
+	enabled = true
+
+[scorchedGuns]
+	#Enforce siege rules on ScorchedGuns (mod id scguns): fragile-block
+	#(glass) breaking is covered on the base projectile class, inherited by nearly
+	#every bullet type; the Krahg Round, Osborne Slug, and Fire Round's sculk-clear
+	#each have their own separate raw block-break call; the Scamp Tank and Scamp
+	#Rocket hostile mobs terrain-break with no owner; the Penetrator block's tunnel
+	#reaches past its own placement point. Also covers the mod's mining laser gun,
+	#which fires block-breaking beams directly against whatever a real player's
+	#raycast hits with NO permission check at all -- the single highest-severity
+	#gap found in this addon's whole compat sweep, since unlike every other gap it's
+	#fired directly by a named player, not an edge-case projectile.
+	enabled = true
+
+[sable]
+	#Enforce siege rules on Sable (mod id sable) ship interactions:
+	#right-click, left-click, and block-break aimed at a block on a moving ship's
+	#own detached sub-level never resolve to the world position that block actually
+	#occupies unless something explicitly translates it, so by default a player can
+	#fly a ship over a claim and interact with or break its blocks unprotected. Ported
+	#from the reference implementation in the CurseForge addon 'FTB Chunks: Sable
+	#Aerospace', which solves the identical problem for FTB Chunks. Does not cover ship
+	#movement into a claim or ship-borne weapon fire -- no reference implementation for
+	#either exists to port from, so both remain an open gap for now.
+	enabled = true
+
+[aeronautics]
+	#Enforce siege rules on Create Aeronautics (mod id aeronautics):
+	#its Levitite Blend catalyzer packet takes a client-supplied block position with
+	#zero distance check and zero permission check, converting Levitite Blend fluid
+	#into a solid crystal block and (by the mod's own default config) destroying every
+	#adjacent breakable block around it -- a real, confirmed gap, found by reading the
+	#mod's own real source (github.com/Creators-of-Aeronautics/Simulated-Project), not
+	#decompiled bytecode. Its other content (balloons, propellers, hot-air burners,
+	#the mounted potato cannon) was checked and adds no other block-mutating mechanic;
+	#ship/sub-level interaction is separately covered by the 'sable' module above,
+	#since Aeronautics ships are built on Sable's own sub-level engine.
+	enabled = true
+
+[createPacketProtection]
+	#Enforce siege rules on Create's remote-interaction network
+	#packets (clipboard edit, super glue attach/detach, toolbox equip/dispose, wrench
+	#radial menu, block entity configuration, curved train track removal): a
+	#crafted/replayed packet can trigger these actions at a claimed position without
+	#going through the normal right-click permission path Create itself gates.
+	#Separate from the 'create' module above, which covers automation (drills, saws,
+	#rollers) rather than direct packet-driven interaction. Ported from the CurseForge
+	#addon 'Create Aeronautics FTB Chunks', whose actual payload turned out to be this
+	#packet-protection layer rather than anything Aeronautics-specific (confirmed by
+	#decompiling the jar); the curved-track case was found separately by auditing
+	#Create's own train system directly afterward (a curved track connection's far
+	#end can sit on a different claim than its near end, which the shared
+	#block-entity-config gate alone doesn't see).
+	enabled = true
+
+[cgs]
+	#Enforce siege rules on Create: Gunsmithing (mod id cgs): its blaze-round
+	#weapons plant a Soul Fire block directly on hit (only gated by the mobGriefing
+	#gamerule, never by claims), and hitting a sufficiently-full Create Copper Backtank
+	#with any gun projectile detonates it via a raw Level#destroyBlock call with zero
+	#event or permission check at all -- both real, confirmed gaps found by decompiling
+	#the real shipped jar, not guesswork. The Backtank case has no shooter reference to
+	#attribute to a nation, so it fails closed like Warnautics' land mines: protected at
+	#peace, but not currently breachable by a legitimate wartime attacker either.
+	enabled = true
+
+[ntgl]
+	#Enforce siege rules on NTGL (mod id ntgl, "NukaTeam's Gun Lib"), the
+	#shared library Create: Gunsmithing's weapons are built on. Any weapon with an
+	#explosive round drives its own Explosion subclass directly instead of calling
+	#Level#explode, bypassing this addon's generic explosion filter entirely (same
+	#bypass shape as Create: Warnautics, one library level further down); and every
+	#single projectile hit rolls a chance to break "fragile" blocks (glass and
+	#similar) via a raw Level#destroyBlock call with zero permission check at all --
+	#both real, confirmed gaps found by decompiling the real shipped jar, not
+	#guesswork. Separate from the 'cgs' module above, which covers gaps specific to
+	#Create: Gunsmithing's own code rather than the shared library underneath it.
+	enabled = true
+
+[warium]
+	#Enforce siege rules on WariumCE (mod id wariumce, community edition
+	#of "Warium"), a large MCreator-generated military/artillery mod. Filtered through
+	#its own WariumBlockAlterEvent, fired right before every raw block write its
+	#weapon-impact and explosion-tier code performs -- a wn-siege-motivated upstream
+	#addition (provisional: built against a local patch branch, not yet merged/released
+	#by the maintainer). Attribution prefers the event's cause entity (the shooter, where
+	#tracked) and falls back to the target chunk's own owner otherwise, the same
+	#best-effort posture used elsewhere in this addon for unattributed blasts.
+	enabled = true
+
+[mol]
+	#Enforce siege rules on Eshan's Missile Mod (mod id
+	#modularordinancelite): its warhead detonations already fire a real
+	#cancellable WarheadDetonateEvent.Pre before any block mutation (vanilla
+	#explosion, its own multi-tick crater carver, and scorch marks all gated by
+	#that one event, no mixin needed for the main blast). Two incendiary
+	#fire-spread call sites (the Incendiary Warhead and the cluster warhead's
+	#incendiary sub-munition) run unconditionally regardless of that event's
+	#outcome and need their own gate, confirmed by decompiling the real 1.0.6 jar.
+	enabled = true

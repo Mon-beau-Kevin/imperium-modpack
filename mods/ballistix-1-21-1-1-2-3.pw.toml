@@ -1,0 +1,8 @@
+name = "Ballistix"
+filename = "ballistix-1.21.1-1.2.3.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9259/921/ballistix-1.21.1-1.2.3.jar"
+hash-format = "sha1"
+hash = "080619a8cc9063ece9fcb38412111965bdb666ca"

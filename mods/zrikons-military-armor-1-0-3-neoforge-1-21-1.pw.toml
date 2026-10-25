@@ -1,0 +1,8 @@
+name = "Zrikon's Military Armor"
+filename = "zrikons_military_armor-1.0.3-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7696/84/zrikons_military_armor-1.0.3-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "83d3792385bac2a85886a0097365b1736eef75fc"

@@ -1,0 +1,8 @@
+name = "Create: Escalated"
+filename = "escalated-1.3.2-mc.1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8679/269/escalated-1.3.2-mc.1.21.1.jar"
+hash-format = "sha1"
+hash = "34854b74bd9c627b873cb21bb5ec15fbad038db6"

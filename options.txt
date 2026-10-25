@@ -1,0 +1,14 @@
+version:3955
+autoJump:false
+renderDistance:12
+simulationDistance:10
+graphicsMode:1
+maxFps:120
+enableVsync:true
+mipmapLevels:4
+biomeBlendRadius:2
+entityShadows:true
+particles:0
+renderClouds:"false"
+resourcePacks:["tacz_resources","vanilla","mod_resources","moonlight:merged_pack","file/FreshAnimations_v1.11_1.20+.zip"]
+incompatibleResourcePacks:[]

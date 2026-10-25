@@ -1,0 +1,8 @@
+name = "Ping Like R2"
+filename = "Ping-Wheel-1.12.0-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7339/660/Ping-Wheel-1.12.0-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "03d2b2cda8d9b07336e2132a2bbaced1df4016f3"

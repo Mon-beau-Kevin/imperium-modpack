@@ -1,0 +1,8 @@
+name = "YUNG's Cave Biomes (Forge/NeoForge)"
+filename = "YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6913/179/YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar"
+hash-format = "sha1"
+hash = "bcab81f578b3cb31e599ae327c6634b9fa8d0f04"

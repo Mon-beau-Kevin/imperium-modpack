@@ -1,0 +1,8 @@
+name = "TaCZ Pack Upgrader"
+filename = "tacz-pack-upgrader-2.1.3.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8387/504/tacz-pack-upgrader-2.1.3.jar"
+hash-format = "sha1"
+hash = "7b3f519278a7778cc82142023376c62b089c97b4"

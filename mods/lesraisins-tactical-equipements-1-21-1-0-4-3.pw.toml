@@ -1,0 +1,8 @@
+name = "[UNOFFICIAL] LesRaisins Tactical Equipements"
+filename = "LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8745/260/LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar"
+hash-format = "sha1"
+hash = "d4e5b0a5a2d03092cac11dd2b7b3a60dc4f5ddfd"

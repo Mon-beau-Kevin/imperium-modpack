@@ -1,0 +1,8 @@
+name = "BlueMap"
+filename = "bluemap-5.7-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6239/407/bluemap-5.7-neoforge.jar"
+hash-format = "sha1"
+hash = "49675ada6be555e6f8393f49aff91750028e1239"

@@ -1,0 +1,9 @@
+{
+  "_aide": "Prix d'un chunk selon la limite de la nation apres l'achat (t). Jusqu'a seuil_chunks : prix_depart_crowns x (1 + hausse_douce x (t - 5)), donc doux. Au-dela : le prix au seuil x multiplicateur^(t - seuil_chunks), donc tres cher tres vite. Puis / (1 + reduction_membres x (membres - 1)) et -X % pendant les soldes du president. achat_max = chunks achetables au maximum par nation. Les chunks gratuits se reglent dans warring-nations/wn-core-server.toml (claimsPerMemberBase). Tout l'argent des achats va au tresor public.",
+  "prix_depart_crowns": 5,
+  "hausse_douce": 0.1,
+  "seuil_chunks": 30,
+  "multiplicateur": 1.3,
+  "reduction_membres": 0.35,
+  "achat_max": 100
+}

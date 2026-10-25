@@ -1,0 +1,8 @@
+name = "SBW Optimized"
+filename = "sbw-optimized-neoforge-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9125/726/sbw-optimized-neoforge-1.21.1-1.0.0.jar"
+hash-format = "sha1"
+hash = "023a69852eb9c80363989d0860371b17888973ce"

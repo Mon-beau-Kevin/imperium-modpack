@@ -1,0 +1,8 @@
+name = "DoxCore"
+filename = "doxcore-2.0.0.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8737/163/doxcore-2.0.0.jar"
+hash-format = "sha1"
+hash = "2bb441465b4755aca4b6dd7dd4236206bbfe21d7"

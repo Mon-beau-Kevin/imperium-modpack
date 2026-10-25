@@ -1,0 +1,13 @@
+name = "Imperium"
+author = "Kaszimir01"
+version = "3.5.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "02795616f793e830ee7a6cd55cb4941f7bed1bac0d60d61c8eac9531c0034c91"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.264"

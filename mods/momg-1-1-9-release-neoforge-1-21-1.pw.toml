@@ -1,0 +1,8 @@
+name = "More Ores More Gems (Java Edition)"
+filename = "momg-1.1.9-release-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8340/167/momg-1.1.9-release-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "c69a28260120b3c6c7f6e7d7d714b1440269fa06"

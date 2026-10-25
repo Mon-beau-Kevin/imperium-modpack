@@ -1,0 +1,8 @@
+name = "YUNG's Better Desert Temples (NeoForge) [1.20.4 - 1.21.1 ONLY]"
+filename = "YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/6276/955/YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar"
+hash-format = "sha1"
+hash = "90529257dbd92558998c65178294bc7b2fd16a64"

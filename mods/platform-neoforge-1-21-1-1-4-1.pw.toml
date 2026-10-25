@@ -1,0 +1,8 @@
+name = "Platform"
+filename = "Platform-neoforge-1.21.1-1.4.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9295/857/Platform-neoforge-1.21.1-1.4.1.jar"
+hash-format = "sha1"
+hash = "f183c417154f9a42d4c3387ab815ea1319db61bc"

@@ -1,0 +1,8 @@
+name = "Advanced Stands - New Armor, Tools & Weapons Stands"
+filename = "Advanced Stands MC 1.21.1 - 2.0.0 Neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8646/743/Advanced%20Stands%20MC%201.21.1%20-%202.0.0%20Neoforge.jar"
+hash-format = "sha1"
+hash = "b096c42d4ababce901a0c69dec833df03422cc36"

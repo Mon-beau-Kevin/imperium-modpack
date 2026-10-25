@@ -1,0 +1,8 @@
+name = "Rise of Humanity - Music Pack"
+filename = "rise_of_humanity_music_mod-1.0.2-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8679/439/rise_of_humanity_music_mod-1.0.2-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "9352dc0fc1ce4c7eca5e091b29c95adcef02311f"

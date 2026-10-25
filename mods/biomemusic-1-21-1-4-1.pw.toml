@@ -1,0 +1,8 @@
+name = "Biome Music"
+filename = "biomemusic-1.21.1-4.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8318/257/biomemusic-1.21.1-4.1.jar"
+hash-format = "sha1"
+hash = "2d049c15c1dedf4b7054b933b871ff29f7c3040b"
