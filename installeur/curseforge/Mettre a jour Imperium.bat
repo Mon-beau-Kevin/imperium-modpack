@@ -40,5 +40,16 @@ if errorlevel 1 (
   exit /b 1
 )
 echo.
-echo Imperium est a jour ! Tu peux lancer le jeu depuis CurseForge.
-timeout /t 5 >nul
+echo Imperium est a jour !
+set "CF="
+set "CFOW="
+for %%P in ("%LOCALAPPDATA%\Programs\CurseForge Windows\CurseForge.exe" "%ProgramFiles%\CurseForge Windows\CurseForge.exe") do if not defined CF if exist "%%~P" set "CF=%%~P"
+set "OW=%ProgramFiles(x86)%\Overwolf\OverwolfLauncher.exe"
+if not defined CF if exist "%OW%" set "CFOW=1"
+if defined CF start "" "%CF%"
+if defined CFOW start "" "%OW%" -launchapp cchhcaiapeikjbdbpfplgmpobbcdkdaphclbmkbj -from-desktop
+if defined CF echo CurseForge s'ouvre : clique sur Jouer.
+if defined CFOW echo CurseForge s'ouvre : clique sur Jouer.
+if not defined CF if not defined CFOW echo Relance le jeu depuis CurseForge.
+timeout /t 8 >nul
+exit

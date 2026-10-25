@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.4
+- Après la mise à jour, CurseForge (version Overwolf ou classique) se rouvre vraiment tout seul.
+
 ## 3.5.3
 - Écran titre : bandeau vert « Ton modpack Imperium est à jour » quand tu as la bonne version.
 - La version du modpack est affichée en bas à gauche de l'écran titre.
