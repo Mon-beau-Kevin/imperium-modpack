@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.5.9
+- Carte JourneyMap : les croupiers, vendeurs et villageois n'apparaissent plus. Seuls les PNJ de missions restent visibles (sauf L'Ombre, qu'il faut trouver).
+
 ## 3.5.8
 - Réouverture de CurseForge après la mise à jour : cherche aussi les raccourcis (menu Démarrer, Bureau).
 
