@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.6.2
+- Guide d'Imperium : où trouver les cinq PNJ de missions (port, atelier des bateaux, marché, magasin de gâteaux, forêt du nord).
+
 ## 3.6.1
 - Armurier : la minigun coûte le prix du meilleur sniper.
 
