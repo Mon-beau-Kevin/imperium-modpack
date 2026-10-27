@@ -1,5 +1,11 @@
 # Nouveautés du modpack Imperium
 
+## 3.6.0 — armes et tenues
+- Armurier : lance-roquettes et lance-grenades en vente, et un onglet « Munitions lourdes » (roquettes, grenades 40 mm).
+- Les armes ne se fabriquent plus (table d'armurerie TACZ et recettes Create retirées) : il faut les acheter.
+- Les tenues du costumier (Spec Ops, officier) ne se fabriquent plus.
+- Zone serveur : protections réappliquées (on ouvre tout, on ne casse rien, pas de PvP, machines Create autorisées).
+
 ## 3.5.9
 - Carte JourneyMap : les croupiers, vendeurs et villageois n'apparaissent plus. Seuls les PNJ de missions restent visibles (sauf L'Ombre, qu'il faut trouver).
 
