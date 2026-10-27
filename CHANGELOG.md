@@ -1,5 +1,11 @@
 # Nouveautés du modpack Imperium
 
+## 3.7.0 — casino
+- Tous les jeux du casino : les gains arrivent directement dans l'inventaire (plus rien ne tombe sur la table). Joueur hors ligne : gains donnés à la prochaine connexion.
+- Blackjack : une case où un joueur a posé ses jetons est réservée, son nom s'affiche dessus, les autres ne peuvent plus y miser.
+- Roulette : 20 secondes pour miser (premier tour et tours suivants).
+- Course de canards : à plusieurs, un canard par joueur ; les canards des autres sont marqués « PRIS ». Quitter la machine avant la course rend les jetons.
+
 ## 3.6.5
 - Version Léger : shader Complementary (profil très léger) et Distant Horizons en faible rendu (128 chunks, qualité basse, 2 threads).
 

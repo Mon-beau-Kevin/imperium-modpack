@@ -1,12 +1,12 @@
 name = "Imperium - Leger"
 author = "Kaszimir01"
-version = "3.6.5"
+version = "3.7.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "86d760132ac48eb6738b85e3ee561a2583f97e312c52c9c8d3df46d8e97b05ee"
+hash = "0cc9b307ca4a0fe98787c546f2fe3a3cd8306c2ad579df5cf0ac90c51e186054"
 
 [versions]
 minecraft = "1.21.1"
