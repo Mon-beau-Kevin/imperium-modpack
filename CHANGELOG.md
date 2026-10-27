@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.7.1
+- Zone serveur : aucune créature (monstre, animal, loup, golem…) ne peut blesser un joueur. Les joueurs peuvent toujours frapper animaux et monstres.
+
 ## 3.7.0 — casino
 - Tous les jeux du casino : les gains arrivent directement dans l'inventaire (plus rien ne tombe sur la table). Joueur hors ligne : gains donnés à la prochaine connexion.
 - Blackjack : une case où un joueur a posé ses jetons est réservée, son nom s'affiche dessus, les autres ne peuvent plus y miser.
