@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.7.2
+- Course de canards : JOUER lance un compte à rebours de 10 secondes, pour que tout le monde ait le temps de miser.
+
 ## 3.7.1
 - Zone serveur : aucune créature (monstre, animal, loup, golem…) ne peut blesser un joueur. Les joueurs peuvent toujours frapper animaux et monstres.
 
