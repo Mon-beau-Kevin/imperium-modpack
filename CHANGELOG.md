@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.6.4
+- Version normale identique à l'instance de référence : shader Complementary et ses réglages, Fresh Animations, réglages Distant Horizons et Iris tenus à jour chez tous les joueurs.
+- Version Léger : sans shader (shaders coupés), sans Fresh Animations, sans Distant Horizons.
+
 ## 3.6.3
 - Ajout du shader **Complementary Reimagined** (version normale et Léger) et du pack de textures **Fresh Animations** (version normale) : ils manquaient au modpack.
 

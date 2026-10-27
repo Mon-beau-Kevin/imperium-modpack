@@ -692,8 +692,7 @@ preserve = true
 
 [[files]]
 file = "config/iris.properties"
-hash = "a95c42097d1c9589d85a03262ae01a30fedea7e6e435d584991eaff5887326a1"
-preserve = true
+hash = "07779153fcbce6e9d6381321c06f62e8788ecb1fb604ca7e5f72ee7d88c0a244"
 
 [[files]]
 file = "config/jade/hide-blocks.json"
@@ -1396,7 +1395,7 @@ hash = "b27da17540a7c9eebf18090cc948e31bd55d0fd286aaa99915eabd667b53b70b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "3ad143a7bbc464452fea79e6f5614ab6a2d63e32a990a6880710d4f8cadeeb2c"
+hash = "9a989ebd95efe334f4248db1d63432eaa07e6fbe0e1234e47c91e5fc88906ca1"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -2306,13 +2305,4 @@ preserve = true
 [[files]]
 file = "servers.dat"
 hash = "914e531be2313eadb31380a2e63bc504ae97e812dc005f0e992c7f5e6d50dab7"
-preserve = true
-
-[[files]]
-file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip"
-hash = "fed6c879e732cf7fc7bc6570ebb1def43235aa7e96f62859fbdbdbfa0b484b38"
-
-[[files]]
-file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
-hash = "67cc8336f6d9023b5cf8f56924b63290373944ab4b4886a5f6a4ede4c488890f"
 preserve = true

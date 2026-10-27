@@ -7,8 +7,7 @@ preserve = true
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "4d878f74de5d312a5971ee3ec5e7000ce92e6fabba45630804aa76f3daf1b2cc"
-preserve = true
+hash = "a2111ddfc20f8a06be9848ee1baa425ba893d29edb12a9a7a0861f1c02f8bd2e"
 
 [[files]]
 file = "config/Mekanism/client.toml"
@@ -697,8 +696,7 @@ preserve = true
 
 [[files]]
 file = "config/iris.properties"
-hash = "357f7ad61ff52757b10b5694805438614e3946ae0d37bec22731f381835f024f"
-preserve = true
+hash = "aab2f944e4c5b4687e1ba6d2bfbc53169df56ec9dd6f2e43e93e0e6e0de1dea0"
 
 [[files]]
 file = "config/jade/hide-blocks.json"
@@ -1047,7 +1045,7 @@ preserve = true
 
 [[files]]
 file = "config/sodium-options.json"
-hash = "44478bef0973f1aa587c0493568a5cbc5426233b611f14bd2be489b5b862fa7f"
+hash = "ef3242a314c4311b64b88ce016acea790d42a35f7c81f0a02934841e64efcda1"
 preserve = true
 
 [[files]]
@@ -1397,7 +1395,7 @@ preserve = true
 
 [[files]]
 file = "imperium-version.txt"
-hash = "3ad143a7bbc464452fea79e6f5614ab6a2d63e32a990a6880710d4f8cadeeb2c"
+hash = "9a989ebd95efe334f4248db1d63432eaa07e6fbe0e1234e47c91e5fc88906ca1"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -2360,4 +2358,3 @@ hash = "fed6c879e732cf7fc7bc6570ebb1def43235aa7e96f62859fbdbdbfa0b484b38"
 [[files]]
 file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
 hash = "3569ff6f5e138030c9746db3f10aba25724093d8a29bc4e8998d99112a3123d1"
-preserve = true
