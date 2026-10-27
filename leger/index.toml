@@ -1399,7 +1399,7 @@ hash = "b27da17540a7c9eebf18090cc948e31bd55d0fd286aaa99915eabd667b53b70b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "c6985d515b3473f1ea6ec6306d74ea3cb913b64740172689a8e2b1edde3ec9fc"
+hash = "c5c590b00cd6c1d7a69736ea08aa29cdd07d75eae430122c5b6651d299368c49"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -1899,7 +1899,7 @@ metafile = true
 
 [[files]]
 file = "mods/minevegas-casino-neoforge-1.21.1-1.0.4.jar"
-hash = "25b8fe0f54eda5a51a5b1367ff2a27dddb592ee63b135255eb8355c66da19fb8"
+hash = "80fafd1942cc54b4ef5a613248ba72493dc9f92b3d8c7eb33c4dcc07917254f1"
 
 [[files]]
 file = "mods/modernfix-neoforge-5-27-26-mc1-21-1.pw.toml"

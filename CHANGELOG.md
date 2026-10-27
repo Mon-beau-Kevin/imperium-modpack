@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.7.3
+- Course de canards : chaque joueur mise sur UNE case ; jusqu'à 3 joueurs sur le même canard, chacun sur sa case. Les cases des autres sont marquées en rouge.
+
 ## 3.7.2
 - Course de canards : JOUER lance un compte à rebours de 10 secondes, pour que tout le monde ait le temps de miser.
 
