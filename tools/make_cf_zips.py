@@ -38,7 +38,7 @@ def make(base, name, label, version):
         for dirpath, dirnames, fns in os.walk(base):
             rel_dir = os.path.relpath(dirpath, base)
             if rel_dir == ".":
-                dirnames[:] = [d for d in dirnames if d in ("config", "journeymap", "mods")]
+                dirnames[:] = [d for d in dirnames if d in ("config", "journeymap", "mods", "shaderpacks", "resourcepacks")]
             for fn in fns:
                 rel = os.path.normpath(os.path.join(rel_dir, fn)).replace(os.sep, "/")
                 if fn.endswith(".pw.toml") or rel in ("pack.toml", "index.toml"):

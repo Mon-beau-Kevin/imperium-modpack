@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.6.3
+- Ajout du shader **Complementary Reimagined** (version normale et Léger) et du pack de textures **Fresh Animations** (version normale) : ils manquaient au modpack.
+
 ## 3.6.2
 - Guide d'Imperium : où trouver les cinq PNJ de missions (port, atelier des bateaux, marché, magasin de gâteaux, forêt du nord).
 

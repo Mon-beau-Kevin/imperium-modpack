@@ -17,7 +17,7 @@ VERSION = sys.argv[1] if len(sys.argv) > 1 else "0"
 MC, NEOFORGE = "1.21.1", "21.1.264"
 # fichiers installés une seule fois (puis laissés au joueur)
 PRESERVE_DIRS = ("config/", "journeymap/")
-PRESERVE_FILES = ("options.txt", "servers.dat")
+PRESERVE_FILES = ("options.txt", "servers.dat", "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt")
 # fichiers toujours tenus à jour (même s'ils sont dans config/)
 FORCE_UPDATE = set()
 
@@ -51,7 +51,7 @@ def make_leger():
     if os.path.isdir(dst):
         shutil.rmtree(dst)
     os.makedirs(os.path.join(dst, "mods"))
-    for d in ("config", "journeymap"):
+    for d in ("config", "journeymap", "shaderpacks"):      # pas resourcepacks : Fresh Animations a besoin d'EMF/ETF (absents du Léger)
         shutil.copytree(os.path.join(ROOT, d), os.path.join(dst, d))
     for f in ("options.txt", "servers.dat", "imperium-version.txt"):
         shutil.copy2(os.path.join(ROOT, f), os.path.join(dst, f))

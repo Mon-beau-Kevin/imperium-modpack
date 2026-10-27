@@ -1396,7 +1396,7 @@ hash = "b27da17540a7c9eebf18090cc948e31bd55d0fd286aaa99915eabd667b53b70b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "bb8408e7188bc6e00f87159c1898e6bfee03926fb2c65b5af3f372a7abfbc7fb"
+hash = "3ad143a7bbc464452fea79e6f5614ab6a2d63e32a990a6880710d4f8cadeeb2c"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -2306,4 +2306,13 @@ preserve = true
 [[files]]
 file = "servers.dat"
 hash = "914e531be2313eadb31380a2e63bc504ae97e812dc005f0e992c7f5e6d50dab7"
+preserve = true
+
+[[files]]
+file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip"
+hash = "fed6c879e732cf7fc7bc6570ebb1def43235aa7e96f62859fbdbdbfa0b484b38"
+
+[[files]]
+file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+hash = "67cc8336f6d9023b5cf8f56924b63290373944ab4b4886a5f6a4ede4c488890f"
 preserve = true
