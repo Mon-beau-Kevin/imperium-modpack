@@ -6,6 +6,10 @@ hash = "114a4e9351be626365eed3df88e8ed0c30c9987867a3bd04e2cb7329cf00b589"
 preserve = true
 
 [[files]]
+file = "config/DistantHorizons.toml"
+hash = "3471e51d372e2be01df44a1e02345b079ff362c4223f6341adf6f4842c71ee75"
+
+[[files]]
 file = "config/Mekanism/client.toml"
 hash = "fa311a5086b0cc91ad4ddd1a13d39d841675e9294c70d8366e88526520d276e9"
 preserve = true
@@ -692,7 +696,7 @@ preserve = true
 
 [[files]]
 file = "config/iris.properties"
-hash = "07779153fcbce6e9d6381321c06f62e8788ecb1fb604ca7e5f72ee7d88c0a244"
+hash = "a95c42097d1c9589d85a03262ae01a30fedea7e6e435d584991eaff5887326a1"
 
 [[files]]
 file = "config/jade/hide-blocks.json"
@@ -1395,7 +1399,7 @@ hash = "b27da17540a7c9eebf18090cc948e31bd55d0fd286aaa99915eabd667b53b70b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "9a989ebd95efe334f4248db1d63432eaa07e6fbe0e1234e47c91e5fc88906ca1"
+hash = "40803a7a78dc98a2ebe1d1d0a901433465279db2c2d9314a6206eff688386016"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -1643,6 +1647,11 @@ metafile = true
 [[files]]
 file = "mods/curios-neoforge-9-5-1-1-21-1.pw.toml"
 hash = "c74afeb756e6d44101b5bcd7af758a73fd6064fb5911d40c322c866832c3852f"
+metafile = true
+
+[[files]]
+file = "mods/distanthorizons-3-3-3-1-21-1-fabric-neoforge.pw.toml"
+hash = "66b776b0ca78aedc5be927ceab8ae7ac0c5a1fee281ac082621bbaa4befa0a44"
 metafile = true
 
 [[files]]
@@ -2306,3 +2315,11 @@ preserve = true
 file = "servers.dat"
 hash = "914e531be2313eadb31380a2e63bc504ae97e812dc005f0e992c7f5e6d50dab7"
 preserve = true
+
+[[files]]
+file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip"
+hash = "fed6c879e732cf7fc7bc6570ebb1def43235aa7e96f62859fbdbdbfa0b484b38"
+
+[[files]]
+file = "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"
+hash = "67cc8336f6d9023b5cf8f56924b63290373944ab4b4886a5f6a4ede4c488890f"

@@ -20,7 +20,7 @@ PRESERVE_DIRS = ("config/", "journeymap/")
 PRESERVE_FILES = ("options.txt", "servers.dat")
 # fichiers toujours tenus à jour (même s'ils sont dans config/) : réglages identiques chez tous les joueurs
 FORCE_UPDATE = {"config/DistantHorizons.toml", "config/iris.properties", "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"}
-FORCE_UPDATE_LEGER = {"config/iris.properties"}   # Léger : shaders coupés
+FORCE_UPDATE_LEGER = {"config/DistantHorizons.toml", "config/iris.properties", "shaderpacks/ComplementaryReimagined_r5.9.3.zip.txt"}   # Léger : shader et DH en faible rendu
 
 
 def sha256(path):
@@ -52,7 +52,7 @@ def make_leger():
     if os.path.isdir(dst):
         shutil.rmtree(dst)
     os.makedirs(os.path.join(dst, "mods"))
-    for d in ("config", "journeymap"):      # Léger : ni shader, ni Fresh Animations, ni Distant Horizons
+    for d in ("config", "journeymap", "shaderpacks"):      # Léger : shader et DH en faible rendu, pas de Fresh Animations (EMF/ETF absents)
         shutil.copytree(os.path.join(ROOT, d), os.path.join(dst, d))
     for f in ("options.txt", "servers.dat", "imperium-version.txt"):
         shutil.copy2(os.path.join(ROOT, f), os.path.join(dst, f))

@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.6.5
+- Version Léger : shader Complementary (profil très léger) et Distant Horizons en faible rendu (128 chunks, qualité basse, 2 threads).
+
 ## 3.6.4
 - Version normale identique à l'instance de référence : shader Complementary et ses réglages, Fresh Animations, réglages Distant Horizons et Iris tenus à jour chez tous les joueurs.
 - Version Léger : sans shader (shaders coupés), sans Fresh Animations, sans Distant Horizons.
