@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.6.1
+- Armurier : la minigun coûte le prix du meilleur sniper.
+
 ## 3.6.0 — armes et tenues
 - Armurier : lance-roquettes et lance-grenades en vente, et un onglet « Munitions lourdes » (roquettes, grenades 40 mm).
 - Les armes ne se fabriquent plus (table d'armurerie TACZ et recettes Create retirées) : il faut les acheter.
