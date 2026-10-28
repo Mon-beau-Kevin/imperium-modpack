@@ -1,0 +1,8 @@
+name = "MezzConfig"
+filename = "mezz_config-1.21.1-neoforge-0.6.9-standalone.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9318/719/mezz_config-1.21.1-neoforge-0.6.9-standalone.jar"
+hash-format = "sha1"
+hash = "a20ecb9978bd8eebd40f4548d14b0a360a63f8a4"

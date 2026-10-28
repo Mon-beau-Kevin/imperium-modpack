@@ -1,8 +1,0 @@
-name = "Amendments"
-filename = "amendments-1.21-2.2.0-neoforge.jar"
-side = "both"
-
-[download]
-url = "https://edge.forgecdn.net/files/9272/216/amendments-1.21-2.2.0-neoforge.jar"
-hash-format = "sha1"
-hash = "3bc420bce11ebd51d57eef956ab211696dd0ecbd"

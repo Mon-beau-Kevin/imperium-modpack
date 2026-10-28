@@ -1,0 +1,8 @@
+name = "Envelope"
+filename = "envelope-neoforge-1.21.1-0.8.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9336/716/envelope-neoforge-1.21.1-0.8.1.jar"
+hash-format = "sha1"
+hash = "f2f9510cbc6666b978ecd08dbfae77f5dd974956"

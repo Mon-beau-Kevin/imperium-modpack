@@ -1,0 +1,8 @@
+name = "FTB Library (NeoForge)"
+filename = "ftb-library-neoforge-2101.1.38.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9344/121/ftb-library-neoforge-2101.1.38.jar"
+hash-format = "sha1"
+hash = "dce68b18dd26c390de14acfaec32fb5cdd70f15c"

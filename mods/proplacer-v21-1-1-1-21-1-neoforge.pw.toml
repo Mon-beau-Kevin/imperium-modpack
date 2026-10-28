@@ -1,8 +1,0 @@
-name = "Pro Placer"
-filename = "ProPlacer-v21.1.1-1.21.1-NeoForge.jar"
-side = "both"
-
-[download]
-url = "https://edge.forgecdn.net/files/6903/607/ProPlacer-v21.1.1-1.21.1-NeoForge.jar"
-hash-format = "sha1"
-hash = "458337cbff5860133d95794da3a1439e640f9581"

@@ -1,8 +1,0 @@
-name = "Create Missiles"
-filename = "createmissiles-1.0.3+neoforge-1.21.1.jar"
-side = "both"
-
-[download]
-url = "https://edge.forgecdn.net/files/8431/131/createmissiles-1.0.3%2Bneoforge-1.21.1.jar"
-hash-format = "sha1"
-hash = "4bce5c006184407bfa1932c3071491ef3a8d8fdf"

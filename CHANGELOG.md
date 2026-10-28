@@ -1,5 +1,11 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.0
+- Retirés : **Ballistix** (et sa bibliothèque Voltaic API), **Create Missiles** et **ProPlacer**.
+- Ajoutés : **Create: Ender Transmission** (version corrigée pour la 1.21.1) et **Mekanism Generators**.
+- Mises à jour : Amendments, Envelope, FTB Library, Fzzy Config, Immersive Paintings, Just Zoom, MezzConfig, ModernFix, Platform, Sign Plates, Sound Physics Remastered, TACZ Turrets, Traveler's Backpack. Puzzles Lib et DoxAmmo/DoxEffect gardent leur version (les plus récentes faisaient planter).
+- Zone serveur : un opérateur peut casser tous les blocs (Create compris) et démonter les bateaux et engins Create Aeronautics.
+
 ## 3.7.3
 - Course de canards : chaque joueur mise sur UNE case ; jusqu'à 3 joueurs sur le même canard, chacun sur sa case. Les cases des autres sont marquées en rouge.
 
