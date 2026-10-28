@@ -1380,7 +1380,7 @@ preserve = true
 
 [[files]]
 file = "imperium-version.txt"
-hash = "88206afd2d9b56ca71466c85d1ed1421b1db0e78fa00072697918fb8a9ac54ef"
+hash = "8366b0a6a2bd18fbaf821765e4908b8408fbafe3ba962e7d6b32b8b9e0486254"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
