@@ -1,5 +1,12 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.4 — renseignement et postes de commandement
+- **Predator Missile** (version Imperium) : nouveaux blocs, réservés au **mode créatif** :
+  - **Antenne de repérage** : une parabole qui tourne au-dessus d'un boîtier, avec une lampe qui clignote.
+  - **Console de renseignement** (2 blocs de large) : avec une antenne à moins de 12 blocs, elle retrouve un **joueur** (ses coordonnées s'il est dans l'Overworld, sinon seulement sa dimension, suivi en direct) ou une **nation** (ses homes, la base d'abord, et les zones de son territoire).
+  - **Écran d'ordinateur** avec clavier et souris : se relie aux consoles de tir et de drone comme les écrans tactiques (carte ou caméra).
+  - Déco : **clavier** seul et **baie de serveurs** aux voyants qui clignotent.
+
 ## 3.8.3 — tourelles TACZ 4.0
 - **TACZ Turrets** passe en version **4.0.0** : 10 modèles de tourelles (de basique à ultime, acier, laiton…), un **établi à tourelles** pour les fabriquer et des **camouflages**. Attention : l'ancien objet « Tourelle » n'existe plus.
 - Nouveau avec ce mod : des **tourelles sentinelles hostiles** peuvent apparaître dans la nature et dans les grottes.
