@@ -1,5 +1,12 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.2 — console de tir, drone et radar
+- Nouveau mod **Predator Missile** (version Imperium), réservé au **mode créatif** pour l'instant (aucune recette) :
+  - **Console de tir** : carte vue du ciel, clic = cible, missile en autopilote ou piloté. Le missile part de très haut et plonge sur la cible.
+  - **Console de drone** : drone de repérage (1 à 10 min de vol, cercle réglable), pilotable à la main, caméra 3D en couleur ou en thermique. Il peut frapper : missiles moyens (4, puis 30 s de recharge) ou puissants (2, puis 45 s), arrivée droit devant ou par le côté.
+  - **Écrans tactiques** : s'assemblent en grands panneaux, montrent la carte ou la caméra. **Clic droit** sur la carte = poser un ping visible par tous ; **Shift + clic droit** = changer d'affichage.
+  - **Écran radar** : balayage de la zone, joueurs en rouge, monstres en orange, animaux en bleu ; ses détections s'affichent aussi sur les cartes.
+
 ## 3.8.1
 - Retirés : **Ballistix** (et sa bibliothèque Voltaic API), **Create Missiles** et **ProPlacer**.
 - Ajoutés : **Create: Ender Transmission** (version corrigée pour la 1.21.1) et **Mekanism Generators**.
