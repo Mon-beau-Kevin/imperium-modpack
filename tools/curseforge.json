@@ -1378,12 +1378,12 @@
  },
  {
   "name": "TACZ Turrets",
-  "filename": "tacz_turrets-neoforge-3.0.1-1.21.1.jar",
-  "url": "https://edge.forgecdn.net/files/9316/840/tacz_turrets-neoforge-3.0.1-1.21.1.jar",
-  "sha1": "4f06037159dbbdae8a0cd8fb9c550392c46abea4",
-  "size": 1300906,
+  "filename": "tacz_turrets-neoforge-4.0.0-1.21.1.jar",
+  "url": "https://edge.forgecdn.net/files/9350/514/tacz_turrets-neoforge-4.0.0-1.21.1.jar",
+  "sha1": "fd089f356a6cd6c172321793c6c75c159f63cabc",
+  "size": 1631581,
   "projectID": 1376660,
-  "fileID": 9316840
+  "fileID": 9350514
  },
  {
   "name": "[UNOFFICIAL] TaCZ NeoForge Port",

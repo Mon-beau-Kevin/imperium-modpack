@@ -1,8 +1,0 @@
-name = "TACZ Turrets"
-filename = "tacz_turrets-neoforge-3.0.1-1.21.1.jar"
-side = "both"
-
-[download]
-url = "https://edge.forgecdn.net/files/9316/840/tacz_turrets-neoforge-3.0.1-1.21.1.jar"
-hash-format = "sha1"
-hash = "4f06037159dbbdae8a0cd8fb9c550392c46abea4"

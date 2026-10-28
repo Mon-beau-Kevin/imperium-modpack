@@ -1,5 +1,10 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.3 — tourelles TACZ 4.0
+- **TACZ Turrets** passe en version **4.0.0** : 10 modèles de tourelles (de basique à ultime, acier, laiton…), un **établi à tourelles** pour les fabriquer et des **camouflages**. Attention : l'ancien objet « Tourelle » n'existe plus.
+- Nouveau avec ce mod : des **tourelles sentinelles hostiles** peuvent apparaître dans la nature et dans les grottes.
+- **Fresh Animations** (animations des créatures) est inclus dans la version normale. S'il n'est pas actif chez toi : Options → Packs de ressources → l'ajouter à droite.
+
 ## 3.8.2 — console de tir, drone et radar
 - Nouveau mod **Predator Missile** (version Imperium), réservé au **mode créatif** pour l'instant (aucune recette) :
   - **Console de tir** : carte vue du ciel, clic = cible, missile en autopilote ou piloté. Le missile part de très haut et plonge sur la cible.
