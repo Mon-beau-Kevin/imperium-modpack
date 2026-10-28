@@ -3,7 +3,7 @@
 ## 3.8.0
 - Retirés : **Ballistix** (et sa bibliothèque Voltaic API), **Create Missiles** et **ProPlacer**.
 - Ajoutés : **Create: Ender Transmission** (version corrigée pour la 1.21.1) et **Mekanism Generators**.
-- Mises à jour : Amendments, Envelope, FTB Library, Fzzy Config, Immersive Paintings, Just Zoom, MezzConfig, ModernFix, Platform, Sign Plates, Sound Physics Remastered, TACZ Turrets, Traveler's Backpack. Puzzles Lib et DoxAmmo/DoxEffect gardent leur version (les plus récentes faisaient planter).
+- Mises à jour : Amendments, Envelope, Fzzy Config, Immersive Paintings, Just Zoom, MezzConfig, ModernFix, Platform, Sign Plates, Sound Physics Remastered, TACZ Turrets, Traveler's Backpack. Puzzles Lib, DoxAmmo/DoxEffect et FTB Library gardent leur version (les plus récentes font planter, ou Warring Nations exige la version actuelle).
 - Zone serveur : un opérateur peut casser tous les blocs (Create compris) et démonter les bateaux et engins Create Aeronautics.
 
 ## 3.7.3

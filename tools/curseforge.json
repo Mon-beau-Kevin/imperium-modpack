@@ -604,12 +604,12 @@
  },
  {
   "name": "FTB Library (NeoForge)",
-  "filename": "ftb-library-neoforge-2101.1.38.jar",
-  "url": "https://edge.forgecdn.net/files/9344/121/ftb-library-neoforge-2101.1.38.jar",
-  "sha1": "dce68b18dd26c390de14acfaec32fb5cdd70f15c",
-  "size": 1477837,
+  "filename": "ftb-library-neoforge-2101.1.35.jar",
+  "url": "https://edge.forgecdn.net/files/8569/579/ftb-library-neoforge-2101.1.35.jar",
+  "sha1": "9922fa358983120edeed22194bf02bcf9c859fbb",
+  "size": 1439018,
   "projectID": 404465,
-  "fileID": 9344121
+  "fileID": 8569579
  },
  {
   "name": "FTB Teams (NeoForge)",

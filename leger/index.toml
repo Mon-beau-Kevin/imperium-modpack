@@ -1718,8 +1718,8 @@ hash = "c09cf9513df6350d6ceeb82568e3e256a2fbcbfb4a74deca3fd04cecb0ebd3d4"
 metafile = true
 
 [[files]]
-file = "mods/ftb-library-neoforge-2101-1-38.pw.toml"
-hash = "a6ceaadfc234b25adf6a9d8e43e0ffecf8cc0969c893ad6d5881a0c82f0c02e4"
+file = "mods/ftb-library-neoforge-2101-1-35.pw.toml"
+hash = "d9136a2ace2b1d246220858a3d7bf0663f18bffa803045c37ed98ba13d07d2c6"
 metafile = true
 
 [[files]]
