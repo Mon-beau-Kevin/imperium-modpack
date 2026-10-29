@@ -1384,7 +1384,7 @@ hash = "b27da17540a7c9eebf18090cc948e31bd55d0fd286aaa99915eabd667b53b70b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "3461d1186e6d7a30fdf744c2ce707abc8394f35b051d79f454f6943d0dafa6bf"
+hash = "4da730426dc19c071fb62fba61e101ba45ef4460563f44229646872b400fd3ea"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -1474,6 +1474,11 @@ metafile = true
 [[files]]
 file = "mods/betterarcheology-neoforge-1-21-1-1-3-9.pw.toml"
 hash = "466bc2bdce73153d1d0a878cbcb773046b9a3f45447b07e390d6a8837e3a0668"
+metafile = true
+
+[[files]]
+file = "mods/betterf3-11-0-3-neoforge-1-21-1.pw.toml"
+hash = "01a5151fcf0fc97c93f738a672790e3dc872d26247f9fa8718acaf815c510203"
 metafile = true
 
 [[files]]
@@ -2102,6 +2107,11 @@ metafile = true
 [[files]]
 file = "mods/sodium-neoforge-0-8-13-mc1-21-1.pw.toml"
 hash = "54af96e25d98bacb2ce0aabf70c072d59ee0e3f871957e0cd3eb3ad146a22937"
+metafile = true
+
+[[files]]
+file = "mods/sound-physics-remastered-neoforge-1-21-1-1-5-2.pw.toml"
+hash = "a5eb0aaf0b1a4ec54cfaca8d76718f9e9771f729a841b501803196cf1c6de925"
 metafile = true
 
 [[files]]

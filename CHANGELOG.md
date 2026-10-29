@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.9 — Version Léger : son réaliste et écran F3
+- **Version Léger** : Sound Physics Remastered (écho et sons réalistes) et BetterF3 (écran F3 plus lisible) sont maintenant inclus, comme dans la version normale.
+- Version normale : rien ne change.
+
 ## 3.8.8 — Début de la vraie partie
 - **Kit de départ** : à ta première connexion, le pays te verse **5 crowns sur ton compte en banque** et tu reçois un **terminal bancaire portable** (clic droit : voir ton compte, déposer ou retirer de l'argent, où que tu sois), avec les deux livres du serveur.
 - **Nouvelle partie** : l'économie des tests a été remise à zéro (comptes en banque, pièces, trésor public à 20 crowns, missions, gouvernement). Tout le monde repart avec le kit de départ.

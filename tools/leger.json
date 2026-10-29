@@ -1,11 +1,9 @@
 {
  "_": "Version Léger : mods retirés (noms de fichiers) et fichiers retirés",
  "sans_mods": [
-  "BetterF3-11.0.3-NeoForge-1.21.1.jar",
   "entity_model_features-3.3.12-1.21-neoforge.jar",
   "entity_texture_features-7.2.6-1.21-neoforge.jar",
   "light-overlay-12.0.0-neoforge.jar",
-  "sound-physics-remastered-neoforge-1.21.1-1.5.2.jar",
   "spark-1.10.124-neoforge.jar",
   "worldedit-mod-7.3.8.jar"
  ],
