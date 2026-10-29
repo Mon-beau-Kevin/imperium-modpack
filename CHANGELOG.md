@@ -1,5 +1,10 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.8 — Début de la vraie partie
+- **Kit de départ** : à ta première connexion, le pays te verse **5 crowns sur ton compte en banque** et tu reçois un **terminal bancaire portable** (clic droit : voir ton compte, déposer ou retirer de l'argent, où que tu sois), avec les deux livres du serveur.
+- **Nouvelle partie** : l'économie des tests a été remise à zéro (comptes en banque, pièces, trésor public à 20 crowns, missions, gouvernement). Tout le monde repart avec le kit de départ.
+- Le Guide d'Imperium parle maintenant de l'argent de départ.
+
 ## 3.8.7 — FPS dans les magasins
 - Les vitrines des magasins (Create Numismatics) ne redessinent plus à chaque image les objets au modèle 3D énorme (les drones de SBW Drone Warfare : des dizaines de milliers de faces chacun), qui faisaient chuter les FPS près de ces magasins. À la place, la vitrine montre une « photo » de l'objet, exactement comme son icône dans l'inventaire, toujours tournée vers toi. Le vendeur marche pareil.
 
