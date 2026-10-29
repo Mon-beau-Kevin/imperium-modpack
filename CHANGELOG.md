@@ -1,5 +1,8 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.7 — FPS dans les magasins
+- Les vitrines des magasins (Create Numismatics) ne redessinent plus à chaque image les objets au modèle 3D énorme (les drones de SBW Drone Warfare : des dizaines de milliers de faces chacun), qui faisaient chuter les FPS près de ces magasins. À la place, la vitrine montre une « photo » de l'objet, exactement comme son icône dans l'inventaire, toujours tournée vers toi. Le vendeur marche pareil.
+
 ## 3.8.6 — FPS au spawn, tableau de mission, nouvelles tables de commande
 - **FPS au spawn** : les objets qui tournent au-dessus des vendeurs (Create Numismatics) ne sont plus dessinés qu'à 24 blocs, et les présentoirs d'armes TACZ qu'à 32 blocs et seulement quand ils sont dans ton champ de vision. Les boutiques marchent pareil.
 - **Predator Missile** (blocs réservés au mode créatif) :

@@ -1380,7 +1380,7 @@ preserve = true
 
 [[files]]
 file = "imperium-version.txt"
-hash = "b2ed8b4dad7edca7706cb88b19e5465b66a14be5360d147824d746b48d9db6cb"
+hash = "f4453f40934851ac7fca57ac61481bd14b28c3cf9a64e3bbd46f7e6a19956ddc"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -2018,7 +2018,7 @@ metafile = true
 
 [[files]]
 file = "mods/predator-missile-imperium.jar"
-hash = "8d3d05e046f57bf0e5b54f41b7a981d7f453dd2359f55d9a706eb734660f0025"
+hash = "3e6819c88fa5c90ad490e22ca937fd56bb6d48379b220699ed60571208849932"
 
 [[files]]
 file = "mods/puzzleslib-v21-1-64-mc1-21-1-neoforge.pw.toml"
