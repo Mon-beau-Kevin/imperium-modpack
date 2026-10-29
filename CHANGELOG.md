@@ -1,5 +1,15 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.6 — FPS au spawn, tableau de mission, nouvelles tables de commande
+- **FPS au spawn** : les objets qui tournent au-dessus des vendeurs (Create Numismatics) ne sont plus dessinés qu'à 24 blocs, et les présentoirs d'armes TACZ qu'à 32 blocs et seulement quand ils sont dans ton champ de vision. Les boutiques marchent pareil.
+- **Predator Missile** (blocs réservés au mode créatif) :
+  - **Consoles de tir et de drone** : ce sont maintenant de vraies tables de commande de 2 blocs (grand écran, pupitre de lancement, gros bouton rouge ; écran caméra, joystick et manette des gaz pour le drone). Mêmes fonctions qu'avant. Les consoles déjà posées restent comme elles sont : pour avoir la nouvelle table, casse-la et repose-la (il faut 1 bloc libre à droite).
+  - **Tableau de mission** à poser au mur (jusqu'à 10 × 6 blocs) : comme la table de plan, il a sa propre carte. La carte est épinglée, chaque objectif a sa fiche reliée à la carte par un fil rouge, et on y voit les frappes prévues.
+  - Nouvel outil **Frappe** sur la carte du plan : une petite croix là où il faut frapper.
+  - Table de plan : les textes restent sur la carte et les symboles sont plus petits.
+  - On peut **s'asseoir** sur la chaise de bureau (clic droit ; accroupi pour se lever).
+- **Zone du serveur** : les opérateurs et les bâtisseurs peuvent casser les rails de train Create (même les courbes) et régler les blocs Create à la clé (gares, signaux…), comme les autres blocs.
+
 ## 3.8.5 — missiles incendiaires, table de plan et protections
 - **Predator Missile** (version Imperium) :
   - Nouveau **missile incendiaire** (console de tir et drone) : petite explosion puis un incendie qui brûle les joueurs, les créatures et les constructions inflammables pendant quelques secondes. Le feu ne se propage pas.
