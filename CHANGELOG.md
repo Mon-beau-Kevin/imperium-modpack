@@ -1,5 +1,10 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.0 — Nettoyage des anciens mods
+- **Anciens mods supprimés tout seuls** : si ton dossier mods contient encore des mods que le pack n'utilise plus (par exemple Create Missiles, Ballistix ou Voltaic, venus d'un ancien fichier d'installation), ils t'empêchaient de rejoindre le serveur (« channel missing on the server side »). Maintenant, un écran te prévient au lancement et ils sont supprimés quand tu fermes le jeu. Relance ensuite le jeu : tout est prêt.
+- La mise à jour automatique les supprime aussi.
+- Version Léger : les mods qu'elle n'a pas (Entity Model/Texture Features, Light Overlay, spark, WorldEdit) sont retirés s'ils sont restés d'une installation normale.
+
 ## 3.8.9 — Version Léger : son réaliste et écran F3
 - **Version Léger** : Sound Physics Remastered (écho et sons réalistes) et BetterF3 (écran F3 plus lisible) sont maintenant inclus, comme dans la version normale.
 - Version normale : rien ne change.

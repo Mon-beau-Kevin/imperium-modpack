@@ -8,6 +8,9 @@ Sources :
     (« preserve ») : les réglages, touches et serveurs des joueurs ne sont jamais écrasés.
 Construit aussi la version « Léger » (dossier leger/) pour les petits PC : mêmes fichiers, moins de mods
 (tools/leger.json) et des réglages graphiques plus légers (tools/leger/).
+Anciens mods : tools/mods-historique.txt garde le nom de tous les fichiers de mods que le pack a contenus un jour ;
+chaque édition reçoit imperium-mods-retires.txt = ceux qui n'y sont plus. Le mod outils-serveur (au lancement) et les
+scripts de mise à jour les suppriment chez le joueur (packwiz, lui, ne supprime pas les mods installés par CurseForge).
 Usage : python3 tools/build_pack.py <version>
 """
 import hashlib, json, os, re, sys, urllib.parse
@@ -75,7 +78,26 @@ def make_leger():
     return set(spec["sans_mods"])
 
 
+HIST = os.path.join(ROOT, "tools", "mods-historique.txt")
+RETIRES = "imperium-mods-retires.txt"
+
+
+def history():
+    """Noms de tous les mods que le pack a contenus un jour, complétés avec ceux d'aujourd'hui."""
+    names = set()
+    if os.path.exists(HIST):
+        names = {l.strip() for l in open(HIST, encoding="utf-8") if l.strip() and not l.startswith("#")}
+    names |= {m["filename"] for m in json.load(open(os.path.join(ROOT, "tools", "curseforge.json"), encoding="utf-8"))}
+    names |= {f for f in os.listdir(os.path.join(ROOT, "mods")) if f.endswith(".jar")}
+    head = [l for l in open(HIST, encoding="utf-8") if l.startswith("#")] if os.path.exists(HIST) else []
+    with open(HIST, "w", encoding="utf-8", newline="\n") as f:
+        f.write("".join(head) + "\n".join(sorted(names, key=str.lower)) + "\n")
+    return names
+
+
 def main():
+    global ALL_MODS
+    ALL_MODS = history()
     build(ROOT, "Imperium", set(), FORCE_UPDATE)
     sans = make_leger()
     build(os.path.join(ROOT, LEGER), "Imperium - Leger", sans, FORCE_UPDATE_LEGER)
@@ -90,6 +112,10 @@ def build(base, packname, sans, force):
             os.remove(os.path.join(meta_dir, f))
     cf = [m for m in json.load(open(os.path.join(ROOT, "tools", "curseforge.json"), encoding="utf-8")) if m["filename"] not in sans]
     hosted = {f for f in os.listdir(meta_dir) if f.endswith(".jar")}
+    # anciens mods : tout ce que le pack a contenu un jour et que cette édition n'a plus
+    retired = sorted(ALL_MODS - {m["filename"] for m in cf} - hosted, key=str.lower)
+    with open(RETIRES, "w", encoding="utf-8", newline="\r\n") as f:
+        f.write("\n".join(retired) + ("\n" if retired else ""))
     files = []
     used = set()
     for m in sorted(cf, key=lambda m: m["filename"].lower()):
@@ -139,7 +165,7 @@ def build(base, packname, sans, force):
         f.write(pack)
     n_meta = sum(1 for e in files if e.get("metafile"))
     n_jar = sum(1 for e in files if e["file"].endswith(".jar") and e["file"].startswith("mods/"))
-    print(f"{packname} {VERSION} : {n_meta} mods CurseForge, {n_jar} mods hébergés, {len(files) - n_meta - n_jar} autres fichiers")
+    print(f"{packname} {VERSION} : {n_meta} mods CurseForge, {n_jar} mods hébergés, {len(files) - n_meta - n_jar} autres fichiers, {len(retired)} anciens mods à supprimer")
 
 
 if __name__ == "__main__":

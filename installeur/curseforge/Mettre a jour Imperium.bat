@@ -47,6 +47,8 @@ if errorlevel 1 (
   pause
   exit /b 1
 )
+rem --- Anciens mods retires du pack (installes par CurseForge : packwiz ne les supprime pas) ---
+if exist "imperium-mods-retires.txt" for /f "usebackq delims=" %%F in ("imperium-mods-retires.txt") do if exist "mods\%%F" (echo Ancien mod supprime : %%F& del /f /q "mods\%%F")
 echo.
 echo Imperium est a jour !
 set "CF="

@@ -43,7 +43,7 @@ def make(base, name, label, version):
                 rel = os.path.normpath(os.path.join(rel_dir, fn)).replace(os.sep, "/")
                 if fn.endswith(".pw.toml") or rel in ("pack.toml", "index.toml"):
                     continue
-                if rel_dir == "." and fn not in ("options.txt", "servers.dat", "imperium-version.txt", "imperium-edition.txt"):
+                if rel_dir == "." and fn not in ("options.txt", "servers.dat", "imperium-version.txt", "imperium-edition.txt", "imperium-mods-retires.txt"):
                     continue
                 z.write(os.path.join(dirpath, fn), "overrides/" + rel)
         for f in OUTILS:
