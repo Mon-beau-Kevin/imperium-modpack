@@ -1,5 +1,17 @@
 # Nouveautés du modpack Imperium
 
+## 3.8.5 — missiles incendiaires, table de plan et protections
+- **Predator Missile** (version Imperium) :
+  - Nouveau **missile incendiaire** (console de tir et drone) : petite explosion puis un incendie qui brûle les joueurs, les créatures et les constructions inflammables pendant quelques secondes. Le feu ne se propage pas.
+  - **Tous les missiles cassent et blessent**, même dans les territoires des nations. Seule la **zone du serveur** (le spawn) reste protégée. Le missile « Propre » casse aussi, avec une petite explosion.
+  - Les **tablettes Predator** ne se fabriquent plus.
+  - **Plan de bataille** dans la console : flèches d'attaque, ralliement, danger, défense et objectifs de mission, visibles par tous sur la console et les écrans.
+  - Nouveaux blocs, réservés au **mode créatif** :
+    - **Table de plan** : des blocs posés côte à côte forment une table rectangulaire (jusqu'à 16 × 16). Elle a **sa propre carte**, posée à plat sur la table : tape les coordonnées X et Z de la zone, déplace-la avec les flèches, choisis l'échelle. On y voit les territoires des nations et on y dessine le plan d'attaque. Les **opérations** se rangent (« Opération Alpha ») : quand une opération est finie, on en ouvre une nouvelle et on peut rouvrir les anciennes.
+    - **Bureau** : poste informatique (2 écrans qui montrent la carte et la caméra), bureau, classeur, lampe, chaise, imprimante, globe, machine à écrire, machine à café, panneau d'affichage, caisse de munitions et sacs de sable.
+- **Explosions** (TNT, creepers…) : elles ne cassent plus rien dans les territoires protégés, même avec les gros cratères d'Explosion Overhaul.
+- **Zone du serveur** : un opérateur peut casser les blocs d'un engin Create Aeronautics assemblé sans le démonter d'abord.
+
 ## 3.8.4 — renseignement et postes de commandement
 - **Predator Missile** (version Imperium) : nouveaux blocs, réservés au **mode créatif** :
   - **Antenne de repérage** : une parabole qui tourne au-dessus d'un boîtier, avec une lampe qui clignote.
