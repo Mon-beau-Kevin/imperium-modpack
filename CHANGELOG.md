@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.2 — Missions par jour Minecraft
+- **Missions** : tu peux rendre 3 missions par **jour Minecraft** (au lieu de 3 par jour réel). Le compteur repart à zéro à chaque lever du soleil, donc aussi quand tout le monde va dormir.
+- Le Guide d'Imperium est à jour.
+
 ## 3.9.1 — Réanimation et sacs à dos
 - **Réanimation (PlayerRevive)** : quand tu es à terre, le texte « Time left… / Wait for help… » ne s'affiche plus en double, l'un sur l'autre.
 - **Sacs à dos (Traveler's Backpack)** : le sac ne se met plus dans la case « Dos » de Curios. On l'équipe comme avant, avec le bouton du sac (menu du sac). Un sac déjà porté ne disparaît pas : tu le retrouves dans ton inventaire.
