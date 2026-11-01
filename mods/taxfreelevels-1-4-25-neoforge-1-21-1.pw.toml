@@ -1,0 +1,8 @@
+name = "Tax Free Levels"
+filename = "TaxFreeLevels-1.4.25-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8738/216/TaxFreeLevels-1.4.25-neoforge-1.21.1.jar"
+hash-format = "sha1"
+hash = "cad7df48510d9622867131342930437c0f99af64"

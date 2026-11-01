@@ -1,5 +1,13 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.4 — 5 nouveaux mods
+- **Vein Mining** : un nouvel enchantement « Vein Mining » (table d'enchantement, livres). Avec un outil qui l'a, tu casses d'un coup tout un filon de minerai ou un tronc entier ; accroupis-toi pour miner un seul bloc. Ça use l'outil et donne faim pour chaque bloc. Les zones protégées restent protégées.
+- **Uncraft Everything** : une table pour décrafter les objets et récupérer leurs matériaux.
+- **Dis-Enchanting Table** : une table pour retirer les enchantements d'un objet et les mettre sur des livres.
+- **Tax Free Levels** : l'enclume et la table d'enchantement coûtent pareil quel que soit ton niveau, plus de « Trop cher ! » à l'enclume, et renommer un objet coûte toujours 1 niveau.
+- **Crawl on Demand** : une touche pour ramper quand tu veux (passer dans les trous d'un bloc de haut).
+- Dans les deux versions du pack (normale et Léger).
+
 ## 3.9.3 — Les marchands rendent la monnaie
 - **Marchands PNJ** : tu n'as plus besoin des pièces exactes. Si un objet coûte par exemple 1 crown et 1 cog, tu peux payer avec 2 crowns : le marchand prend ce qu'il faut et te **rend la monnaie** dans ton inventaire (un message te dit combien). Marche avec toutes les pièces (sun, crown, cog, sprocket, bevel, spur).
 - Le banquier ne change rien : il garde son fonctionnement habituel.

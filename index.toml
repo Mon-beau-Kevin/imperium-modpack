@@ -1384,7 +1384,7 @@ hash = "061eb54db5eefc53abfd30f2604264664df88061b22e197fbd2e29beedaef39e"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "a5f3bf7c7d6bb4e38f65f6fd984cf5dabf7dee41e8990ea10e13b6eec5e38724"
+hash = "aa77303aac98eddf36b60c556bb4f1252b4829be76a80d94853a5a2ecd1f0766"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -1570,6 +1570,11 @@ hash = "21dd4c9ecb1d4abff397a45f4a8eadc380722ab71684e5c348798fe066714c10"
 metafile = true
 
 [[files]]
+file = "mods/crawlondemand-1-21-1-21-5-1-2-0-neoforge.pw.toml"
+hash = "543ea0c35f0207954c3a4bf091d12bb81035859f89818d4a997f5b4bf2dd1cfd"
+metafile = true
+
+[[files]]
 file = "mods/create-1-21-1-6-0-10.pw.toml"
 hash = "e140ee0c92d95b84626ebe3d02506bbd6ca762536bbd2baca246f108efd5f78e"
 metafile = true
@@ -1631,6 +1636,11 @@ metafile = true
 [[files]]
 file = "mods/curios-neoforge-9-5-1-1-21-1.pw.toml"
 hash = "c74afeb756e6d44101b5bcd7af758a73fd6064fb5911d40c322c866832c3852f"
+metafile = true
+
+[[files]]
+file = "mods/disenchanting-table-merged-1-21-1-5-0-2.pw.toml"
+hash = "6c1b3b7167839e5b2e5cf5ad7ccc750ec3c3a55203192a6886b27bfad677e2e8"
 metafile = true
 
 [[files]]
@@ -1921,6 +1931,11 @@ hash = "bdadb73f23307337d32e23ee7071bb7e63d66b82bb26d206c25b89f7e91352ea"
 metafile = true
 
 [[files]]
+file = "mods/monolib-neoforge-1-21-1-4-1-2.pw.toml"
+hash = "5e4ab7ddedf92aa00d4b55c79f57db7edb243c0b5ea0ea82c5df5c2ff567b654"
+metafile = true
+
+[[files]]
 file = "mods/moonlight-1-21-1-3-7-2-neoforge.pw.toml"
 hash = "ef2bab1e89bcf81f586b38188e6214e10fc84b722a6f624cded71f7fcf559191"
 metafile = true
@@ -2200,6 +2215,11 @@ hash = "859f813a55c6277a958fa02151b68ef6ad18cbc4f5dfc0e1334047a145519add"
 metafile = true
 
 [[files]]
+file = "mods/taxfreelevels-1-4-25-neoforge-1-21-1.pw.toml"
+hash = "972d31f88cd78bedd845ea154c5d53ee73ab01248b3bffd90a504aa781bae598"
+metafile = true
+
+[[files]]
 file = "mods/teampins-2-0-0.pw.toml"
 hash = "271b97a926bda992a1dcba6cf2ea62c1d672ebf3599ea534974ef3232f77e068"
 metafile = true
@@ -2235,8 +2255,18 @@ hash = "ee3c63c1c91a699a0071bb33ee1de57b9a68e63137104c65d90994f1c8473a63"
 metafile = true
 
 [[files]]
+file = "mods/uncrafteverything-2-1-6-1-21-1-neoforge.pw.toml"
+hash = "20ab61326566325b63139b3aa64d61e4a4a8530fd6b70c9100e08ae1ece8d42b"
+metafile = true
+
+[[files]]
 file = "mods/undead-unleashed-2-0-6-hotfix-neoforge-1-21-1.pw.toml"
 hash = "be6e1578aaa48e625bd8921cd76c6be6e0cc18cf20734b4084740e82664008c7"
+metafile = true
+
+[[files]]
+file = "mods/veinmining-neoforge-5-0-0-beta-2-1-21.pw.toml"
+hash = "a8f305e27176dbc4420618e28c9f3888810c3822b8e7b9fd66aaad868763b1c1"
 metafile = true
 
 [[files]]

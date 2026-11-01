@@ -1,0 +1,8 @@
+name = "Uncraft Everything"
+filename = "uncrafteverything-2.1.6+1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8978/317/uncrafteverything-2.1.6%2B1.21.1-neoforge.jar"
+hash-format = "sha1"
+hash = "fc52164f27cb6afb58e6676ac8a00fa99d324bc7"

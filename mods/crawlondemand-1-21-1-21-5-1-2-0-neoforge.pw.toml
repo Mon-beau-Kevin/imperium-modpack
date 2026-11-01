@@ -1,0 +1,8 @@
+name = "Crawl on Demand"
+filename = "crawlondemand-1.21-1.21.5-1.2.0+neoforge.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/7385/448/crawlondemand-1.21-1.21.5-1.2.0%2Bneoforge.jar"
+hash-format = "sha1"
+hash = "8aa13f9324597500f0740158c367c957f5221667"
