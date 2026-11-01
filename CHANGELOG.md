@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.3 — Les marchands rendent la monnaie
+- **Marchands PNJ** : tu n'as plus besoin des pièces exactes. Si un objet coûte par exemple 1 crown et 1 cog, tu peux payer avec 2 crowns : le marchand prend ce qu'il faut et te **rend la monnaie** dans ton inventaire (un message te dit combien). Marche avec toutes les pièces (sun, crown, cog, sprocket, bevel, spur).
+- Le banquier ne change rien : il garde son fonctionnement habituel.
+
 ## 3.9.2 — Missions par jour Minecraft
 - **Missions** : tu peux rendre 3 missions par **jour Minecraft** (au lieu de 3 par jour réel). Le compteur repart à zéro à chaque lever du soleil, donc aussi quand tout le monde va dormir.
 - Le Guide d'Imperium est à jour.
