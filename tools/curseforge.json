@@ -1242,6 +1242,15 @@
   "fileID": 8754631
  },
  {
+  "name": "[SBW] NPC Squads",
+  "filename": "sbwnpc-0.6.0-mc1.21.1.jar",
+  "url": "https://edge.forgecdn.net/files/9059/306/sbwnpc-0.6.0-mc1.21.1.jar",
+  "sha1": "bb60719201d0ee44f34aa44d41e057627be94a14",
+  "size": 1344179,
+  "projectID": 1704148,
+  "fileID": 9059306
+ },
+ {
   "name": "SBW Optimized",
   "filename": "sbw-optimized-neoforge-1.21.1-1.0.0.jar",
   "url": "https://edge.forgecdn.net/files/9125/726/sbw-optimized-neoforge-1.21.1-1.0.0.jar",

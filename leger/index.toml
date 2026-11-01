@@ -1388,7 +1388,7 @@ hash = "a5f8a18c3b0674cb854afd7c6e45b8dd5cd984b48ac5cfc54292fc625f14562b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "aa77303aac98eddf36b60c556bb4f1252b4829be76a80d94853a5a2ecd1f0766"
+hash = "f4e2d005055b0f8cc4e1c26c3de3e19c07d5fec9eb3d2a2a110c3e3d780f30eb"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -1531,7 +1531,7 @@ metafile = true
 
 [[files]]
 file = "mods/casino-numismatics-1.0.0.jar"
-hash = "989d2a76554b3225666949e136da82f86d7e2310c50ddc53d24d60a2cd72e271"
+hash = "9b88dd698375353424cbb1bf3f254c75a43cbfc625223e0591429638d50cbc48"
 
 [[files]]
 file = "mods/cerbonsapi-neoforge-1-21-1-3-0.pw.toml"
@@ -1902,7 +1902,7 @@ metafile = true
 
 [[files]]
 file = "mods/minevegas-casino-neoforge-1.21.1-1.0.4.jar"
-hash = "80fafd1942cc54b4ef5a613248ba72493dc9f92b3d8c7eb33c4dcc07917254f1"
+hash = "5694bebe58b4f113681ba1f70b79623987596a025d56eb8e259e4e851752c3c3"
 
 [[files]]
 file = "mods/modernfix-neoforge-5-27-27-mc1-21-1.pw.toml"
@@ -2091,6 +2091,11 @@ metafile = true
 [[files]]
 file = "mods/sbw-optimized-neoforge-1-21-1-1-0-0.pw.toml"
 hash = "a30026264c2545e745031b2cbefb86b08357d9717b48e85ec356f22c83b8fcb7"
+metafile = true
+
+[[files]]
+file = "mods/sbwnpc-0-6-0-mc1-21-1.pw.toml"
+hash = "759e9d8e19627552c9eea10049331308a976d2b811ca5e69f4cf16c6260d6043"
 metafile = true
 
 [[files]]

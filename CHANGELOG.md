@@ -1,5 +1,14 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.5 — Les opérations du Commandant, le nouveau casino
+- **Opérations du Commandant** : un nouveau PNJ, le **Commandant**, confie **25 opérations de groupe** contre des bandits armés. Attaque (reprendre un village tenu, chasser un chef caché, libérer des otages, capturer des points) ou **défense** (3 minutes pour se préparer, puis des vagues massives : protéger les otages dans les maisons). Chacun paie sa mise ; si vous réussissez, vous touchez **× 3 à × 5** ; si vous échouez, tout part au trésor du pays.
+- Ça devient vite très dur : tourelles automatiques autour des villages, pick-up armés, mortiers, drones kamikazes, frappes aériennes qui cassent les murs, et des **soldats en blindé, en char et en hélicoptère** (nouveau mod [SBW] NPC Squads). En défense, les bandits font sauter les maisons avec des **drones de brèche** : abats-les en vol.
+- **Objectifs secondaires** (pas obligatoires) qui rapportent plus : protéger des civils, détruire les tourelles, abattre un officier caché, finir vite, aucun mort…
+- Certaines opérations ne se font que **de nuit**, d'autres que **de jour**. Jamais deux fois le même village : de plus en plus loin, un point de passage s'affiche sur ta carte. Un petit panneau en haut à gauche suit l'opération. Tout est expliqué dans le Guide d'Imperium.
+- **Marché** : les 5 marchands qui n'étaient que du décor (boulanger, primeur, fromager, épicier, fleuriste) vendent leur spécialité pas cher.
+- **Banquier** : accroupi + clic droit pour lui **vendre tous tes minerais** d'un coup (en pièces ou sur ton compte), jusqu'à 64 de chaque par jour.
+- **Casino (nouvelle version)** : le **poker** (Casino Hold'em), 58 nouveaux blocs de décoration et une télé géante. Au blackjack, fermer l'écran laisse tes jetons sur la table (ils sont joués si tu restes à côté, sinon rendus). À la roulette, un onglet « TABLE » montre les mises des autres. Le Plinko ne plante plus.
+
 ## 3.9.4 — 5 nouveaux mods
 - **Vein Mining** : un nouvel enchantement « Vein Mining » (table d'enchantement, livres). Avec un outil qui l'a, tu casses d'un coup tout un filon de minerai ou un tronc entier ; accroupis-toi pour miner un seul bloc. Ça use l'outil et donne faim pour chaque bloc. Les zones protégées restent protégées.
 - **Uncraft Everything** : une table pour décrafter les objets et récupérer leurs matériaux.

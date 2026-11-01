@@ -156,6 +156,7 @@ rottencreatures-neoforge-1.21.1-1.1.2.jar
 sable-neoforge-1.21.1-2.0.6.jar
 SBW-Drone-Warfare-1.21.1-NeoForge-1.0.6.jar
 sbw-optimized-neoforge-1.21.1-1.0.0.jar
+sbwnpc-0.6.0-mc1.21.1.jar
 sbwpersistentwrecks-neoforge-1.21.1-sbw-0.8.9.jar
 seamless-api-2.0.2+mc1.21.1-neoforge.jar
 seamless-deconstructing-workbench-2.1.1+mc1.21.1-neoforge.jar
