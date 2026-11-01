@@ -1,5 +1,10 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.1 — Réanimation et sacs à dos
+- **Réanimation (PlayerRevive)** : quand tu es à terre, le texte « Time left… / Wait for help… » ne s'affiche plus en double, l'un sur l'autre.
+- **Sacs à dos (Traveler's Backpack)** : le sac ne se met plus dans la case « Dos » de Curios. On l'équipe comme avant, avec le bouton du sac (menu du sac). Un sac déjà porté ne disparaît pas : tu le retrouves dans ton inventaire.
+- Serveur : le paysage lointain (Distant Horizons) ne fait plus générer le monde jusqu'à 8000 blocs autour de chaque joueur, ce qui faisait laguer puis redémarrer le serveur (mémoire pleine). Le paysage déjà exploré s'affiche toujours au loin.
+
 ## 3.9.0 — Nettoyage des anciens mods
 - **Anciens mods supprimés tout seuls** : si ton dossier mods contient encore des mods que le pack n'utilise plus (par exemple Create Missiles, Ballistix ou Voltaic, venus d'un ancien fichier d'installation), ils t'empêchaient de rejoindre le serveur (« channel missing on the server side »). Maintenant, un écran te prévient au lancement et ils sont supprimés quand tu fermes le jeu. Relance ensuite le jeu : tout est prêt.
 - La mise à jour automatique les supprime aussi.

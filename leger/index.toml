@@ -1330,7 +1330,7 @@ preserve = true
 
 [[files]]
 file = "config/travelersbackpack-server.toml"
-hash = "5a76437c5de30a4627649b628c1729ba34bfac796af5a0b9d16af3c218e00161"
+hash = "17f587b5b2ee8f5bb4ee255c7996feda7e690f42ac9634b4fb1e6d1a6c83e02d"
 preserve = true
 
 [[files]]
@@ -1388,7 +1388,7 @@ hash = "a5f8a18c3b0674cb854afd7c6e45b8dd5cd984b48ac5cfc54292fc625f14562b"
 
 [[files]]
 file = "imperium-version.txt"
-hash = "5c0f9e710d6f59bb59980444f3dc58886fc564a0a2d8a1d534d3296be2c67da8"
+hash = "b43b810226c9625fdb0d7aad91c019a8423b40c4a3d7a80562c3725ee7df7919"
 
 [[files]]
 file = "journeymap/server/6.0/journeymap.server.global.config"
@@ -2011,7 +2011,7 @@ metafile = true
 
 [[files]]
 file = "mods/predator-missile-imperium.jar"
-hash = "3e6819c88fa5c90ad490e22ca937fd56bb6d48379b220699ed60571208849932"
+hash = "0f6b56e213f95651ef3672e8962f9e330ea4b200d48b2ee3a26864eaf7457714"
 
 [[files]]
 file = "mods/puzzleslib-v21-1-64-mc1-21-1-neoforge.pw.toml"
