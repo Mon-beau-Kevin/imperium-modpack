@@ -1,0 +1,8 @@
+name = "[SBW] NPC Squads"
+filename = "sbwnpc-0.6.0-mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9059/306/sbwnpc-0.6.0-mc1.21.1.jar"
+hash-format = "sha1"
+hash = "bb60719201d0ee44f34aa44d41e057627be94a14"
