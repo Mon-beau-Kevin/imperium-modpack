@@ -1,5 +1,14 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.6 — Opérations en groupe, primes doublées
+- **Rejoindre un groupe** : quand un joueur prépare une opération près du Commandant, elle apparaît en premier dans ta fenêtre (⚑) avec un bouton **« Rejoindre le groupe »**. Fini les groupes séparés par erreur.
+- **Chacun sa progression** : tu peux aider un joueur plus avancé sur son opération (tu touches la prime), sans sauter les tiennes. Ensuite il peut venir t'aider sur la tienne. Seule ta prochaine opération te fait avancer.
+- **Primes doublées** : une opération réussie rapporte maintenant **× 6 à × 10** la mise, et chaque objectif secondaire réussi rapporte **une mise entière** en plus.
+- **3 essais par jour** : après 3 échecs sur la même opération, elle est bloquée pour toi jusqu'au lendemain.
+- **Réapparition protégée** : si tu réapparais dans la zone d'une opération (lit posé au village), tu as 15 s d'invincibilité et d'invisibilité pour te mettre à l'abri, au lieu de te faire tuer en boucle.
+- **Quitter une opération** : clique deux fois sur « Quitter » dans la fenêtre du Commandant (plus besoin du bouton dans le chat).
+- **NPC Squads** : l'outil d'escouade n'apparaît plus dans ton inventaire à chaque mort ou connexion.
+
 ## 3.9.5 — Les opérations du Commandant, le nouveau casino
 - **Opérations du Commandant** : un nouveau PNJ, le **Commandant**, confie **25 opérations de groupe** contre des bandits armés. Attaque (reprendre un village tenu, chasser un chef caché, libérer des otages, capturer des points) ou **défense** (3 minutes pour se préparer, puis des vagues massives : protéger les otages dans les maisons). Chacun paie sa mise ; si vous réussissez, vous touchez **× 3 à × 5** ; si vous échouez, tout part au trésor du pays.
 - Ça devient vite très dur : tourelles automatiques autour des villages, pick-up armés, mortiers, drones kamikazes, frappes aériennes qui cassent les murs, et des **soldats en blindé, en char et en hélicoptère** (nouveau mod [SBW] NPC Squads). En défense, les bandits font sauter les maisons avec des **drones de brèche** : abats-les en vol.
