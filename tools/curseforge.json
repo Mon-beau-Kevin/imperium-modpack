@@ -55,12 +55,12 @@
  },
  {
   "name": "Amendments",
-  "filename": "amendments-1.21-2.2.3-neoforge.jar",
-  "url": "https://edge.forgecdn.net/files/9346/724/amendments-1.21-2.2.3-neoforge.jar",
-  "sha1": "b66fc919bc906613600c458f740a87c3702175a5",
-  "size": 1195278,
+  "filename": "amendments-1.21-2.2.7-neoforge.jar",
+  "url": "https://edge.forgecdn.net/files/9388/448/amendments-1.21-2.2.7-neoforge.jar",
+  "sha1": "f8db6e9b5610fab90a7c545c374feb9140fc7832",
+  "size": 1212703,
   "projectID": 896746,
-  "fileID": 9346724
+  "fileID": 9388448
  },
  {
   "name": "Apotheosis",
@@ -397,12 +397,12 @@
  },
  {
   "name": "CreativeCore",
-  "filename": "CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
-  "url": "https://edge.forgecdn.net/files/9108/41/CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar",
-  "sha1": "eb2242b3d4442ad4017ba0624a7f9588e778b157",
-  "size": 1236490,
+  "filename": "CreativeCore_NEOFORGE_v2.13.52_mc1.21.1.jar",
+  "url": "https://edge.forgecdn.net/files/9371/518/CreativeCore_NEOFORGE_v2.13.52_mc1.21.1.jar",
+  "sha1": "1a8b2594b4d88920c6017f7f1f2cd7120ba1937d",
+  "size": 1236541,
   "projectID": 257814,
-  "fileID": 9108041
+  "fileID": 9371518
  },
  {
   "name": "Cristel Lib",
@@ -703,12 +703,12 @@
  },
  {
   "name": "Immersive Melodies",
-  "filename": "immersive_melodies-neoforge-0.8.0+1.21.1.jar",
-  "url": "https://edge.forgecdn.net/files/8898/367/immersive_melodies-neoforge-0.8.0%2b1.21.1.jar",
-  "sha1": "5f3cd9eb07465a88a22abc6230862e798f45ef82",
-  "size": 5565133,
+  "filename": "immersive_melodies-neoforge-0.8.2-1.21.1.jar",
+  "url": "https://edge.forgecdn.net/files/9364/494/immersive_melodies-neoforge-0.8.2-1.21.1.jar",
+  "sha1": "3c36714c2423cff437dcc2a4e7da0d703494899e",
+  "size": 5570070,
   "projectID": 904471,
-  "fileID": 8898367
+  "fileID": 9364494
  },
  {
   "name": "Immersive Paintings",
@@ -1342,12 +1342,12 @@
  },
  {
   "name": "Streams Reflowing",
-  "filename": "StreamsReflowing-1.21.1-neoforge-2.15.2.jar",
-  "url": "https://edge.forgecdn.net/files/9216/744/StreamsReflowing-1.21.1-neoforge-2.15.2.jar",
-  "sha1": "4e1c4e542b589fd0d1212005dbbfa1af60201df4",
-  "size": 3035995,
+  "filename": "StreamsReflowing-1.21.1-neoforge-2.16.2.jar",
+  "url": "https://edge.forgecdn.net/files/9376/530/StreamsReflowing-1.21.1-neoforge-2.16.2.jar",
+  "sha1": "cb0b3cd2b8225f5473413e282c2565b882caee26",
+  "size": 3410117,
   "projectID": 1581408,
-  "fileID": 9216744
+  "fileID": 9376530
  },
  {
   "name": "Structory",
@@ -1441,21 +1441,21 @@
  },
  {
   "name": "TACZ Turrets",
-  "filename": "tacz_turrets-neoforge-4.0.0-1.21.1.jar",
-  "url": "https://edge.forgecdn.net/files/9350/514/tacz_turrets-neoforge-4.0.0-1.21.1.jar",
-  "sha1": "fd089f356a6cd6c172321793c6c75c159f63cabc",
-  "size": 1631581,
+  "filename": "tacz_turrets-neoforge-4.1.1-1.21.1.jar",
+  "url": "https://edge.forgecdn.net/files/9389/367/tacz_turrets-neoforge-4.1.1-1.21.1.jar",
+  "sha1": "483804f9f83510f25245eec1a400a8fb8ae9ab72",
+  "size": 1638699,
   "projectID": 1376660,
-  "fileID": 9350514
+  "fileID": 9389367
  },
  {
   "name": "[TaCZ:Accel] | Timeless and Classics Zero Guns: Accelerated",
-  "filename": "taczaccel-omni-1.3.3.jar",
-  "url": "https://edge.forgecdn.net/files/9237/540/taczaccel-omni-1.3.3.jar",
-  "sha1": "d67b73649c722f7b6a6516e8fb87480bc339457f",
-  "size": 841991,
+  "filename": "taczaccel-omni-1.3.4.jar",
+  "url": "https://edge.forgecdn.net/files/9396/81/taczaccel-omni-1.3.4.jar",
+  "sha1": "a1370bafdae56b1b6336948e36c98bd2dcd551d6",
+  "size": 842091,
   "projectID": 1622154,
-  "fileID": 9237540
+  "fileID": 9396081
  },
  {
   "name": "Tax Free Levels",

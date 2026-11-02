@@ -1,0 +1,8 @@
+name = "[TaCZ:Accel] | Timeless and Classics Zero Guns: Accelerated"
+filename = "taczaccel-omni-1.3.4.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9396/81/taczaccel-omni-1.3.4.jar"
+hash-format = "sha1"
+hash = "a1370bafdae56b1b6336948e36c98bd2dcd551d6"

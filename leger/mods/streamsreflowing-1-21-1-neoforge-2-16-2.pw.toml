@@ -1,0 +1,8 @@
+name = "Streams Reflowing"
+filename = "StreamsReflowing-1.21.1-neoforge-2.16.2.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9376/530/StreamsReflowing-1.21.1-neoforge-2.16.2.jar"
+hash-format = "sha1"
+hash = "cb0b3cd2b8225f5473413e282c2565b882caee26"

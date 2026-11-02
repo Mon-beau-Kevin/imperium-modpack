@@ -1,5 +1,9 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.7 — Mises à jour de mods
+- Mis à jour : **TACZ Turrets** 4.1.1, **TaCZ Accel** 1.3.4, **Immersive Melodies** 0.8.2, **Amendments** 2.2.7, **CreativeCore** 2.13.52, **Streams Reflowing** 2.16.2 (corrections des auteurs).
+- Vérifié avec nos mods : l'orchestre du casino et les tourelles des opérations du Commandant marchent comme avant.
+
 ## 3.9.6 — Opérations en groupe, primes doublées
 - **Rejoindre un groupe** : quand un joueur prépare une opération près du Commandant, elle apparaît en premier dans ta fenêtre (⚑) avec un bouton **« Rejoindre le groupe »**. Fini les groupes séparés par erreur.
 - **Chacun sa progression** : tu peux aider un joueur plus avancé sur son opération (tu touches la prime), sans sauter les tiennes. Ensuite il peut venir t'aider sur la tienne. Seule ta prochaine opération te fait avancer.
