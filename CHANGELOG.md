@@ -1,5 +1,10 @@
 # Nouveautés du modpack Imperium
 
+## 3.9.8 — Territoires, bandits
+- **Territoires** : un chunk rendu avec la carte FTB est maintenant vraiment libre. Avant, Warring Nations n'était pas prévenu : en marchant dessus tu voyais encore « ⚑ Nation (Home Territory) », les frontières restaient affichées, et la capitale, les accès donnés ou les chunks chargés pouvaient rester sur un chunk rendu. Les restes laissés par les anciens chunks rendus sont nettoyés au démarrage du serveur.
+- **Bandits** : ils n'apparaissent plus tout seuls dans la nature. On ne les trouve plus que dans les **opérations du Commandant**.
+- **Perles de l'Ender** : vérifié, aucun mod ne change le butin des Endermen. C'est le jeu normal : une chance sur deux d'avoir une perle (plus avec Butin).
+
 ## 3.9.7 — Mises à jour de mods
 - Mis à jour : **TACZ Turrets** 4.1.1, **TaCZ Accel** 1.3.4, **Immersive Melodies** 0.8.2, **Amendments** 2.2.7, **CreativeCore** 2.13.52, **Streams Reflowing** 2.16.2 (corrections des auteurs).
 - Vérifié avec nos mods : l'orchestre du casino et les tourelles des opérations du Commandant marchent comme avant.
